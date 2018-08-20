@@ -1,0 +1,160 @@
+
+<li><a href="categories.html">Category</a>: Statically typed<p>
+</p></li><li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>{ ... }<a href="#1">(1)</a></tt></td><td>block (grouping statements, especially when statements are not expressions)</td></tr>
+<tr><td><tt>nothing needed</tt></td><td>breaking lines (useful when end-of-line and/or indentation has a special meaning)</td></tr>
+<tr><td><tt>/* ... */</tt></td><td>commenting (non nestable)</td></tr>
+<tr><td><tt>//</tt></td><td>commenting (until end of line)</td></tr>
+<tr><td><tt>&lt; &gt; &lt;= &gt;=</tt></td><td>comparison</td></tr>
+<tr><td><tt>strings.Compare()</tt></td><td>comparison (returns 3 values (i.e. inferior, equal or superior))</td></tr>
+<tr><td><tt>== !=</tt></td><td>equality / inequality (shallow)</td></tr>
+<tr><td><tt>runtime.GC()</tt></td><td>force garbage collection</td></tr>
+<tr><td><tt>( ... )</tt></td><td>grouping expressions</td></tr>
+<tr><td><tt>runtime.Caller(0)</tt></td><td>information about the current line and file</td></tr>
+<tr><td><tt>case-sensitive</tt></td><td>tokens (case-sensitivity (keywords, variable identifiers...))</td></tr>
+<tr><td><tt>[_a-zA-Z][_a-zA-Z0-9]*</tt></td><td>tokens (variable identifier regexp)</td></tr>
+<tr><td><tt>CamelCase or camelCase</tt></td><td>tokens (what is the standard way for <a href="http://c2.com/cgi/wiki?CapitalizationRules">scrunching together multiple words</a>)</td></tr>
+<tr><td><tt>=</tt></td><td>variable assignment or declaration (assignment)</td></tr>
+<tr><td><tt>:=</tt></td><td>variable assignment or declaration (both)</td></tr>
+<tr><td><tt>var v t</tt></td><td>variable assignment or declaration (declaration)</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>func(para1 typ1, ...) (typ2, ...) { ... }</tt></td><td>anonymous function</td></tr>
+<tr><td><tt>f(a,b,...)</tt></td><td>function call</td></tr>
+<tr><td><tt>f()</tt></td><td>function call (with no parameter)</td></tr>
+<tr><td><tt>func f(para1 typ1, para2 typ2, ...) (typ3, ...) { ... }</tt></td><td>function definition</td></tr>
+<tr><td><tt>func f(para1 typ1, para2 typ2, ...) { ... }</tt></td><td>function definition (procedures)</td></tr>
+<tr><td><tt>f(args ...typ0)<a href="#2">(2)</a></tt></td><td>function definition (variable number of arguments)</td></tr>
+<tr><td><tt>return<a href="#3">(3)</a></tt></td><td>function return value (breaks the control flow)</td></tr>
+<tr><td><tt>runtime.Caller(0)</tt></td><td>runtime inspecting the caller information</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>continue / break</tt></td><td>breaking control flow (continue / break)</td></tr>
+<tr><td><tt>goto</tt></td><td>breaking control flow (goto (unconditional jump))</td></tr>
+<tr><td><tt>return<a href="#3">(3)</a></tt></td><td>breaking control flow (returning a value)</td></tr>
+<tr><td><tt>recover()</tt></td><td>exception (catching)</td></tr>
+<tr><td><tt>panic(v)</tt></td><td>exception (throwing)</td></tr>
+<tr><td><tt>if c {...}</tt></td><td>if_then</td></tr>
+<tr><td><tt>if c {b1} else if c2 {b2} else {b3}</tt></td><td>if_then_else</td></tr>
+<tr><td><tt>for</tt></td><td>loop (for &quot;a la C&quot; (while + initialisation))</td></tr>
+<tr><td><tt>for i := 10; i &gt;= 1; i-- {...}</tt></td><td>loop (for each value in a numeric range, 1 decrement)</td></tr>
+<tr><td><tt>for i := 1; i &lt;= 10; i++ {...}</tt></td><td>loop (for each value in a numeric range, 1 increment (see also the entries about ranges))</td></tr>
+<tr><td><tt>for i := 1; i &lt;= 10; i += 2 {...}</tt></td><td>loop (for each value in a numeric range, free increment)</td></tr>
+<tr><td><tt>for {}</tt></td><td>loop (forever loop)</td></tr>
+<tr><td><tt>for c {...}</tt></td><td>loop (while condition do something)</td></tr>
+<tr><td><tt><pre>switch val {
+    case v1, v2, ...:
+        ...
+        fallthrough
+    case v3:
+        ...
+    default:
+        ...
+}</pre></tt></td><td>multiple selection (switch)</td></tr>
+<tr><td><tt>,</tt></td><td>sequence</td></tr>
+<tr><td><tt>;</tt></td><td>sequence</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/Tps.html">Types</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>var n t</tt></td><td>annotation (or variable declaration)</td></tr>
+<tr><td><tt>(t)(e)</tt></td><td>cast (upcast)</td></tr>
+<tr><td><tt>type n t</tt></td><td>declaration</td></tr>
+<tr><td><tt>const e t</tt></td><td>mutability, constness (type of a constant value)</td></tr>
+<tr><td><tt>mutability is the default</tt></td><td>mutability, constness (type of a mutable value)</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>package p</tt></td><td>declare</td></tr>
+<tr><td><tt>Identifier is only exported if the first character of its name is an Unicode upper case letter; and the identifier is declared in the package block or it is a field name or method name.  No other identifiers are exported</tt></td><td>declare (selective export)</td></tr>
+<tr><td><tt>import &quot;p&quot;</tt></td><td>import (package (ie. load the package))</td></tr>
+<tr><td><tt>.</tt></td><td>package scope</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>s[n]</tt></td><td>accessing n-th character</td></tr>
+<tr><td><tt>utf8.DecodeRuneInString(s)</tt></td><td>ascii to character</td></tr>
+<tr><td><tt>&apos;z&apos;</tt></td><td>character &quot;z&quot;</td></tr>
+<tr><td><tt>string(c)</tt></td><td>character to ascii</td></tr>
+<tr><td><tt>rune</tt></td><td>character type name</td></tr>
+<tr><td><tt>string(e)</tt></td><td>convert something to a string (see also string interpolation)</td></tr>
+<tr><td><tt>strings.Repeat</tt></td><td>duplicate n times</td></tr>
+<tr><td><tt>s[n:m+1]</tt></td><td>extract a substring</td></tr>
+<tr><td><tt>strings.Index</tt></td><td>locate a substring</td></tr>
+<tr><td><tt>strings.LastIndex</tt></td><td>locate a substring (starting at the end)</td></tr>
+<tr><td><tt>`...`</tt></td><td>multi-line</td></tr>
+<tr><td><tt>fmt.Print</tt></td><td>simple print (on strings)</td></tr>
+<tr><td><tt>fmt.Printf</tt></td><td>simple print (printf-like)</td></tr>
+<tr><td><tt>fmt.Sprintf</tt></td><td>sprintf-like</td></tr>
+<tr><td><tt>+</tt></td><td>string concatenation</td></tr>
+<tr><td><tt>== !=(Vimscript: whether or not == and != are case-sensitive depends on user settings.)</tt></td><td>string equality &amp; inequality</td></tr>
+<tr><td><tt>len</tt></td><td>string size</td></tr>
+<tr><td><tt>&quot;\n&quot;</tt></td><td>strings (end-of-line (without writing the real CR or LF character))</td></tr>
+<tr><td><tt>&quot;...&quot;</tt></td><td>strings (with no interpolation of variables)</td></tr>
+<tr><td><tt>string</tt></td><td>type name</td></tr>
+<tr><td><tt>unicode.ToUpper / unicode.ToLower</tt></td><td>upper / lower case character</td></tr>
+<tr><td><tt>strings.ToUpper / strings.ToLower / strings.Title</tt></td><td>uppercase / lowercase / capitalized string</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>false</tt></td><td>false value</td></tr>
+<tr><td><tt>!</tt></td><td>logical not</td></tr>
+<tr><td><tt>|| / &amp;&amp;</tt></td><td>logical or / and (short circuit)</td></tr>
+<tr><td><tt>true</tt></td><td>true value</td></tr>
+<tr><td><tt>bool</tt></td><td>type name</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>append</tt></td><td>adding an element at the end (side-effect)</td></tr>
+<tr><td><tt>l[1:]</tt></td><td>all but the first element</td></tr>
+<tr><td><tt>for i, v := range l {...}</tt></td><td>for each element do something</td></tr>
+<tr><td><tt>for i, v := range l {...}</tt></td><td>iterate with index</td></tr>
+<tr><td><tt>strings.Join</tt></td><td>join a list of strings in a string using a glue string</td></tr>
+<tr><td><tt>l[len(l)-1:]</tt></td><td>last element</td></tr>
+<tr><td><tt>append</tt></td><td>list concatenation</td></tr>
+<tr><td><tt>[]t{a, b, c}</tt></td><td>list constructor</td></tr>
+<tr><td><tt>len(l)</tt></td><td>list size</td></tr>
+<tr><td><tt>a[i]</tt></td><td>list/array indexing</td></tr>
+<tr><td><tt>[]a</tt></td><td>type name</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>h[k]</tt></td><td>dictionary (access: read/write)</td></tr>
+<tr><td><tt>map[typ0]typ1{ a: b, c: d }</tt></td><td>dictionary (constructor)</td></tr>
+<tr><td><tt>v, exists := h[k]</tt></td><td>dictionary (has the key ?)</td></tr>
+<tr><td><tt>delete(h, k)</tt></td><td>dictionary (remove by key)</td></tr>
+<tr><td><tt>map</tt></td><td>dictionary (type name)</td></tr>
+<tr><td><tt>k, v := range h</tt></td><td>range (inclusive .. inclusive)</td></tr>
+<tr><td><tt>.</tt></td><td>record (selector)</td></tr>
+<tr><td><tt>type typ struct{ n1 typ1; n2 typ2; }</tt></td><td>record (type declaration)</td></tr>
+<tr><td><tt>&amp;</tt></td><td>reference (pointer) (creation)</td></tr>
+<tr><td><tt>*<a href="#4">(4)</a></tt></td><td>reference (pointer) (dereference)</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>+ / - / * / /</tt></td><td>addition / subtraction / multiplication / division</td></tr>
+<tr><td><tt>&amp; / | / ^</tt></td><td>bitwise operators (and / or / xor)</td></tr>
+<tr><td><tt>&lt;&lt; / &gt;&gt;</tt></td><td>bitwise operators (left shift / right shift / unsigned right shift)</td></tr>
+<tr><td><tt>Div<a href="#5">(5)</a></tt></td><td>euclidean division (both quotient and modulo)</td></tr>
+<tr><td><tt>math.Pow</tt></td><td>exponentiation (power)</td></tr>
+<tr><td><tt>math.Log10</tt></td><td>logarithm (base 10)</td></tr>
+<tr><td><tt>math.Log2</tt></td><td>logarithm (base 2)</td></tr>
+<tr><td><tt>math.Log</tt></td><td>logarithm (base e)</td></tr>
+<tr><td><tt>%</tt></td><td>modulo (modulo of -3 / 2 is -1)</td></tr>
+<tr><td><tt>-</tt></td><td>negation</td></tr>
+<tr><td><tt>1000., 1E3</tt></td><td>numbers syntax (floating point)</td></tr>
+<tr><td><tt>0xf</tt></td><td>numbers syntax (integers in base 2, octal and hexadecimal)</td></tr>
+<tr><td><tt>1000</tt></td><td>numbers syntax (integers)</td></tr>
+<tr><td><tt>mathematical</tt></td><td>operator priorities and associativities (addition vs multiplication)</td></tr>
+<tr><td><tt>rand.Read<a href="#6">(6)</a></tt></td><td>random (random number)</td></tr>
+<tr><td><tt>rand.Seed<a href="#7">(7)</a></tt></td><td>random (seed the pseudo random generator)</td></tr>
+<tr><td><tt>math.Sqrt</tt></td><td>square root / e-exponential / absolute value</td></tr>
+<tr><td><tt>math.Sin / math.Cos / math.Tan</tt></td><td>trigonometry (basic)</td></tr>
+<tr><td><tt>math.Asin / math.Acos / math.Atan</tt></td><td>trigonometry (inverse)</td></tr>
+<tr><td><tt>math.Trunc / / math.Floor / math.Ceil</tt></td><td>truncate / round / floor / ceil</td></tr>
+<tr><td><tt>float32, float64</tt></td><td>type name (floating point)</td></tr>
+<tr><td><tt>int8, uint8, int16, uint16, ...64</tt></td><td>type name (integers)</td></tr>
+</tbody></table></p><p>
+</p></li>

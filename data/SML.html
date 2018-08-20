@@ -1,0 +1,138 @@
+
+<li><a href="categories.html">Category</a>: Functional, Statically typed<p>
+</p></li><li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>nothing needed</tt></td><td>breaking lines (useful when end-of-line and/or indentation has a special meaning)</td></tr>
+<tr><td><tt>(* ... *)</tt></td><td>commenting (nestable)</td></tr>
+<tr><td><tt>&lt; &gt; &lt;= &gt;=</tt></td><td>comparison</td></tr>
+<tr><td><tt>= &lt;&gt;</tt></td><td>equality / inequality (deep)</td></tr>
+<tr><td><tt>( ... )</tt></td><td>grouping expressions</td></tr>
+<tr><td><tt>[_a-z][_a-zA-Z0-9&apos;]*</tt></td><td>tokens (variable identifier regexp)</td></tr>
+<tr><td><tt>:=</tt></td><td>variable assignment or declaration (assignment)</td></tr>
+<tr><td><tt>let val v = e in</tt></td><td>variable assignment or declaration (declaration)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>documentation comment<br>information about the current line and file<br>tokens (case-sensitivity (keywords, variable identifiers...))<br>tokens (what is the standard way for <a href="http://c2.com/cgi/wiki?CapitalizationRules">scrunching together multiple words</a>)<br>comparison (returns 3 values (i.e. inferior, equal or superior))<br>comparison (min / max (binary or more))<br>force garbage collection
+</blockquote>
+</li><li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>f a</tt></td><td><a href="http://www.haskell.org/hawiki/PartialApplication">partial application</a> (in the examples below, a normal call is &quot;f(a,b)&quot;) (give the first argument)</td></tr>
+<tr><td><tt>fn (a, b) =&gt; ...</tt></td><td>anonymous function</td></tr>
+<tr><td><tt>f a b ...</tt></td><td>function call</td></tr>
+<tr><td><tt>f()</tt></td><td>function call (with no parameter)</td></tr>
+<tr><td><tt>o</tt></td><td>function composition</td></tr>
+<tr><td><tt>fun f para1 para2 = ...</tt></td><td>function definition</td></tr>
+<tr><td><tt>no syntax needed<a href="#1">(1)</a></tt></td><td>function return value (function body is the result)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote><a href="http://www.haskell.org/hawiki/PartialApplication">partial application</a> (in the examples below, a normal call is &quot;f(a,b)&quot;) (give the first argument to operator &quot;&gt;&quot;)<br><a href="http://www.haskell.org/hawiki/PartialApplication">partial application</a> (in the examples below, a normal call is &quot;f(a,b)&quot;) (give the second argument to operator &quot;&gt;&quot;)<br>identity function
+</blockquote>
+</li><li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>a handle exn =&gt; ...</tt></td><td>exception (catching)</td></tr>
+<tr><td><tt>raise</tt></td><td>exception (throwing)</td></tr>
+<tr><td><tt>if c then b1 else b2</tt></td><td>if_then_else</td></tr>
+<tr><td><tt>while c do ...</tt></td><td>loop (while condition do something)</td></tr>
+<tr><td><tt><pre>case val of
+   v1 =&gt; ...
+ | v2 =&gt; ...
+ | _ =&gt; ...</pre></tt></td><td>multiple selection (switch)</td></tr>
+<tr><td><tt>;</tt></td><td>sequence</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/Tps.html">Types</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>:</tt></td><td>annotation (or variable declaration)</td></tr>
+<tr><td><tt>type n = t</tt></td><td>declaration</td></tr>
+<tr><td><tt>datatype n = t</tt></td><td>declaration</td></tr>
+<tr><td><tt>constness is the default</tt></td><td>mutability, constness (type of a constant value)</td></tr>
+<tr><td><tt>T ref</tt></td><td>mutability, constness (type of a mutable value)</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>.</tt></td><td>package scope</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>declare<br>import
+</blockquote>
+</li><li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>sub</tt></td><td>accessing n-th character</td></tr>
+<tr><td><tt>chr</tt></td><td>ascii to character</td></tr>
+<tr><td><tt>#&quot;z&quot;</tt></td><td>character &quot;z&quot;</td></tr>
+<tr><td><tt>ord</tt></td><td>character to ascii</td></tr>
+<tr><td><tt>char</tt></td><td>character type name</td></tr>
+<tr><td><tt>substring</tt></td><td>extract a substring</td></tr>
+<tr><td><tt>print</tt></td><td>simple print (on strings)</td></tr>
+<tr><td><tt>^</tt></td><td>string concatenation</td></tr>
+<tr><td><tt>= &lt;&gt;</tt></td><td>string equality &amp; inequality</td></tr>
+<tr><td><tt>size</tt></td><td>string size</td></tr>
+<tr><td><tt>&quot;...&quot;</tt></td><td>strings (with no interpolation of variables)</td></tr>
+<tr><td><tt>string</tt></td><td>type name</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>strings (end-of-line (without writing the real CR or LF character))<br>multi-line<br>serialize (marshalling)<br>unserialize (un-marshalling)<br>upper / lower case character<br>uppercase / lowercase / capitalized string<br>locate a substring<br>locate a substring (starting at the end)
+</blockquote>
+</li><li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>false</tt></td><td>false value</td></tr>
+<tr><td><tt>not<a href="#2">(2)</a></tt></td><td>logical not</td></tr>
+<tr><td><tt>or / and</tt></td><td>logical or / and (non short circuit (always evaluates both arguments))</td></tr>
+<tr><td><tt>orelse / andalso</tt></td><td>logical or / and (short circuit)</td></tr>
+<tr><td><tt>true</tt></td><td>true value</td></tr>
+<tr><td><tt>bool</tt></td><td>type name</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>unzip</tt></td><td>2 lists from a list of couples</td></tr>
+<tr><td><tt>::</tt></td><td>adding an element at the beginning (list cons) (return the new list (no side-effect))</td></tr>
+<tr><td><tt>foldl</tt></td><td>f(... f(f(init, e1), e2) ..., en)</td></tr>
+<tr><td><tt>foldr</tt></td><td>f(e1, f(e2, ... f(en, init) ...))</td></tr>
+<tr><td><tt>find</tt></td><td>find an element</td></tr>
+<tr><td><tt>app</tt></td><td>for each element do something</td></tr>
+<tr><td><tt>exists</tt></td><td>is the predicate true for an element</td></tr>
+<tr><td><tt>all<a href="#3">(3)</a></tt></td><td>is the predicate true for every element</td></tr>
+<tr><td><tt>filter</tt></td><td>keep elements (matching)</td></tr>
+<tr><td><tt>@</tt></td><td>list concatenation</td></tr>
+<tr><td><tt>[ a, b, c ]<a href="#4">(4)</a></tt></td><td>list constructor</td></tr>
+<tr><td><tt>concat</tt></td><td>list flattening (one level depth)</td></tr>
+<tr><td><tt>zip</tt></td><td>list of couples from 2 lists</td></tr>
+<tr><td><tt>length</tt></td><td>list size</td></tr>
+<tr><td><tt>partition</tt></td><td>partition a list: elements matching, elements non matching</td></tr>
+<tr><td><tt>rev</tt></td><td>reverse</td></tr>
+<tr><td><tt>map</tt></td><td>transform a list (or bag) in another one</td></tr>
+<tr><td><tt>ListPair.map</tt></td><td>transform two lists in parallel</td></tr>
+<tr><td><tt>a list</tt></td><td>type name</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>list/array indexing<br>adding an element at index<br>first element<br>all but the first element<br>last element<br>get the first element and remove it<br>get the last element and remove it<br>split a list<br>is an element in the list<br>smallest / biggest element<br>join a list of strings in a string using a glue string<br>iterate with index<br>remove duplicates<br>sort<br>lookup an element in a association list
+</blockquote>
+</li><li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>datatype typ = N1 | N2 | ...</tt></td><td>enumerated type declaration</td></tr>
+<tr><td><tt>NONE</tt></td><td>optional value (null value)</td></tr>
+<tr><td><tt>option</tt></td><td>optional value (type name)</td></tr>
+<tr><td><tt>SOME v</tt></td><td>optional value (value)</td></tr>
+<tr><td><tt>#field r</tt></td><td>record (selector)</td></tr>
+<tr><td><tt>type typ = { n1 : typ1; n2 : typ2 }</tt></td><td>record (type declaration)</td></tr>
+<tr><td><tt>:=</tt></td><td>reference (pointer) (assigning (when dereferencing doesn&apos;t give a lvalue))</td></tr>
+<tr><td><tt>ref</tt></td><td>reference (pointer) (creation)</td></tr>
+<tr><td><tt>!<a href="#5">(5)</a></tt></td><td>reference (pointer) (dereference)</td></tr>
+<tr><td><tt>( a, b, c )</tt></td><td>tuple constructor</td></tr>
+<tr><td><tt>typ1 * ... * typn</tt></td><td>tuple type</td></tr>
+<tr><td><tt>datatype typ = N1 of typ1 | N2 of typ2 | ...</tt></td><td>union type declaration</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>optional value (null coalescing)<br>dictionary (type name)<br>dictionary (constructor)<br>dictionary (access)<br>dictionary (has the key ?)<br>dictionary (remove by key)<br>dictionary (list of keys)<br>dictionary (list of values)<br>dictionary (merge)<br>range
+</blockquote>
+</li><li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>~</tt></td><td>bitwise operators (bitwise inversion)</td></tr>
+<tr><td><tt>IntInf.quotrem</tt></td><td>euclidean division (both quotient and modulo)</td></tr>
+<tr><td><tt>pow</tt></td><td>exponentiation (power)</td></tr>
+<tr><td><tt>log</tt></td><td>logarithm (base 10)</td></tr>
+<tr><td><tt>ln</tt></td><td>logarithm (base e)</td></tr>
+<tr><td><tt>mod</tt></td><td>modulo (modulo of -3 / 2 is 1)</td></tr>
+<tr><td><tt>~</tt></td><td>negation</td></tr>
+<tr><td><tt>sqrt / exp / abs</tt></td><td>square root / e-exponential / absolute value</td></tr>
+<tr><td><tt>sin / cos / tan</tt></td><td>trigonometry (basic)</td></tr>
+<tr><td><tt>/ round / floor / ceil</tt></td><td>truncate / round / floor / ceil</td></tr>
+<tr><td><tt>float</tt></td><td>type name (floating point)</td></tr>
+<tr><td><tt>int</tt></td><td>type name (integers)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>numbers syntax (integers)<br>numbers syntax (integers in base 2, octal and hexadecimal)<br>numbers syntax (floating point)<br>addition / subtraction / multiplication / division<br>random (random number)<br>random (seed the pseudo random generator)<br>operator priorities and associativities<br>trigonometry (inverse)
+</blockquote>
+</li>

@@ -1,0 +1,98 @@
+
+<li><a href="categories.html">Category</a>: Dynamically typed<p>
+</p></li><li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>{ ... }</tt></td><td>block (grouping statements, especially when statements are not expressions)</td></tr>
+<tr><td><tt>( ... )<a href="#1">(1)</a></tt></td><td>block (grouping statements, especially when statements are not expressions)</td></tr>
+<tr><td><tt>\</tt></td><td>breaking lines (useful when end-of-line and/or indentation has a special meaning)</td></tr>
+<tr><td><tt>#</tt></td><td>commenting (until end of line)</td></tr>
+<tr><td><tt>-lt -gt -le -ge</tt></td><td>comparison</td></tr>
+<tr><td><tt>= !=</tt></td><td>equality / inequality (shallow)</td></tr>
+<tr><td><tt>eval</tt></td><td>runtime evaluation</td></tr>
+<tr><td><tt>case-sensitive</tt></td><td>tokens (case-sensitivity (keywords, variable identifiers...))</td></tr>
+<tr><td><tt>[_a-zA-Z0-9]+</tt></td><td>tokens (variable identifier regexp)</td></tr>
+<tr><td><tt>UPPER_CASE</tt></td><td>tokens (what is the standard way for <a href="http://c2.com/cgi/wiki?CapitalizationRules">scrunching together multiple words</a>)</td></tr>
+<tr><td><tt>=</tt></td><td>variable assignment or declaration (assignment)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>documentation comment<br>information about the current line and file<br>grouping expressions<br>comparison (returns 3 values (i.e. inferior, equal or superior))<br>comparison (min / max (binary or more))<br>force garbage collection
+</blockquote>
+</li><li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>f a b ...</tt></td><td>function call</td></tr>
+<tr><td><tt>f</tt></td><td>function call (with no parameter)</td></tr>
+<tr><td><tt>f() { ... }</tt></td><td>function definition</td></tr>
+<tr><td><tt>f() { ... $@ }</tt></td><td>function definition (variable number of arguments)</td></tr>
+<tr><td><tt>return<a href="#2">(2)</a></tt></td><td>function return value (breaks the control flow)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>function called when a function is not defined (in dynamic languages)<br>runtime inspecting the caller information
+</blockquote>
+</li><li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>return<a href="#2">(2)</a></tt></td><td>breaking control flow (returning a value)</td></tr>
+<tr><td><tt>if c; then ... fi</tt></td><td>if_then</td></tr>
+<tr><td><tt>if c; then b1; elif c2; then b2; else b3; fi</tt></td><td>if_then_else</td></tr>
+<tr><td><tt>for ((x = 0; x &lt; 10; x++)); do ...; done</tt></td><td>loop (for &quot;a la C&quot; (while + initialisation))</td></tr>
+<tr><td><tt>for i in `seq 10 -1 1`; do ...; done</tt></td><td>loop (for each value in a numeric range, 1 decrement)</td></tr>
+<tr><td><tt>while c; do ...; done</tt></td><td>loop (while condition do something)</td></tr>
+<tr><td><tt><pre>case val in
+   v1) statement1 ;;
+   v2|v3) statement23 ;;
+   *) statement_else ;;
+esac</pre></tt></td><td>multiple selection (switch)</td></tr>
+<tr><td><tt>;</tt></td><td>sequence</td></tr>
+<tr><td><tt>end-of-line</tt></td><td>sequence</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>loop (forever loop)<br>loop (do something until condition)<br>loop (for each value in a numeric range, 1 increment (see also the entries about ranges))<br>loop (for each value in a numeric range, free increment)<br>breaking control flow (goto (unconditional jump))<br>breaking control flow (continue / break)<br>exception (throwing)<br>exception (catching)
+</blockquote>
+</li><li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>. p</tt></td><td>import (everything into current namespace)</td></tr>
+<tr><td><tt>source p</tt></td><td>import (everything into current namespace)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>package scope<br>declare
+</blockquote>
+</li><li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>&quot;z&quot;</tt></td><td>character &quot;z&quot;</td></tr>
+<tr><td><tt>all strings allow multi-line strings</tt></td><td>multi-line</td></tr>
+<tr><td><tt>echo<a href="#3">(3)</a></tt></td><td>simple print (on strings)</td></tr>
+<tr><td><tt>$a$b</tt></td><td>string concatenation</td></tr>
+<tr><td><tt>= !=</tt></td><td>string equality &amp; inequality</td></tr>
+<tr><td><tt>${#v}</tt></td><td>string size</td></tr>
+<tr><td><tt>&quot;... $v ...&quot;</tt></td><td>strings (with interpolation of variables)</td></tr>
+<tr><td><tt>&lt;&lt;MARK ... $v ... MARK</tt></td><td>strings (with interpolation of variables)</td></tr>
+<tr><td><tt>&apos;...&apos;</tt></td><td>strings (with no interpolation of variables)</td></tr>
+<tr><td><tt>&lt;&lt;&apos;MARK&apos; ... MARK</tt></td><td>strings (with no interpolation of variables)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>strings (end-of-line (without writing the real CR or LF character))<br>serialize (marshalling)<br>unserialize (un-marshalling)<br>sprintf-like<br>duplicate n times<br>upper / lower case character<br>uppercase / lowercase / capitalized string<br>ascii to character<br>character to ascii<br>accessing n-th character<br>extract a substring<br>locate a substring<br>locate a substring (starting at the end)
+</blockquote>
+</li><li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>false</tt></td><td>false value</td></tr>
+<tr><td><tt>exit status different from 0</tt></td><td>false value</td></tr>
+<tr><td><tt>true</tt></td><td>true value</td></tr>
+<tr><td><tt>exit status 0</tt></td><td>true value</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>logical not<br>logical or / and
+</blockquote>
+</li><li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>for v in l; do ...; done</tt></td><td>for each element do something</td></tr>
+<tr><td><tt>a[i]</tt></td><td>list/array indexing</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>seq a b / jot - a b<a href="#4">(4)</a></tt></td><td>range (inclusive .. inclusive)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>tuple constructor<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (empty tuple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (1-uple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (using a tuple for a function call)<br>reference (pointer) (creation)<br>reference (pointer) (dereference)<br>optional value (null value)<br>optional value (value)<br>optional value (null coalescing)<br>record (selector)<br>dictionary (constructor)<br>dictionary (access)<br>dictionary (has the key ?)<br>dictionary (remove by key)<br>dictionary (list of keys)<br>dictionary (list of values)<br>dictionary (merge)
+</blockquote>
+</li><li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>+ / - / * / /</tt></td><td>addition / subtraction / multiplication / division</td></tr>
+<tr><td><tt>-</tt></td><td>negation</td></tr>
+<tr><td><tt>1000</tt></td><td>numbers syntax (integers)</td></tr>
+<tr><td><tt>mathematical</tt></td><td>operator priorities and associativities (addition vs multiplication)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>numbers syntax (integers in base 2, octal and hexadecimal)<br>exponentiation (power)<br>random (random number)<br>random (seed the pseudo random generator)<br>square root / e-exponential / absolute value<br>trigonometry (basic)<br>trigonometry (inverse)<br>logarithm (base e)<br>logarithm (base 10)<br>modulo<br>truncate / round / floor / ceil<br>bitwise operators
+</blockquote>
+</li>

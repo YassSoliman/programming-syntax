@@ -1,0 +1,156 @@
+
+<li><a href="categories.html">Category</a>: Object Oriented, Functional, Reflexive, Statically typed<p>
+</p></li><li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>indentation<a href="#1">(1)</a></tt></td><td>block (grouping statements, especially when statements are not expressions)</td></tr>
+<tr><td><tt>#</tt></td><td>commenting (until end of line)</td></tr>
+<tr><td><tt>&lt; &gt; &lt;= &gt;=</tt></td><td>comparison</td></tr>
+<tr><td><tt>min / max</tt></td><td>comparison (min / max (binary or more))</td></tr>
+<tr><td><tt>a &lt;=&gt; b</tt></td><td>comparison (returns 3 values (i.e. inferior, equal or superior))</td></tr>
+<tr><td><tt>== !=</tt></td><td>equality / inequality (deep)</td></tr>
+<tr><td><tt>( ... )</tt></td><td>grouping expressions</td></tr>
+<tr><td><tt>indentation</tt></td><td>grouping expressions</td></tr>
+<tr><td><tt>space<a href="#2">(2)</a></tt></td><td>grouping expressions</td></tr>
+<tr><td><tt>case-sensitive</tt></td><td>tokens (case-sensitivity (keywords, variable identifiers...))</td></tr>
+<tr><td><tt>[_a-z][_a-zA-Z0-9]*[!?&apos;]*</tt></td><td>tokens (variable identifier regexp)</td></tr>
+<tr><td><tt>underscores</tt></td><td>tokens (what is the standard way for <a href="http://c2.com/cgi/wiki?CapitalizationRules">scrunching together multiple words</a>)</td></tr>
+<tr><td><tt>=</tt></td><td>variable assignment or declaration (both)</td></tr>
+<tr><td><tt>:=</tt></td><td>variable assignment or declaration (both)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>documentation comment<br>information about the current line and file<br>breaking lines (useful when end-of-line and/or indentation has a special meaning)<br>force garbage collection
+</blockquote>
+</li><li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>(a &gt;)</tt></td><td><a href="http://www.haskell.org/hawiki/PartialApplication">partial application</a> (in the examples below, a normal call is &quot;f(a,b)&quot;) (give the first argument to operator &quot;&gt;&quot;)</td></tr>
+<tr><td><tt>f(a,)</tt></td><td><a href="http://www.haskell.org/hawiki/PartialApplication">partial application</a> (in the examples below, a normal call is &quot;f(a,b)&quot;) (give the first argument)</td></tr>
+<tr><td><tt>(&gt; a)</tt></td><td><a href="http://www.haskell.org/hawiki/PartialApplication">partial application</a> (in the examples below, a normal call is &quot;f(a,b)&quot;) (give the second argument to operator &quot;&gt;&quot;)</td></tr>
+<tr><td><tt>f(,b)</tt></td><td><a href="http://www.haskell.org/hawiki/PartialApplication">partial application</a> (in the examples below, a normal call is &quot;f(a,b)&quot;) (give the second argument)</td></tr>
+<tr><td><tt>a, b -&gt; ...</tt></td><td>anonymous function</td></tr>
+<tr><td><tt>f(a,b,...)</tt></td><td>function call</td></tr>
+<tr><td><tt>f()</tt></td><td>function call (with no parameter)</td></tr>
+<tr><td><tt>~</tt></td><td>function composition</td></tr>
+<tr><td><tt>f(para1, para2, ...) = ...</tt></td><td>function definition</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>function return value<br>identity function
+</blockquote>
+</li><li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>raise</tt></td><td>exception (throwing)</td></tr>
+<tr><td><tt>if c then ...</tt></td><td>if_then</td></tr>
+<tr><td><tt>if c then b1 else b2</tt></td><td>if_then_else</td></tr>
+<tr><td><tt>loop</tt></td><td>loop (forever loop)</td></tr>
+<tr><td><tt><pre>val.
+   v1 -&gt; ...
+   v2 -&gt; ...
+   _ -&gt; ...</pre></tt></td><td>multiple selection (switch)</td></tr>
+<tr><td><tt>;</tt></td><td>sequence</td></tr>
+<tr><td><tt>end-of-line</tt></td><td>sequence</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>loop (while condition do something)<br>loop (do something until condition)<br>loop (for each value in a numeric range, 1 increment (see also the entries about ranges))<br>loop (for each value in a numeric range, 1 decrement)<br>loop (for each value in a numeric range, free increment)<br>loop (for &quot;a la C&quot; (while + initialisation))<br>breaking control flow (returning a value)<br>breaking control flow (continue / break)<br>exception (catching)
+</blockquote>
+</li><li><a href="../syntax-across-languages/Tps.html">Types</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>!!</tt></td><td>annotation (or variable declaration)</td></tr>
+<tr><td><tt>n = t</tt></td><td>declaration</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>cast<br>mutability, constness (type of a mutable value)<br>mutability, constness (type of a constant value)
+</blockquote>
+</li><li><a href="../syntax-across-languages/bjcrntRfl.html">Object Oriented &amp; Reflexivity</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>object.method(para)</tt></td><td>method invocation</td></tr>
+<tr><td><tt>object.method</tt></td><td>method invocation (with no parameter)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>object creation<br>object cloning<br>manually call an object&apos;s destructor<br>class declaration<br>testing class membership<br>get the type/class corresponding to an object/instance/value<br>methods available<br>inheritance<br>current instance<br>accessing parent method
+</blockquote>
+</li><li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>::</tt></td><td>package scope</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>declare<br>import
+</blockquote>
+</li><li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>&quot;z&quot;</tt></td><td>character &quot;z&quot;</td></tr>
+<tr><td><tt>Char</tt></td><td>character type name</td></tr>
+<tr><td><tt>to_string</tt></td><td>convert something to a string (see also string interpolation)</td></tr>
+<tr><td><tt>times</tt></td><td>duplicate n times</td></tr>
+<tr><td><tt>print</tt></td><td>simple print (on strings)</td></tr>
+<tr><td><tt>println<a href="#3">(3)</a></tt></td><td>simple print (on strings)</td></tr>
+<tr><td><tt>printf</tt></td><td>simple print (printf-like)</td></tr>
+<tr><td><tt>sprintf</tt></td><td>sprintf-like</td></tr>
+<tr><td><tt>+</tt></td><td>string concatenation</td></tr>
+<tr><td><tt>== !=</tt></td><td>string equality &amp; inequality</td></tr>
+<tr><td><tt>&quot;... {v} ...&quot;</tt></td><td>strings (with interpolation of variables)</td></tr>
+<tr><td><tt>qq(...(... {v} ...)...)</tt></td><td>strings (with interpolation of variables)</td></tr>
+<tr><td><tt>q(...(...)...)</tt></td><td>strings (with no interpolation of variables)</td></tr>
+<tr><td><tt>String</tt></td><td>type name</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>strings (end-of-line (without writing the real CR or LF character))<br>multi-line<br>serialize (marshalling)<br>unserialize (un-marshalling)<br>string size<br>upper / lower case character<br>uppercase / lowercase / capitalized string<br>ascii to character<br>character to ascii<br>accessing n-th character<br>extract a substring<br>locate a substring<br>locate a substring (starting at the end)
+</blockquote>
+</li><li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>False</tt></td><td>false value</td></tr>
+<tr><td><tt>not<a href="#4">(4)</a></tt></td><td>logical not</td></tr>
+<tr><td><tt>|| / &amp;&amp;</tt></td><td>logical or / and (short circuit)</td></tr>
+<tr><td><tt>True</tt></td><td>true value</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>type name
+</blockquote>
+</li><li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>unzip</tt></td><td>2 lists from a list of couples</td></tr>
+<tr><td><tt>:</tt></td><td>adding an element at the beginning (list cons) (return the new list (no side-effect))</td></tr>
+<tr><td><tt>push</tt></td><td>adding an element at the end (return the new list (no side-effect))</td></tr>
+<tr><td><tt>foldl</tt></td><td>f(... f(f(init, e1), e2) ..., en)</td></tr>
+<tr><td><tt>foldr</tt></td><td>f(e1, f(e2, ... f(en, init) ...))</td></tr>
+<tr><td><tt>find</tt></td><td>find an element</td></tr>
+<tr><td><tt>each</tt></td><td>for each element do something</td></tr>
+<tr><td><tt>shift!</tt></td><td>get the first element and remove it</td></tr>
+<tr><td><tt>pop!</tt></td><td>get the last element and remove it</td></tr>
+<tr><td><tt>member?</tt></td><td>is an element in the list</td></tr>
+<tr><td><tt>exists?</tt></td><td>is the predicate true for an element</td></tr>
+<tr><td><tt>all?</tt></td><td>is the predicate true for every element</td></tr>
+<tr><td><tt>each_with_index</tt></td><td>iterate with index</td></tr>
+<tr><td><tt>filter</tt></td><td>keep elements (matching)</td></tr>
+<tr><td><tt>+</tt></td><td>list concatenation</td></tr>
+<tr><td><tt>[ a, b, c ]<a href="#5">(5)</a></tt></td><td>list constructor</td></tr>
+<tr><td><tt>flatten</tt></td><td>list flattening (one level depth)</td></tr>
+<tr><td><tt>zip</tt></td><td>list of couples from 2 lists</td></tr>
+<tr><td><tt>to_list</tt></td><td>list out of a bag</td></tr>
+<tr><td><tt>size</tt></td><td>list size</td></tr>
+<tr><td><tt>a[i]</tt></td><td>list/array indexing</td></tr>
+<tr><td><tt>partition</tt></td><td>partition a list: elements matching, elements non matching</td></tr>
+<tr><td><tt>uniq</tt></td><td>remove duplicates</td></tr>
+<tr><td><tt>reverse</tt></td><td>reverse</td></tr>
+<tr><td><tt>minimum / maximum</tt></td><td>smallest / biggest element</td></tr>
+<tr><td><tt>sort<a href="#6">(6)</a></tt></td><td>sort</td></tr>
+<tr><td><tt>sort_by</tt></td><td>sort</td></tr>
+<tr><td><tt>map</tt></td><td>transform a list (or bag) in another one</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>type name<br>adding an element at index<br>first element<br>all but the first element<br>last element<br>transform two lists in parallel<br>split a list<br>join a list of strings in a string using a glue string<br>lookup an element in a association list
+</blockquote>
+</li><li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>((a))</tt></td><td>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (1-uple)</td></tr>
+<tr><td><tt>()</tt></td><td>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (empty tuple)</td></tr>
+<tr><td><tt>t</tt></td><td>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (using a tuple for a function call)</td></tr>
+<tr><td><tt>a .. b</tt></td><td>range (inclusive .. inclusive)</td></tr>
+<tr><td><tt>r { field }</tt></td><td>record (selector)</td></tr>
+<tr><td><tt>a, b, c</tt></td><td>tuple constructor</td></tr>
+<tr><td><tt>typ1, ..., typn</tt></td><td>tuple type</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>reference (pointer) (creation)<br>reference (pointer) (dereference)<br>optional value (null value)<br>optional value (value)<br>optional value (type name)<br>optional value (null coalescing)<br>record (type declaration)<br>union type declaration<br>enumerated type declaration<br>dictionary (type name)<br>dictionary (constructor)<br>dictionary (access)<br>dictionary (has the key ?)<br>dictionary (remove by key)<br>dictionary (list of keys)<br>dictionary (list of values)<br>dictionary (merge)
+</blockquote>
+</li><li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>+ / - / * / /</tt></td><td>addition / subtraction / multiplication / division</td></tr>
+<tr><td><tt>**</tt></td><td>exponentiation (power)</td></tr>
+<tr><td><tt>-</tt></td><td>negation</td></tr>
+<tr><td><tt>1000, 1000.0, 1E3<a href="#7">(7)</a></tt></td><td>numbers syntax (floating point)</td></tr>
+<tr><td><tt>1_000</tt></td><td>numbers syntax (integer thousand-separator)</td></tr>
+<tr><td><tt>1000</tt></td><td>numbers syntax (integers)</td></tr>
+<tr><td><tt>mathematical</tt></td><td>operator priorities and associativities (addition vs multiplication)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>type name<br>numbers syntax (integers in base 2, octal and hexadecimal)<br>random (random number)<br>random (seed the pseudo random generator)<br>square root / e-exponential / absolute value<br>trigonometry (basic)<br>trigonometry (inverse)<br>logarithm (base e)<br>logarithm (base 10)<br>modulo<br>truncate / round / floor / ceil<br>bitwise operators
+</blockquote>
+</li>

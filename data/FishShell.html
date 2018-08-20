@@ -1,0 +1,90 @@
+
+<li><a href="categories.html">Category</a>: Dynamically typed<p>
+</p></li><li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>\</tt></td><td>breaking lines (useful when end-of-line and/or indentation has a special meaning)</td></tr>
+<tr><td><tt>#</tt></td><td>commenting (until end of line)</td></tr>
+<tr><td><tt>-lt -gt -le -ge</tt></td><td>comparison</td></tr>
+<tr><td><tt>= !=</tt></td><td>equality / inequality (shallow)</td></tr>
+<tr><td><tt>begin ... end</tt></td><td>grouping expressions</td></tr>
+<tr><td><tt>eval</tt></td><td>runtime evaluation</td></tr>
+<tr><td><tt>case-sensitive</tt></td><td>tokens (case-sensitivity (keywords, variable identifiers...))</td></tr>
+<tr><td><tt>[^ \t\n\r\f/]+</tt></td><td>tokens (function identifier regexp (if different from variable identifier regexp))</td></tr>
+<tr><td><tt>[a-zA-Z][a-zA-Z0-9]*</tt></td><td>tokens (variable identifier regexp)</td></tr>
+<tr><td><tt>[a-zA-Z0-9]+</tt></td><td>tokens (variable identifier regexp)</td></tr>
+<tr><td><tt>underscores</tt></td><td>tokens (what is the standard way for <a href="http://c2.com/cgi/wiki?CapitalizationRules">scrunching together multiple words</a>)</td></tr>
+<tr><td><tt>set</tt></td><td>variable assignment or declaration (assignment)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>documentation comment<br>information about the current line and file<br>block (grouping statements, especially when statements are not expressions)<br>comparison (returns 3 values (i.e. inferior, equal or superior))<br>comparison (min / max (binary or more))
+</blockquote>
+</li><li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>f a b ...</tt></td><td>function call</td></tr>
+<tr><td><tt>function f; ...; end</tt></td><td>function definition</td></tr>
+<tr><td><tt>sub f; ... $argv; end</tt></td><td>function definition (variable number of arguments)</td></tr>
+<tr><td><tt>return<a href="#1">(1)</a></tt></td><td>function return value (breaks the control flow)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>function call (with no parameter)<br>function called when a function is not defined (in dynamic languages)<br>runtime inspecting the caller information
+</blockquote>
+</li><li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>continue / break</tt></td><td>breaking control flow (continue / break)</td></tr>
+<tr><td><tt>return<a href="#1">(1)</a></tt></td><td>breaking control flow (returning a value)</td></tr>
+<tr><td><tt>if c; ...; end</tt></td><td>if_then</td></tr>
+<tr><td><tt>if c; b1; else b2; end</tt></td><td>if_then_else</td></tr>
+<tr><td><tt>for i in (seq 10 -1 1); ...; end</tt></td><td>loop (for each value in a numeric range, 1 decrement)</td></tr>
+<tr><td><tt>for i in (seq 10); ...; end</tt></td><td>loop (for each value in a numeric range, 1 increment (see also the entries about ranges))</td></tr>
+<tr><td><tt>for i in (seq 1 2 10); ...; end</tt></td><td>loop (for each value in a numeric range, free increment)</td></tr>
+<tr><td><tt>while c; ...; end</tt></td><td>loop (while condition do something)</td></tr>
+<tr><td><tt><pre>switch val
+  case v1
+    ...
+  case v2 v3
+    ...
+  case &apos;*&apos;
+    ...
+end</pre></tt></td><td>multiple selection (switch)</td></tr>
+<tr><td><tt>;</tt></td><td>sequence</td></tr>
+<tr><td><tt>end-of-line</tt></td><td>sequence</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>loop (do something until condition)
+</blockquote>
+</li><li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
+Unknown: </p><blockquote>package scope<br>declare<br>import
+</blockquote>
+</li><li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>all strings allow multi-line strings</tt></td><td>multi-line</td></tr>
+<tr><td><tt>echo<a href="#2">(2)</a></tt></td><td>simple print (on strings)</td></tr>
+<tr><td><tt>$a$b</tt></td><td>string concatenation</td></tr>
+<tr><td><tt>= !=</tt></td><td>string equality &amp; inequality</td></tr>
+<tr><td><tt>wc -c</tt></td><td>string size</td></tr>
+<tr><td><tt>&quot;\n&quot;</tt></td><td>strings (end-of-line (without writing the real CR or LF character))</td></tr>
+<tr><td><tt>&quot;... $v ...&quot;</tt></td><td>strings (with interpolation of variables)</td></tr>
+<tr><td><tt>&apos;...&apos;</tt></td><td>strings (with no interpolation of variables)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>character &quot;z&quot;<br>convert something to a string (see also string interpolation)<br>serialize (marshalling)<br>unserialize (un-marshalling)<br>sprintf-like<br>duplicate n times<br>upper / lower case character<br>uppercase / lowercase / capitalized string<br>ascii to character<br>character to ascii<br>accessing n-th character<br>extract a substring<br>locate a substring<br>locate a substring (starting at the end)
+</blockquote>
+</li><li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
+Unknown: </p><blockquote>false value<br>true value<br>logical not<br>logical or / and
+</blockquote>
+</li><li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>for v in l; ...; end</tt></td><td>for each element do something</td></tr>
+<tr><td><tt>set l a b c</tt></td><td>list constructor</td></tr>
+<tr><td><tt>&quot;$l&quot;</tt></td><td>list flattening (one level depth)</td></tr>
+<tr><td><tt>count</tt></td><td>list size</td></tr>
+<tr><td><tt>a[i]</tt></td><td>list/array indexing</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>list concatenation<br>adding an element at index<br>all but the first element<br>last element<br>get the first element and remove it<br>get the last element and remove it<br>is an element in the list<br>smallest / biggest element<br>join a list of strings in a string using a glue string<br>iterate with index<br>remove duplicates<br>sort<br>reverse
+</blockquote>
+</li><li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>seq a b / jot - a b<a href="#3">(3)</a></tt></td><td>range (inclusive .. inclusive)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>reference (pointer) (creation)<br>reference (pointer) (dereference)<br>optional value (null value)<br>optional value (value)<br>optional value (null coalescing)<br>record (selector)<br>dictionary (constructor)<br>dictionary (access)<br>dictionary (has the key ?)<br>dictionary (remove by key)<br>dictionary (list of keys)<br>dictionary (list of values)<br>dictionary (merge)
+</blockquote>
+</li><li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
+Unknown: </p><blockquote>numbers syntax (integers)<br>numbers syntax (integers in base 2, octal and hexadecimal)<br>numbers syntax (floating point)<br>addition / subtraction / multiplication / division<br>exponentiation (power)<br>negation<br>random (random number)<br>random (seed the pseudo random generator)<br>operator priorities and associativities<br>square root / e-exponential / absolute value<br>trigonometry (basic)<br>trigonometry (inverse)<br>logarithm (base e)<br>logarithm (base 10)<br>modulo<br>truncate / round / floor / ceil<br>bitwise operators
+</blockquote>
+</li>

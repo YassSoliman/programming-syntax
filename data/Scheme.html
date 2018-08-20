@@ -1,0 +1,129 @@
+
+<li><a href="categories.html">Category</a>: Dynamically typed, Functional<p>
+</p></li><li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>(begin ...)</tt></td><td>block (grouping statements, especially when statements are not expressions)</td></tr>
+<tr><td><tt>nothing needed</tt></td><td>breaking lines (useful when end-of-line and/or indentation has a special meaning)</td></tr>
+<tr><td><tt>#| ... |#<a href="#1">(1)</a></tt></td><td>commenting (nestable)</td></tr>
+<tr><td><tt>;</tt></td><td>commenting (until end of line)</td></tr>
+<tr><td><tt>&lt; &gt; &lt;= &gt;=</tt></td><td>comparison</td></tr>
+<tr><td><tt>min / max</tt></td><td>comparison (min / max (binary or more))</td></tr>
+<tr><td><tt>(define (f para1 para2) &quot;...&quot; ...)</tt></td><td>documentation comment</td></tr>
+<tr><td><tt>equal?</tt></td><td>equality / inequality (deep)</td></tr>
+<tr><td><tt>eq? eqv?</tt></td><td>equality / inequality (shallow)</td></tr>
+<tr><td><tt>eval</tt></td><td>runtime evaluation</td></tr>
+<tr><td><tt>[_a-zA-Z!0&amp;*/:&lt;=&gt;?^][_a-zA-Z!0&amp;*/:&lt;=&gt;?^0-9.+-]*</tt></td><td>tokens (variable identifier regexp)</td></tr>
+<tr><td><tt>hyphens</tt></td><td>tokens (what is the standard way for <a href="http://c2.com/cgi/wiki?CapitalizationRules">scrunching together multiple words</a>)</td></tr>
+<tr><td><tt>set!</tt></td><td>variable assignment or declaration (assignment)</td></tr>
+<tr><td><tt>define</tt></td><td>variable assignment or declaration (declaration)</td></tr>
+<tr><td><tt>let let*</tt></td><td>variable assignment or declaration (declaration)</td></tr>
+<tr><td><tt>letrec</tt></td><td>variable assignment or declaration (declaration)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>information about the current line and file<br>tokens (case-sensitivity (keywords, variable identifiers...))<br>comparison (returns 3 values (i.e. inferior, equal or superior))<br>force garbage collection
+</blockquote>
+</li><li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>(lambda (a b) ...)</tt></td><td>anonymous function</td></tr>
+<tr><td><tt>(f a b ...) (apply f l)</tt></td><td>function call</td></tr>
+<tr><td><tt>(f)</tt></td><td>function call (with no parameter)</td></tr>
+<tr><td><tt>(define (f para1 para2) ...)</tt></td><td>function definition</td></tr>
+<tr><td><tt>(lambda x ...) or<a href="#2">(2)</a></tt></td><td>function definition (variable number of arguments)</td></tr>
+<tr><td><tt>no syntax needed<a href="#3">(3)</a></tt></td><td>function return value (function body is the result)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>function called when a function is not defined (in dynamic languages)<br>runtime inspecting the caller information<br>function composition<br>identity function
+</blockquote>
+</li><li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>call-with-current-continuation<a href="#4">(4)</a></tt></td><td>call-with-current-continuation</td></tr>
+<tr><td><tt>dynamic-wind</tt></td><td>exception (cleanup: code executed before leaving)</td></tr>
+<tr><td><tt>(if c ...)</tt></td><td>if_then</td></tr>
+<tr><td><tt>(if c b1 b2)</tt></td><td>if_then_else</td></tr>
+<tr><td><tt>(cond (c b1) (c2 b2) (else b3))</tt></td><td>if_then_else</td></tr>
+<tr><td><tt><pre>(case val
+   ((v1) ...)
+   ((v2) ...)
+   (else ...))</pre></tt></td><td>multiple selection (switch)</td></tr>
+<tr><td><tt>(begin ...)</tt></td><td>sequence</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>loop (for each value in a numeric range, 1 increment (see also the entries about ranges))<br>loop (for each value in a numeric range, 1 decrement)<br>loop (for each value in a numeric range, free increment)<br>loop (for &quot;a la C&quot; (while + initialisation))<br>breaking control flow (returning a value)<br>breaking control flow (goto (unconditional jump))<br>breaking control flow (continue / break)
+</blockquote>
+</li><li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
+Unknown: </p><blockquote>package scope<br>declare<br>import
+</blockquote>
+</li><li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>string-ref</tt></td><td>accessing n-th character</td></tr>
+<tr><td><tt>integer-&gt;char</tt></td><td>ascii to character</td></tr>
+<tr><td><tt>#\z</tt></td><td>character &quot;z&quot;</td></tr>
+<tr><td><tt>char-&gt;integer</tt></td><td>character to ascii</td></tr>
+<tr><td><tt>substring</tt></td><td>extract a substring</td></tr>
+<tr><td><tt>all strings allow multi-line strings</tt></td><td>multi-line</td></tr>
+<tr><td><tt>display</tt></td><td>simple print (on any objects)</td></tr>
+<tr><td><tt>write</tt></td><td>simple print (on any objects)</td></tr>
+<tr><td><tt>string-append</tt></td><td>string concatenation</td></tr>
+<tr><td><tt>equal?</tt></td><td>string equality &amp; inequality</td></tr>
+<tr><td><tt>string-length</tt></td><td>string size</td></tr>
+<tr><td><tt>&quot;...&quot;</tt></td><td>strings (with no interpolation of variables)</td></tr>
+<tr><td><tt>char-upcase / char-downcase</tt></td><td>upper / lower case character</td></tr>
+<tr><td><tt>string-upcase / string-downcase</tt></td><td>uppercase / lowercase / capitalized string</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>strings (with interpolation of variables)<br>strings (end-of-line (without writing the real CR or LF character))<br>convert something to a string (see also string interpolation)<br>serialize (marshalling)<br>unserialize (un-marshalling)<br>duplicate n times<br>locate a substring<br>locate a substring (starting at the end)
+</blockquote>
+</li><li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>#f</tt></td><td>false value</td></tr>
+<tr><td><tt>not<a href="#5">(5)</a></tt></td><td>logical not</td></tr>
+<tr><td><tt>or / and</tt></td><td>logical or / and (short circuit)</td></tr>
+<tr><td><tt>#t</tt></td><td>true value</td></tr>
+<tr><td><tt>anything not false</tt></td><td>true value</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>cons</tt></td><td>adding an element at the beginning (list cons) (return the new list (no side-effect))</td></tr>
+<tr><td><tt>cdr</tt></td><td>all but the first element</td></tr>
+<tr><td><tt>car</tt></td><td>first element</td></tr>
+<tr><td><tt>for-each</tt></td><td>for each element do something</td></tr>
+<tr><td><tt>member</tt></td><td>is an element in the list</td></tr>
+<tr><td><tt>memq memv</tt></td><td>is an element in the list</td></tr>
+<tr><td><tt>last</tt></td><td>last element</td></tr>
+<tr><td><tt>append</tt></td><td>list concatenation</td></tr>
+<tr><td><tt>&apos;(a b c)</tt></td><td>list constructor</td></tr>
+<tr><td><tt>list</tt></td><td>list constructor</td></tr>
+<tr><td><tt>length</tt></td><td>list size</td></tr>
+<tr><td><tt>list-ref / vector-ref</tt></td><td>list/array indexing</td></tr>
+<tr><td><tt>assoc</tt></td><td>lookup an element in a association list</td></tr>
+<tr><td><tt>assq</tt></td><td>lookup an element in a association list</td></tr>
+<tr><td><tt>assv</tt></td><td>lookup an element in a association list</td></tr>
+<tr><td><tt>reverse</tt></td><td>reverse</td></tr>
+<tr><td><tt>min / max</tt></td><td>smallest / biggest element</td></tr>
+<tr><td><tt>sort<a href="#6">(6)</a></tt></td><td>sort</td></tr>
+<tr><td><tt>map</tt></td><td>transform a list (or bag) in another one</td></tr>
+<tr><td><tt>map</tt></td><td>transform two lists in parallel</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>list flattening<br>adding an element at index<br>adding an element at the end<br>get the first element and remove it<br>get the last element and remove it<br>join a list of strings in a string using a glue string<br>iterate with index
+</blockquote>
+</li><li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>or</tt></td><td>optional value (null coalescing)</td></tr>
+<tr><td><tt>v</tt></td><td>optional value (value)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>tuple constructor<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (empty tuple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (1-uple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (using a tuple for a function call)<br>optional value (null value)<br>record (selector)<br>dictionary (constructor)<br>dictionary (access)<br>dictionary (has the key ?)<br>dictionary (remove by key)<br>dictionary (list of keys)<br>dictionary (list of values)<br>dictionary (merge)<br>range
+</blockquote>
+</li><li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>+ / - / * / /</tt></td><td>addition / subtraction / multiplication / division</td></tr>
+<tr><td><tt>expt</tt></td><td>exponentiation (power)</td></tr>
+<tr><td><tt>log</tt></td><td>logarithm (base e)</td></tr>
+<tr><td><tt>remainder</tt></td><td>modulo (modulo of -3 / 2 is -1)</td></tr>
+<tr><td><tt>-</tt></td><td>negation</td></tr>
+<tr><td><tt>1000., 1E3</tt></td><td>numbers syntax (floating point)</td></tr>
+<tr><td><tt>#b1, #o7, #xf</tt></td><td>numbers syntax (integers in base 2, octal and hexadecimal)</td></tr>
+<tr><td><tt>1000</tt></td><td>numbers syntax (integers)</td></tr>
+<tr><td><tt>sqrt / exp / abs</tt></td><td>square root / e-exponential / absolute value</td></tr>
+<tr><td><tt>sin / cos / tan</tt></td><td>trigonometry (basic)</td></tr>
+<tr><td><tt>asin / acos / atan<a href="#7">(7)</a></tt></td><td>trigonometry (inverse)</td></tr>
+<tr><td><tt>truncate / round / floor / ceiling</tt></td><td>truncate / round / floor / ceil</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>random (random number)<br>random (seed the pseudo random generator)<br>logarithm (base 10)<br>bitwise operators
+</blockquote>
+</li>

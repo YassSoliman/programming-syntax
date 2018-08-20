@@ -1,0 +1,178 @@
+
+<li><a href="categories.html">Category</a>: Object Oriented, Dynamically typed, Statically typed<p>
+</p></li><li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>{ ... }</tt></td><td>block (grouping statements, especially when statements are not expressions)</td></tr>
+<tr><td><tt>/* ... */</tt></td><td>commenting (non nestable)</td></tr>
+<tr><td><tt>//</tt></td><td>commenting (until end of line)</td></tr>
+<tr><td><tt>&lt; &gt; &lt;= &gt;=</tt></td><td>comparison</td></tr>
+<tr><td><tt>min / max</tt></td><td>comparison (min / max (binary or more))</td></tr>
+<tr><td><tt>equal</tt></td><td>equality / inequality (deep)</td></tr>
+<tr><td><tt>== !=</tt></td><td>equality / inequality (shallow)</td></tr>
+<tr><td><tt>gc</tt></td><td>force garbage collection</td></tr>
+<tr><td><tt>( ... )</tt></td><td>grouping expressions</td></tr>
+<tr><td><tt>__LINE__ __FILE__</tt></td><td>information about the current line and file</td></tr>
+<tr><td><tt>compile_string</tt></td><td>runtime evaluation</td></tr>
+<tr><td><tt>case-sensitive</tt></td><td>tokens (case-sensitivity (keywords, variable identifiers...))</td></tr>
+<tr><td><tt>CamelCase for modules and classes, ALLCAPS for macros, underscores for methods, constants and variables</tt></td><td>tokens (what is the standard way for <a href="http://c2.com/cgi/wiki?CapitalizationRules">scrunching together multiple words</a>)</td></tr>
+<tr><td><tt>=</tt></td><td>variable assignment or declaration (assignment)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>documentation comment<br>tokens (variable identifier regexp)<br>breaking lines (useful when end-of-line and/or indentation has a special meaning)<br>comparison (returns 3 values (i.e. inferior, equal or superior))
+</blockquote>
+</li><li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>lambda(typ1 para1, typ2, para2, ...) { ... };</tt></td><td>anonymous function</td></tr>
+<tr><td><tt>f(a,b,...)</tt></td><td>function call</td></tr>
+<tr><td><tt>f()</tt></td><td>function call (with no parameter)</td></tr>
+<tr><td><tt>typ0 f(typ1 para1, typ2 para2, ...) { ... }</tt></td><td>function definition</td></tr>
+<tr><td><tt>void f(typ1 para1, typ2 para2, ...) { ... }</tt></td><td>function definition (procedures)</td></tr>
+<tr><td><tt>return<a href="#1">(1)</a></tt></td><td>function return value (breaks the control flow)</td></tr>
+<tr><td><tt>backtrace</tt></td><td>runtime inspecting the caller information</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>function called when a function is not defined (in dynamic languages)
+</blockquote>
+</li><li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>continue / break</tt></td><td>breaking control flow (continue / break)</td></tr>
+<tr><td><tt>return<a href="#1">(1)</a></tt></td><td>breaking control flow (returning a value)</td></tr>
+<tr><td><tt>catch(...) or catch { ... };</tt></td><td>exception (catching)</td></tr>
+<tr><td><tt>throw</tt></td><td>exception (throwing)</td></tr>
+<tr><td><tt>if (c) ...</tt></td><td>if_then</td></tr>
+<tr><td><tt>if (c) b1 else b2</tt></td><td>if_then_else</td></tr>
+<tr><td><tt>do ... while (!c)</tt></td><td>loop (do something until condition)</td></tr>
+<tr><td><tt>for</tt></td><td>loop (for &quot;a la C&quot; (while + initialisation))</td></tr>
+<tr><td><tt>for (int i = 1; i &lt;= 10; i += 2) ...</tt></td><td>loop (for each value in a numeric range, free increment)</td></tr>
+<tr><td><tt>while (c) ...</tt></td><td>loop (while condition do something)</td></tr>
+<tr><td><tt><pre>switch (val) { 
+   case v1: ...; break; 
+   case v2: case v3: ...; break; 
+   default: ...;
+ }</pre></tt></td><td>multiple selection (switch)</td></tr>
+<tr><td><tt>,</tt></td><td>sequence</td></tr>
+<tr><td><tt>;</tt></td><td>sequence</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>loop (forever loop)<br>loop (for each value in a numeric range, 1 increment (see also the entries about ranges))<br>loop (for each value in a numeric range, 1 decrement)<br>breaking control flow (goto (unconditional jump))
+</blockquote>
+</li><li><a href="../syntax-across-languages/Tps.html">Types</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>t v</tt></td><td>annotation (or variable declaration)</td></tr>
+<tr><td><tt>(t) e</tt></td><td>cast (computed conversion (calls an internal or a user-defined function))</td></tr>
+<tr><td><tt>[t] e</tt></td><td>cast (downcast (need runtime checking))</td></tr>
+<tr><td><tt>[t] e</tt></td><td>cast (upcast)</td></tr>
+<tr><td><tt>typedef t n</tt></td><td>declaration</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>mutability, constness (type of a mutable value)<br>mutability, constness (type of a constant value)
+</blockquote>
+</li><li><a href="../syntax-across-languages/bjcrntRfl.html">Object Oriented &amp; Reflexivity</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>class</tt></td><td>class declaration</td></tr>
+<tr><td><tt>this</tt></td><td>current instance</td></tr>
+<tr><td><tt>object_program</tt></td><td>get the type/class corresponding to an object/instance/value</td></tr>
+<tr><td><tt>object-&gt;method</tt></td><td>has the method</td></tr>
+<tr><td><tt>inherit</tt></td><td>inheritance</td></tr>
+<tr><td><tt>destroy</tt></td><td>manually call an object&apos;s destructor</td></tr>
+<tr><td><tt>object-&gt;method(para)</tt></td><td>method invocation</td></tr>
+<tr><td><tt>object[&quot;method&quot;](para)</tt></td><td>method invocation</td></tr>
+<tr><td><tt>object-&gt;method()</tt></td><td>method invocation (with no parameter)</td></tr>
+<tr><td><tt>object[&quot;method&quot;]()</tt></td><td>method invocation (with no parameter)</td></tr>
+<tr><td><tt>indices</tt></td><td>methods available</td></tr>
+<tr><td><tt>class_name(...)</tt></td><td>object creation</td></tr>
+<tr><td><tt>Program.inherits or Program.implements</tt></td><td>testing class membership</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>object cloning<br>accessing parent method
+</blockquote>
+</li><li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>attached to each name (public, private...)</tt></td><td>declare (selective export)</td></tr>
+<tr><td><tt>import</tt></td><td>import (everything into current namespace)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>package scope
+</blockquote>
+</li><li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>s[n]</tt></td><td>accessing n-th character</td></tr>
+<tr><td><tt>&apos;z&apos;</tt></td><td>character &quot;z&quot;</td></tr>
+<tr><td><tt>(string) e</tt></td><td>convert something to a string (see also string interpolation)</td></tr>
+<tr><td><tt>*</tt></td><td>duplicate n times</td></tr>
+<tr><td><tt>s[n..m]</tt></td><td>extract a substring</td></tr>
+<tr><td><tt>search</tt></td><td>locate a substring</td></tr>
+<tr><td><tt>write</tt></td><td>simple print (on strings)</td></tr>
+<tr><td><tt>write</tt></td><td>simple print (printf-like)</td></tr>
+<tr><td><tt>sprintf</tt></td><td>sprintf-like</td></tr>
+<tr><td><tt>+</tt></td><td>string concatenation</td></tr>
+<tr><td><tt>== !=(Vimscript: whether or not == and != are case-sensitive depends on user settings.)</tt></td><td>string equality &amp; inequality</td></tr>
+<tr><td><tt>sizeof</tt></td><td>string size</td></tr>
+<tr><td><tt>&quot;\n&quot;</tt></td><td>strings (end-of-line (without writing the real CR or LF character))</td></tr>
+<tr><td><tt>&quot;...&quot;</tt></td><td>strings (with no interpolation of variables)</td></tr>
+<tr><td><tt>string</tt></td><td>type name</td></tr>
+<tr><td><tt>upper_case / lower_case</tt></td><td>upper / lower case character</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>strings (with interpolation of variables)<br>multi-line<br>serialize (marshalling)<br>unserialize (un-marshalling)<br>uppercase / lowercase / capitalized string<br>ascii to character<br>character to ascii<br>locate a substring (starting at the end)
+</blockquote>
+</li><li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>0<a href="#2">(2)</a></tt></td><td>false value</td></tr>
+<tr><td><tt>!</tt></td><td>logical not</td></tr>
+<tr><td><tt>|| / &amp;&amp;</tt></td><td>logical or / and (short circuit)</td></tr>
+<tr><td><tt>anything not false</tt></td><td>true value</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>reduce<a href="#3">(3)</a></tt></td><td>f(... f(f(init, e1), e2) ..., en)</td></tr>
+<tr><td><tt>rreduce</tt></td><td>f(e1, f(e2, ... f(en, init) ...))</td></tr>
+<tr><td><tt>search</tt></td><td>find an element</td></tr>
+<tr><td><tt>foreach</tt></td><td>for each element do something</td></tr>
+<tr><td><tt>has_value</tt></td><td>is an element in the list</td></tr>
+<tr><td><tt>foreach(l; typ0 i; typ1 v) { ... }</tt></td><td>iterate with index</td></tr>
+<tr><td><tt>l * s</tt></td><td>join a list of strings in a string using a glue string</td></tr>
+<tr><td><tt>filter</tt></td><td>keep elements (matching)</td></tr>
+<tr><td><tt>a[-1]</tt></td><td>last element</td></tr>
+<tr><td><tt>+</tt></td><td>list concatenation</td></tr>
+<tr><td><tt>({ a, b, c })</tt></td><td>list constructor</td></tr>
+<tr><td><tt>flatten</tt></td><td>list flattening (recursive)</td></tr>
+<tr><td><tt>sizeof</tt></td><td>list size</td></tr>
+<tr><td><tt>a[i]</tt></td><td>list/array indexing</td></tr>
+<tr><td><tt>uniq</tt></td><td>remove duplicates</td></tr>
+<tr><td><tt>uniq2</tt></td><td>remove duplicates</td></tr>
+<tr><td><tt>reverse</tt></td><td>reverse</td></tr>
+<tr><td><tt>min / max</tt></td><td>smallest / biggest element</td></tr>
+<tr><td><tt>sort<a href="#4">(4)</a></tt></td><td>sort</td></tr>
+<tr><td><tt>map</tt></td><td>transform a list (or bag) in another one</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>type name<br>adding an element at the beginning (list cons)<br>adding an element at index<br>adding an element at the end<br>first element<br>all but the first element<br>get the first element and remove it<br>get the last element and remove it
+</blockquote>
+</li><li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>h[&quot;k&quot;] or h-&gt;k</tt></td><td>dictionary (access: read/write)</td></tr>
+<tr><td><tt>([ a:b, c:d ])</tt></td><td>dictionary (constructor)</td></tr>
+<tr><td><tt>h[k]</tt></td><td>dictionary (has the key ?)</td></tr>
+<tr><td><tt>indices</tt></td><td>dictionary (list of keys)</td></tr>
+<tr><td><tt>values</tt></td><td>dictionary (list of values)</td></tr>
+<tr><td><tt>m_delete</tt></td><td>dictionary (remove by key)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>tuple type<br>tuple constructor<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (empty tuple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (1-uple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (using a tuple for a function call)<br>reference (pointer) (creation)<br>reference (pointer) (dereference)<br>optional value (null value)<br>optional value (value)<br>optional value (null coalescing)<br>record (type declaration)<br>record (selector)<br>union type declaration<br>enumerated type declaration<br>dictionary (type name)<br>dictionary (merge)<br>range
+</blockquote>
+</li><li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>&amp; / | / ^</tt></td><td>bitwise operators (and / or / xor)</td></tr>
+<tr><td><tt>~</tt></td><td>bitwise operators (bitwise inversion)</td></tr>
+<tr><td><tt>&lt;&lt; / &gt;&gt;</tt></td><td>bitwise operators (left shift / right shift / unsigned right shift)</td></tr>
+<tr><td><tt>pow</tt></td><td>exponentiation (power)</td></tr>
+<tr><td><tt>log</tt></td><td>logarithm (base e)</td></tr>
+<tr><td><tt>%</tt></td><td>modulo (modulo of -3 / 2 is 1)</td></tr>
+<tr><td><tt>-</tt></td><td>negation</td></tr>
+<tr><td><tt>1000.0, 1E3</tt></td><td>numbers syntax (floating point)</td></tr>
+<tr><td><tt>0b1, 07, 0xf<a href="#5">(5)</a></tt></td><td>numbers syntax (integers in base 2, octal and hexadecimal)</td></tr>
+<tr><td><tt>1000</tt></td><td>numbers syntax (integers)</td></tr>
+<tr><td><tt>sqrt / /</tt></td><td>square root / e-exponential / absolute value</td></tr>
+<tr><td><tt>sin / cos / tan</tt></td><td>trigonometry (basic)</td></tr>
+<tr><td><tt>asin / acos / atan<a href="#6">(6)</a></tt></td><td>trigonometry (inverse)</td></tr>
+<tr><td><tt>int / round / floor / ceil</tt></td><td>truncate / round / floor / ceil</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>type name<br>addition / subtraction / multiplication / division<br>random (random number)<br>random (seed the pseudo random generator)<br>operator priorities and associativities<br>logarithm (base 10)
+</blockquote>
+</li><li><a href="../syntax-across-languages/Thrds.html">Threads</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>object t=Thread.Thread(f)</tt></td><td>thread creation</td></tr>
+</tbody></table></p><p>
+</p></li>

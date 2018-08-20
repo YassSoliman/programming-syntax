@@ -1,0 +1,159 @@
+
+<li><a href="categories.html">Category</a>: Dynamically typed<p>
+</p></li><li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>nothing needed</tt></td><td>breaking lines (useful when end-of-line and/or indentation has a special meaning)</td></tr>
+<tr><td><tt>#</tt></td><td>commenting (until end of line)</td></tr>
+<tr><td><tt>&lt; &gt; &lt;= &gt;=</tt></td><td>comparison</td></tr>
+<tr><td><tt>min / max</tt></td><td>comparison (min / max (binary or more))</td></tr>
+<tr><td><tt>= !=</tt></td><td>equality / inequality (deep)</td></tr>
+<tr><td><tt>= &lt;&gt;</tt></td><td>equality / inequality (shallow)</td></tr>
+<tr><td><tt>gc</tt></td><td>force garbage collection</td></tr>
+<tr><td><tt>( ... )</tt></td><td>grouping expressions</td></tr>
+<tr><td><tt>case-sensitive</tt></td><td>tokens (case-sensitivity (keywords, variable identifiers...))</td></tr>
+<tr><td><tt>[_a-zA-Z][_a-zA-Z0-9]*</tt></td><td>tokens (variable identifier regexp)</td></tr>
+<tr><td><tt>proc() .. end proc</tt></td><td>use a block as a return value (when statements are not expressions)</td></tr>
+<tr><td><tt>:=</tt></td><td>variable assignment or declaration (assignment)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>information about the current line and file<br>tokens (what is the standard way for <a href="http://c2.com/cgi/wiki?CapitalizationRules">scrunching together multiple words</a>)<br>comparison (returns 3 values (i.e. inferior, equal or superior))<br>runtime evaluation
+</blockquote>
+</li><li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>(a, b) -&gt; ...</tt></td><td>anonymous function</td></tr>
+<tr><td><tt>f(a,b,...)</tt></td><td>function call</td></tr>
+<tr><td><tt>f()</tt></td><td>function call (with no parameter)</td></tr>
+<tr><td><tt>@</tt></td><td>function composition</td></tr>
+<tr><td><tt>f := (para1, para2, ...) -&gt; ...</tt></td><td>function definition</td></tr>
+<tr><td><tt>f := proc(para1, para2, ...) ... end proc</tt></td><td>function definition (procedures)</td></tr>
+<tr><td><tt>return<a href="#1">(1)</a></tt></td><td>function return value (breaks the control flow)</td></tr>
+<tr><td><tt>no syntax needed<a href="#2">(2)</a></tt></td><td>function return value (function body is the result)</td></tr>
+<tr><td><tt>where(2)</tt></td><td>runtime inspecting the caller information</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>function called when a function is not defined (in dynamic languages)
+</blockquote>
+</li><li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>next / break<a href="#3">(3)</a></tt></td><td>breaking control flow (continue / break)</td></tr>
+<tr><td><tt>return<a href="#1">(1)</a></tt></td><td>breaking control flow (returning a value)</td></tr>
+<tr><td><tt>try a catch exn: ... end try</tt></td><td>exception (catching)</td></tr>
+<tr><td><tt>finally</tt></td><td>exception (cleanup: code executed before leaving)</td></tr>
+<tr><td><tt>error</tt></td><td>exception (throwing)</td></tr>
+<tr><td><tt>if c then ... end if</tt></td><td>if_then</td></tr>
+<tr><td><tt>if c then ... fi</tt></td><td>if_then</td></tr>
+<tr><td><tt>if c then b1 elif c2 then b2 else b3 end if</tt></td><td>if_then_else</td></tr>
+<tr><td><tt>for i from 10 to 1 by -1 do ... end do</tt></td><td>loop (for each value in a numeric range, 1 decrement)</td></tr>
+<tr><td><tt>for i from 1 to 10 do ... end do</tt></td><td>loop (for each value in a numeric range, 1 increment (see also the entries about ranges))</td></tr>
+<tr><td><tt>for i from 1 to 10 by 2 do ... end do</tt></td><td>loop (for each value in a numeric range, free increment)</td></tr>
+<tr><td><tt>while c do ... end do</tt></td><td>loop (while condition do something)</td></tr>
+<tr><td><tt>;</tt></td><td>sequence</td></tr>
+<tr><td><tt>:</tt></td><td>sequence</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>p = module() ... end module</tt></td><td>declare</td></tr>
+<tr><td><tt>p = module() export name1, name2, ...; ... end module</tt></td><td>declare (selective export)</td></tr>
+<tr><td><tt>with(p)</tt></td><td>import (package (ie. load the package))</td></tr>
+<tr><td><tt>with(p[name1, name2,])</tt></td><td>import (selectively)</td></tr>
+<tr><td><tt>:-</tt></td><td>package scope</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>s[n]</tt></td><td>accessing n-th character</td></tr>
+<tr><td><tt>StringTools[Char]</tt></td><td>ascii to character</td></tr>
+<tr><td><tt>&quot;z&quot;</tt></td><td>character &quot;z&quot;</td></tr>
+<tr><td><tt>StringTools[Ord]</tt></td><td>character to ascii</td></tr>
+<tr><td><tt>convert(e,string)</tt></td><td>convert something to a string (see also string interpolation)</td></tr>
+<tr><td><tt>cat(s$n)</tt></td><td>duplicate n times</td></tr>
+<tr><td><tt>s[n..m]</tt></td><td>extract a substring</td></tr>
+<tr><td><tt>StringTools[Search]</tt></td><td>locate a substring</td></tr>
+<tr><td><tt>StringTools[SearchAll](s,p)[-1]</tt></td><td>locate a substring (starting at the end)</td></tr>
+<tr><td><tt>all strings allow multi-line strings</tt></td><td>multi-line</td></tr>
+<tr><td><tt>print</tt></td><td>simple print (on strings)</td></tr>
+<tr><td><tt>printf</tt></td><td>simple print (printf-like)</td></tr>
+<tr><td><tt>sprintf</tt></td><td>sprintf-like</td></tr>
+<tr><td><tt>||</tt></td><td>string concatenation</td></tr>
+<tr><td><tt>cat</tt></td><td>string concatenation</td></tr>
+<tr><td><tt>= !=</tt></td><td>string equality &amp; inequality</td></tr>
+<tr><td><tt>length</tt></td><td>string size</td></tr>
+<tr><td><tt>&quot;\n&quot;</tt></td><td>strings (end-of-line (without writing the real CR or LF character))</td></tr>
+<tr><td><tt>&quot;...&quot;</tt></td><td>strings (with no interpolation of variables)</td></tr>
+<tr><td><tt>string</tt></td><td>type name</td></tr>
+<tr><td><tt>StringTools[UpperCase] / StringTools[LowerCase] / StringTools[Capitalize]</tt></td><td>uppercase / lowercase / capitalized string</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>serialize (marshalling)<br>unserialize (un-marshalling)<br>upper / lower case character
+</blockquote>
+</li><li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>false</tt></td><td>false value</td></tr>
+<tr><td><tt>FAIL</tt></td><td>false value</td></tr>
+<tr><td><tt>not<a href="#4">(4)</a></tt></td><td>logical not</td></tr>
+<tr><td><tt>or / and</tt></td><td>logical or / and (non short circuit (always evaluates both arguments))</td></tr>
+<tr><td><tt>true</tt></td><td>true value</td></tr>
+<tr><td><tt>boolean</tt></td><td>type name</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>[e l[]]</tt></td><td>adding an element at the beginning (list cons) (return the new list (no side-effect))</td></tr>
+<tr><td><tt>foldl</tt></td><td>f(... f(f(init, e1), e2) ..., en)</td></tr>
+<tr><td><tt>foldr</tt></td><td>f(e1, f(e2, ... f(en, init) ...))</td></tr>
+<tr><td><tt>ListTools[Search]</tt></td><td>find an element</td></tr>
+<tr><td><tt>for v in l ...</tt></td><td>for each element do something</td></tr>
+<tr><td><tt>ormap</tt></td><td>is the predicate true for an element</td></tr>
+<tr><td><tt>andmap</tt></td><td>is the predicate true for every element</td></tr>
+<tr><td><tt>ListTools[Join]</tt></td><td>join a list of strings in a string using a glue string</td></tr>
+<tr><td><tt>select</tt></td><td>keep elements (matching)</td></tr>
+<tr><td><tt>,</tt></td><td>list concatenation</td></tr>
+<tr><td><tt>[ a, b, c ]<a href="#5">(5)</a></tt></td><td>list constructor</td></tr>
+<tr><td><tt>ListTools[FlattenOnce]</tt></td><td>list flattening (one level depth)</td></tr>
+<tr><td><tt>ListTools[Flatten]</tt></td><td>list flattening (recursive)</td></tr>
+<tr><td><tt>zip</tt></td><td>list of couples from 2 lists</td></tr>
+<tr><td><tt>nops</tt></td><td>list size</td></tr>
+<tr><td><tt>a[i]</tt></td><td>list/array indexing</td></tr>
+<tr><td><tt>a[e]</tt></td><td>lookup an element in a association list</td></tr>
+<tr><td><tt>ListTools[MakeUnique]</tt></td><td>remove duplicates</td></tr>
+<tr><td><tt>ListTools[Reverse]</tt></td><td>reverse</td></tr>
+<tr><td><tt>min / max</tt></td><td>smallest / biggest element</td></tr>
+<tr><td><tt>sort<a href="#6">(6)</a></tt></td><td>sort</td></tr>
+<tr><td><tt>ListTools[Split]</tt></td><td>split a list (into sublists delimited by elements matching a predicate)</td></tr>
+<tr><td><tt>map</tt></td><td>transform a list (or bag) in another one</td></tr>
+<tr><td><tt>Zip</tt></td><td>transform two lists in parallel</td></tr>
+<tr><td><tt>list</tt></td><td>type name</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>h[k]</tt></td><td>dictionary (access: read/write)</td></tr>
+<tr><td><tt>table([a=b, c=d])</tt></td><td>dictionary (constructor)</td></tr>
+<tr><td><tt>keys</tt></td><td>dictionary (list of keys)</td></tr>
+<tr><td><tt>entries</tt></td><td>dictionary (list of values)</td></tr>
+<tr><td><tt>table</tt></td><td>dictionary (type name)</td></tr>
+<tr><td><tt>NULL</tt></td><td>optional value (null value)</td></tr>
+<tr><td><tt>r[field]</tt></td><td>record (selector)</td></tr>
+<tr><td><tt>&apos;&apos;</tt></td><td>reference (pointer) (creation)</td></tr>
+<tr><td><tt>eval</tt></td><td>reference (pointer) (dereference)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>tuple constructor<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (empty tuple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (1-uple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (using a tuple for a function call)<br>optional value (value)<br>optional value (null coalescing)<br>dictionary (remove by key)<br>dictionary (merge)
+</blockquote>
+</li><li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>+ / - / * / /</tt></td><td>addition / subtraction / multiplication / division</td></tr>
+<tr><td><tt>**, ^</tt></td><td>exponentiation (power)</td></tr>
+<tr><td><tt>log[10]</tt></td><td>logarithm (base 10)</td></tr>
+<tr><td><tt>ln</tt></td><td>logarithm (base e)</td></tr>
+<tr><td><tt>log</tt></td><td>logarithm (base e)</td></tr>
+<tr><td><tt>-</tt></td><td>negation</td></tr>
+<tr><td><tt>1000., 1E3</tt></td><td>numbers syntax (floating point)</td></tr>
+<tr><td><tt>1000</tt></td><td>numbers syntax (integers)</td></tr>
+<tr><td><tt>mathematical</tt></td><td>operator priorities and associativities (addition vs multiplication)</td></tr>
+<tr><td><tt>mathematical</tt></td><td>operator priorities and associativities (exponentiation vs negation (is -3^2 equal to 9 or -9))</td></tr>
+<tr><td><tt>rand</tt></td><td>random (random number)</td></tr>
+<tr><td><tt>RandomTools[MersenneTwister][SetState]</tt></td><td>random (seed the pseudo random generator)</td></tr>
+<tr><td><tt>sqrt / exp / abs</tt></td><td>square root / e-exponential / absolute value</td></tr>
+<tr><td><tt>sin / cos / tan</tt></td><td>trigonometry (basic)</td></tr>
+<tr><td><tt>arcsin / arccos / arctan</tt></td><td>trigonometry (inverse)</td></tr>
+<tr><td><tt>trunc / round / floor / ceil</tt></td><td>truncate / round / floor / ceil</td></tr>
+<tr><td><tt>float</tt></td><td>type name (floating point)</td></tr>
+<tr><td><tt>integer</tt></td><td>type name (integers)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>numbers syntax (integers in base 2, octal and hexadecimal)<br>modulo<br>bitwise operators
+</blockquote>
+</li>

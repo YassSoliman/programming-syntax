@@ -2,8 +2,16 @@
         <h1>Syntax difference between languages</h1>
 
         <form action="/api" method="GET" accept-charset="utf-8">
-            <input type="text" name="language1"/>
-            <input type="text" name="language2"/>
+            <select name="language1">
+                <% for(var i=0; i<titles.length-4; i++){%>
+                    <option value="<%- titles[i] %>"><%- titles[i] %></option>
+                <% } %>
+            </select>
+            <select name="language2">
+                <% for(var i=0; i<titles.length-4; i++){%>
+                    <option value="<%- titles[i] %>"><%- titles[i] %></option>
+                <% } %>
+            </select>
             <input type="submit"/>            
         </form>
 <% include partials/footer %>

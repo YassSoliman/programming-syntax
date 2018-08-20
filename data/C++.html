@@ -1,0 +1,191 @@
+
+<li><a href="categories.html">Category</a>: Object Oriented, Statically typed<p>
+</p></li><li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>{ ... }<a href="#1">(1)</a></tt></td><td>block (grouping statements, especially when statements are not expressions)</td></tr>
+<tr><td><tt>nothing needed</tt></td><td>breaking lines (useful when end-of-line and/or indentation has a special meaning)</td></tr>
+<tr><td><tt>/* ... */</tt></td><td>commenting (non nestable)</td></tr>
+<tr><td><tt>//</tt></td><td>commenting (until end of line)</td></tr>
+<tr><td><tt>&lt; &gt; &lt;= &gt;=</tt></td><td>comparison</td></tr>
+<tr><td><tt>min / max</tt></td><td>comparison (min / max (binary or more))</td></tr>
+<tr><td><tt>== !=</tt></td><td>equality / inequality (deep)</td></tr>
+<tr><td><tt>== !=</tt></td><td>equality / inequality (shallow)</td></tr>
+<tr><td><tt>( ... )</tt></td><td>grouping expressions</td></tr>
+<tr><td><tt>__LINE__ __FILE__</tt></td><td>information about the current line and file</td></tr>
+<tr><td><tt>case-sensitive</tt></td><td>tokens (case-sensitivity (keywords, variable identifiers...))</td></tr>
+<tr><td><tt>[_a-zA-Z][_a-zA-Z0-9]*</tt></td><td>tokens (variable identifier regexp)</td></tr>
+<tr><td><tt>usually underscores</tt></td><td>tokens (what is the standard way for <a href="http://c2.com/cgi/wiki?CapitalizationRules">scrunching together multiple words</a>)</td></tr>
+<tr><td><tt>=</tt></td><td>variable assignment or declaration (assignment)</td></tr>
+<tr><td><tt>t v</tt></td><td>variable assignment or declaration (declaration)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>documentation comment
+</blockquote>
+</li><li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>f(a,b,...)</tt></td><td>function call</td></tr>
+<tr><td><tt>f()</tt></td><td>function call (with no parameter)</td></tr>
+<tr><td><tt>typ0 f(typ1 para1, typ2 para2, ...) { ... }</tt></td><td>function definition</td></tr>
+<tr><td><tt>void f(typ1 para1, typ2 para2, ...) { ... }</tt></td><td>function definition (procedures)</td></tr>
+<tr><td><tt>one can use overloading on different number of arguments</tt></td><td>function definition (variable number of arguments)</td></tr>
+<tr><td><tt>return<a href="#2">(2)</a></tt></td><td>function return value (breaks the control flow)</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>continue / break</tt></td><td>breaking control flow (continue / break)</td></tr>
+<tr><td><tt>goto</tt></td><td>breaking control flow (goto (unconditional jump))</td></tr>
+<tr><td><tt>return<a href="#2">(2)</a></tt></td><td>breaking control flow (returning a value)</td></tr>
+<tr><td><tt>try a catch (exn) ...</tt></td><td>exception (catching)</td></tr>
+<tr><td><tt>throw</tt></td><td>exception (throwing)</td></tr>
+<tr><td><tt>if (c) ...</tt></td><td>if_then</td></tr>
+<tr><td><tt>if (c) b1 else b2</tt></td><td>if_then_else</td></tr>
+<tr><td><tt>c ? b1 : b2</tt></td><td>if_then_else</td></tr>
+<tr><td><tt>do ... while (!c)</tt></td><td>loop (do something until condition)</td></tr>
+<tr><td><tt>for</tt></td><td>loop (for &quot;a la C&quot; (while + initialisation))</td></tr>
+<tr><td><tt>for (int i = 10; i &gt;= 1; i--) ...</tt></td><td>loop (for each value in a numeric range, 1 decrement)</td></tr>
+<tr><td><tt>for (int i = 1; i &lt;= 10; i++) ...</tt></td><td>loop (for each value in a numeric range, 1 increment (see also the entries about ranges))</td></tr>
+<tr><td><tt>for (int i = 1; i &lt;= 10; i += 2) ...</tt></td><td>loop (for each value in a numeric range, free increment)</td></tr>
+<tr><td><tt>while (c) ...</tt></td><td>loop (while condition do something)</td></tr>
+<tr><td><tt><pre>switch (val) { 
+   case v1: ...; break; 
+   case v2: case v3: ...; break; 
+   default: ...;
+ }</pre></tt></td><td>multiple selection (switch)</td></tr>
+<tr><td><tt>,</tt></td><td>sequence</td></tr>
+<tr><td><tt>;</tt></td><td>sequence</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/Tps.html">Types</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>t v</tt></td><td>annotation (or variable declaration)</td></tr>
+<tr><td><tt>(t) e</tt></td><td>cast (computed conversion (calls an internal or a user-defined function))</td></tr>
+<tr><td><tt>t(e)</tt></td><td>cast (computed conversion (calls an internal or a user-defined function))</td></tr>
+<tr><td><tt>dynamic_cast&lt;t&gt;(e)</tt></td><td>cast (downcast (need runtime checking))</td></tr>
+<tr><td><tt>(t) e</tt></td><td>cast (upcast)</td></tr>
+<tr><td><tt>static_cast&lt;t&gt;(e)</tt></td><td>cast (upcast)</td></tr>
+<tr><td><tt>typedef t n</tt></td><td>declaration</td></tr>
+<tr><td><tt>const T</tt></td><td>mutability, constness (type of a constant value)</td></tr>
+<tr><td><tt>mutability is the default</tt></td><td>mutability, constness (type of a mutable value)</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/bjcrntRfl.html">Object Oriented &amp; Reflexivity</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>class</tt></td><td>class declaration</td></tr>
+<tr><td><tt>struct</tt></td><td>class declaration</td></tr>
+<tr><td><tt>this</tt></td><td>current instance</td></tr>
+<tr><td><tt>typeid</tt></td><td>get the type/class corresponding to an object/instance/value</td></tr>
+<tr><td><tt>class child : parent</tt></td><td>inheritance</td></tr>
+<tr><td><tt>delete</tt></td><td>manually call an object&apos;s destructor</td></tr>
+<tr><td><tt>object.method(para)</tt></td><td>method invocation</td></tr>
+<tr><td><tt>object-&gt;method(para)</tt></td><td>method invocation</td></tr>
+<tr><td><tt>object.method()</tt></td><td>method invocation (with no parameter)</td></tr>
+<tr><td><tt>o2 = o<a href="#3">(3)</a></tt></td><td>object cloning</td></tr>
+<tr><td><tt>new class_name(...)</tt></td><td>object creation</td></tr>
+<tr><td><tt>class_name v(...)</tt></td><td>object creation</td></tr>
+<tr><td><tt>dynamic_cast</tt></td><td>testing class membership</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>namespace p { ... }</tt></td><td>declare</td></tr>
+<tr><td><tt>using namespace p;</tt></td><td>import (everything into current namespace)</td></tr>
+<tr><td><tt>using p::name1; using p::name2; ...</tt></td><td>import (selectively)</td></tr>
+<tr><td><tt>::</tt></td><td>package scope</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>s[n]</tt></td><td>accessing n-th character</td></tr>
+<tr><td><tt>at<a href="#4">(4)</a></tt></td><td>accessing n-th character</td></tr>
+<tr><td><tt>(char) c</tt></td><td>ascii to character</td></tr>
+<tr><td><tt>&apos;z&apos;</tt></td><td>character &quot;z&quot;</td></tr>
+<tr><td><tt>(int) c</tt></td><td>character to ascii</td></tr>
+<tr><td><tt>char</tt></td><td>character type name</td></tr>
+<tr><td><tt>substr</tt></td><td>extract a substring</td></tr>
+<tr><td><tt>find</tt></td><td>locate a substring</td></tr>
+<tr><td><tt>rfind</tt></td><td>locate a substring (starting at the end)</td></tr>
+<tr><td><tt>printf</tt></td><td>simple print (printf-like)</td></tr>
+<tr><td><tt>sprintf</tt></td><td>sprintf-like</td></tr>
+<tr><td><tt>+</tt></td><td>string concatenation</td></tr>
+<tr><td><tt>== !=</tt></td><td>string equality &amp; inequality</td></tr>
+<tr><td><tt>length</tt></td><td>string size</td></tr>
+<tr><td><tt>size</tt></td><td>string size</td></tr>
+<tr><td><tt>&quot;\n&quot;</tt></td><td>strings (end-of-line (without writing the real CR or LF character))</td></tr>
+<tr><td><tt>&quot;...&quot;</tt></td><td>strings (with no interpolation of variables)</td></tr>
+<tr><td><tt>char const[]</tt></td><td>type name</td></tr>
+<tr><td><tt>string</tt></td><td>type name</td></tr>
+<tr><td><tt>toupper / tolower</tt></td><td>upper / lower case character</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>false</tt></td><td>false value</td></tr>
+<tr><td><tt>NULL</tt></td><td>false value</td></tr>
+<tr><td><tt>0<a href="#5">(5)</a></tt></td><td>false value</td></tr>
+<tr><td><tt>&apos;\0&apos;</tt></td><td>false value</td></tr>
+<tr><td><tt>!</tt></td><td>logical not</td></tr>
+<tr><td><tt>|| / &amp;&amp;</tt></td><td>logical or / and (short circuit)</td></tr>
+<tr><td><tt>true</tt></td><td>true value</td></tr>
+<tr><td><tt>anything not false</tt></td><td>true value</td></tr>
+<tr><td><tt>bool</tt></td><td>type name</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>push_front</tt></td><td>adding an element at the beginning (list cons) (side-effect)</td></tr>
+<tr><td><tt>push_back</tt></td><td>adding an element at the end (side-effect)</td></tr>
+<tr><td><tt>find</tt></td><td>find an element</td></tr>
+<tr><td><tt>find_if</tt></td><td>find an element</td></tr>
+<tr><td><tt>begin</tt></td><td>first element (iterator)</td></tr>
+<tr><td><tt>for_each</tt></td><td>for each element do something</td></tr>
+<tr><td><tt>{ a, b, c }<a href="#6">(6)</a></tt></td><td>list constructor</td></tr>
+<tr><td><tt>size</tt></td><td>list size</td></tr>
+<tr><td><tt>a[i]</tt></td><td>list/array indexing</td></tr>
+<tr><td><tt>at<a href="#7">(7)</a></tt></td><td>list/array indexing</td></tr>
+<tr><td><tt>unique<a href="#8">(8)</a></tt></td><td>remove duplicates</td></tr>
+<tr><td><tt>reverse</tt></td><td>reverse</td></tr>
+<tr><td><tt>reverse_copy</tt></td><td>reverse</td></tr>
+<tr><td><tt>min_element / max_element</tt></td><td>smallest / biggest element</td></tr>
+<tr><td><tt>sort<a href="#9">(9)</a></tt></td><td>sort</td></tr>
+<tr><td><tt>transform</tt></td><td>transform a list (or bag) in another one</td></tr>
+<tr><td><tt>transform</tt></td><td>transform two lists in parallel</td></tr>
+<tr><td><tt>vector</tt></td><td>type name</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>join a list of strings in a string using a glue string
+</blockquote>
+</li><li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>h[k]</tt></td><td>dictionary (access: read/write)</td></tr>
+<tr><td><tt>find<a href="#10">(10)</a></tt></td><td>dictionary (has the key ?)</td></tr>
+<tr><td><tt>insert<a href="#11">(11)</a></tt></td><td>dictionary (merge)</td></tr>
+<tr><td><tt>erase</tt></td><td>dictionary (remove by key)</td></tr>
+<tr><td><tt>std::map</tt></td><td>dictionary (type name)</td></tr>
+<tr><td><tt>enum typ { n1; n2; ... }<a href="#12">(12)</a></tt></td><td>enumerated type declaration</td></tr>
+<tr><td><tt>0<a href="#13">(13)</a></tt></td><td>optional value (null value)</td></tr>
+<tr><td><tt>*v<a href="#13">(13)</a></tt></td><td>optional value (value)</td></tr>
+<tr><td><tt>.</tt></td><td>record (selector)</td></tr>
+<tr><td><tt>-&gt;</tt></td><td>record (selector)</td></tr>
+<tr><td><tt>struct { typ1 n1; typ2 n2; ... }</tt></td><td>record (type declaration)</td></tr>
+<tr><td><tt>&amp;</tt></td><td>reference (pointer) (creation)</td></tr>
+<tr><td><tt>*<a href="#14">(14)</a></tt></td><td>reference (pointer) (dereference)</td></tr>
+<tr><td><tt>-&gt;<a href="#15">(15)</a></tt></td><td>reference (pointer) (dereference)</td></tr>
+<tr><td><tt>union { typ1 n1; typ2 n2; ... }</tt></td><td>union type declaration</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>optional value (null coalescing)
+</blockquote>
+</li><li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>+ / - / * / /</tt></td><td>addition / subtraction / multiplication / division</td></tr>
+<tr><td><tt>&amp; / | / ^</tt></td><td>bitwise operators (and / or / xor)</td></tr>
+<tr><td><tt>~</tt></td><td>bitwise operators (bitwise inversion)</td></tr>
+<tr><td><tt>&lt;&lt; / &gt;&gt;</tt></td><td>bitwise operators (left shift / right shift / unsigned right shift)</td></tr>
+<tr><td><tt>pow</tt></td><td>exponentiation (power)</td></tr>
+<tr><td><tt>log10</tt></td><td>logarithm (base 10)</td></tr>
+<tr><td><tt>log</tt></td><td>logarithm (base e)</td></tr>
+<tr><td><tt>%</tt></td><td>modulo (modulo of -3 / 2 is -1)</td></tr>
+<tr><td><tt>-</tt></td><td>negation</td></tr>
+<tr><td><tt>1000., 1E3</tt></td><td>numbers syntax (floating point)</td></tr>
+<tr><td><tt>07, 0xf</tt></td><td>numbers syntax (integers in base 2, octal and hexadecimal)</td></tr>
+<tr><td><tt>1000</tt></td><td>numbers syntax (integers)</td></tr>
+<tr><td><tt>mathematical</tt></td><td>operator priorities and associativities (addition vs multiplication)</td></tr>
+<tr><td><tt>sqrt / exp / abs</tt></td><td>square root / e-exponential / absolute value</td></tr>
+<tr><td><tt>sin / cos / tan</tt></td><td>trigonometry (basic)</td></tr>
+<tr><td><tt>asin / acos / atan<a href="#16">(16)</a></tt></td><td>trigonometry (inverse)</td></tr>
+<tr><td><tt>trunc / round / floor / ceil</tt></td><td>truncate / round / floor / ceil</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>type name<br>random (random number)<br>random (seed the pseudo random generator)
+</blockquote>
+</li>

@@ -1,0 +1,164 @@
+
+<li><a href="categories.html">Category</a>: Object Oriented, Dynamically typed, Has anonymous functions<p>
+</p></li><li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>{ ... }</tt></td><td>block (grouping statements, especially when statements are not expressions)</td></tr>
+<tr><td><tt>nothing needed</tt></td><td>breaking lines (useful when end-of-line and/or indentation has a special meaning)</td></tr>
+<tr><td><tt>/* ... */</tt></td><td>commenting (non nestable)</td></tr>
+<tr><td><tt>//</tt></td><td>commenting (until end of line)</td></tr>
+<tr><td><tt>&lt; &gt; &lt;= &gt;=</tt></td><td>comparison</td></tr>
+<tr><td><tt>/** ... */<a href="#1">(1)</a></tt></td><td>documentation comment (non nestable)</td></tr>
+<tr><td><tt>== === != !==<a href="#2">(2)</a></tt></td><td>equality / inequality (shallow)</td></tr>
+<tr><td><tt>VM.garbageCollect()</tt></td><td>force garbage collection</td></tr>
+<tr><td><tt>( ... )</tt></td><td>grouping expressions</td></tr>
+<tr><td><tt>eval</tt></td><td>runtime evaluation</td></tr>
+<tr><td><tt>case-sensitive</tt></td><td>tokens (case-sensitivity (keywords, variable identifiers...))</td></tr>
+<tr><td><tt>[$A-Za-z_\x7f-\uffff][$\w\x7f-\uffff]*</tt></td><td>tokens (variable identifier regexp)</td></tr>
+<tr><td><tt>camelCase</tt></td><td>tokens (what is the standard way for <a href="http://c2.com/cgi/wiki?CapitalizationRules">scrunching together multiple words</a>)</td></tr>
+<tr><td><tt>CamelCase or camelCase</tt></td><td>tokens (what is the standard way for <a href="http://c2.com/cgi/wiki?CapitalizationRules">scrunching together multiple words</a>)</td></tr>
+<tr><td><tt>=</tt></td><td>variable assignment or declaration (assignment)</td></tr>
+<tr><td><tt>var</tt></td><td>variable assignment or declaration (declaration)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>information about the current line and file<br>comparison (returns 3 values (i.e. inferior, equal or superior))<br>comparison (min / max (binary or more))
+</blockquote>
+</li><li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>function(a, b) { ... }</tt></td><td>anonymous function</td></tr>
+<tr><td><tt>f(a,b,...)</tt></td><td>function call</td></tr>
+<tr><td><tt>f()</tt></td><td>function call (with no parameter)</td></tr>
+<tr><td><tt>__noSuchMethod__<a href="#3">(3)</a></tt></td><td>function called when a function is not defined (in dynamic languages)</td></tr>
+<tr><td><tt>function f(para1, para2) { ... }</tt></td><td>function definition</td></tr>
+<tr><td><tt>return<a href="#4">(4)</a></tt></td><td>function return value (breaks the control flow)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>runtime inspecting the caller information
+</blockquote>
+</li><li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>continue / break</tt></td><td>breaking control flow (continue / break)</td></tr>
+<tr><td><tt>return<a href="#4">(4)</a></tt></td><td>breaking control flow (returning a value)</td></tr>
+<tr><td><tt>try a catch (exn) ...</tt></td><td>exception (catching)</td></tr>
+<tr><td><tt>throw</tt></td><td>exception (throwing)</td></tr>
+<tr><td><tt>if (c) ...</tt></td><td>if_then</td></tr>
+<tr><td><tt>if (c) b1 else b2</tt></td><td>if_then_else</td></tr>
+<tr><td><tt>c ? b1 : b2</tt></td><td>if_then_else</td></tr>
+<tr><td><tt>do ... while (!c)</tt></td><td>loop (do something until condition)</td></tr>
+<tr><td><tt>for</tt></td><td>loop (for &quot;a la C&quot; (while + initialisation))</td></tr>
+<tr><td><tt>for (i = 10; i &gt;= 1; i--) ...</tt></td><td>loop (for each value in a numeric range, 1 decrement)</td></tr>
+<tr><td><tt>for (i = 1; i &lt;= 10; i++) ...</tt></td><td>loop (for each value in a numeric range, 1 increment (see also the entries about ranges))</td></tr>
+<tr><td><tt>for (i = 1; i &lt;= 10; i += 2) ...</tt></td><td>loop (for each value in a numeric range, free increment)</td></tr>
+<tr><td><tt>while (c) ...</tt></td><td>loop (while condition do something)</td></tr>
+<tr><td><tt><pre>switch (val) { 
+   case v1: ...; break; 
+   case v2: case v3: ...; break; 
+   default: ...;
+ }</pre></tt></td><td>multiple selection (switch)</td></tr>
+<tr><td><tt>,</tt></td><td>sequence</td></tr>
+<tr><td><tt>;</tt></td><td>sequence</td></tr>
+<tr><td><tt>end-of-line</tt></td><td>sequence</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/bjcrntRfl.html">Object Oriented &amp; Reflexivity</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>this</tt></td><td>current instance</td></tr>
+<tr><td><tt>typeof</tt></td><td>get the type/class corresponding to an object/instance/value</td></tr>
+<tr><td><tt>delete</tt></td><td>manually call an object&apos;s destructor</td></tr>
+<tr><td><tt>object.method(para)</tt></td><td>method invocation</td></tr>
+<tr><td><tt>object.method()</tt></td><td>method invocation (with no parameter)</td></tr>
+<tr><td><tt>new class_name(...)</tt></td><td>object creation</td></tr>
+<tr><td><tt>instanceof</tt></td><td>testing class membership</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>object cloning<br>class declaration<br>methods available<br>inheritance<br>has the method<br>accessing parent method
+</blockquote>
+</li><li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>charAt</tt></td><td>accessing n-th character</td></tr>
+<tr><td><tt>fromCharCode</tt></td><td>ascii to character</td></tr>
+<tr><td><tt>charCodeAt</tt></td><td>character to ascii</td></tr>
+<tr><td><tt>toString</tt></td><td>convert something to a string (see also string interpolation)</td></tr>
+<tr><td><tt>String</tt></td><td>convert something to a string (see also string interpolation)</td></tr>
+<tr><td><tt>&quot;&quot; + e</tt></td><td>convert something to a string (see also string interpolation)</td></tr>
+<tr><td><tt>slice</tt></td><td>extract a substring</td></tr>
+<tr><td><tt>mid$</tt></td><td>extract a substring</td></tr>
+<tr><td><tt>indexOf</tt></td><td>locate a substring</td></tr>
+<tr><td><tt>lastIndexOf</tt></td><td>locate a substring (starting at the end)</td></tr>
+<tr><td><tt>write</tt></td><td>simple print (on strings)</td></tr>
+<tr><td><tt>writeln</tt></td><td>simple print (on strings)</td></tr>
+<tr><td><tt>+</tt></td><td>string concatenation</td></tr>
+<tr><td><tt>== !=(Vimscript: whether or not == and != are case-sensitive depends on user settings.)</tt></td><td>string equality &amp; inequality</td></tr>
+<tr><td><tt>length</tt></td><td>string size</td></tr>
+<tr><td><tt>&quot;\n&quot;</tt></td><td>strings (end-of-line (without writing the real CR or LF character))</td></tr>
+<tr><td><tt>&apos;...&apos;</tt></td><td>strings (with no interpolation of variables)</td></tr>
+<tr><td><tt>&quot;...&quot;</tt></td><td>strings (with no interpolation of variables)</td></tr>
+<tr><td><tt>String</tt></td><td>type name</td></tr>
+<tr><td><tt>toUpperCase / toLowerCase</tt></td><td>upper / lower case character</td></tr>
+<tr><td><tt>toUpperCase / toLowerCase</tt></td><td>uppercase / lowercase / capitalized string</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>strings (with interpolation of variables)<br>multi-line<br>serialize (marshalling)<br>unserialize (un-marshalling)
+</blockquote>
+</li><li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>false</tt></td><td>false value</td></tr>
+<tr><td><tt>null</tt></td><td>false value</td></tr>
+<tr><td><tt>undefined</tt></td><td>false value</td></tr>
+<tr><td><tt>0<a href="#5">(5)</a></tt></td><td>false value</td></tr>
+<tr><td><tt>NaN</tt></td><td>false value</td></tr>
+<tr><td><tt>&quot;&quot;</tt></td><td>false value</td></tr>
+<tr><td><tt>!</tt></td><td>logical not</td></tr>
+<tr><td><tt>|| / &amp;&amp;</tt></td><td>logical or / and (short circuit)</td></tr>
+<tr><td><tt>true</tt></td><td>true value</td></tr>
+<tr><td><tt>boolean</tt></td><td>type name</td></tr>
+</tbody></table></p><p>
+</p></li><li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>unshift</tt></td><td>adding an element at the beginning (list cons) (side-effect)</td></tr>
+<tr><td><tt>push</tt></td><td>adding an element at the end (side-effect)</td></tr>
+<tr><td><tt>for (var v in l) { ... }</tt></td><td>for each element do something</td></tr>
+<tr><td><tt>shift</tt></td><td>get the first element and remove it</td></tr>
+<tr><td><tt>pop</tt></td><td>get the last element and remove it</td></tr>
+<tr><td><tt>in</tt></td><td>is an element in the list</td></tr>
+<tr><td><tt>l.join(s)</tt></td><td>join a list of strings in a string using a glue string</td></tr>
+<tr><td><tt>concat</tt></td><td>list concatenation</td></tr>
+<tr><td><tt>[ a, b, c ]<a href="#6">(6)</a></tt></td><td>list constructor</td></tr>
+<tr><td><tt>Array(a, b, c)<a href="#7">(7)</a></tt></td><td>list constructor</td></tr>
+<tr><td><tt>length</tt></td><td>list size</td></tr>
+<tr><td><tt>a[i]</tt></td><td>list/array indexing</td></tr>
+<tr><td><tt>reverse</tt></td><td>reverse</td></tr>
+<tr><td><tt>sort<a href="#8">(8)</a></tt></td><td>sort</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>adding an element at index<br>transform a list (or bag) in another one<br>transform two lists in parallel<br>find an element<br>keep elements<br>is the predicate true for an element<br>is the predicate true for every element<br>f(... f(f(init, e1), e2) ..., en)
+</blockquote>
+</li><li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>h[k]</tt></td><td>dictionary (access: read/write)</td></tr>
+<tr><td><tt>h.k</tt></td><td>dictionary (access: read/write)</td></tr>
+<tr><td><tt>{ a: b, c: d }</tt></td><td>dictionary (constructor)</td></tr>
+<tr><td><tt>k in h</tt></td><td>dictionary (has the key ?)</td></tr>
+<tr><td><tt>delete</tt></td><td>dictionary (remove by key)</td></tr>
+<tr><td><tt>||</tt></td><td>optional value (null coalescing)</td></tr>
+<tr><td><tt>null</tt></td><td>optional value (null value)</td></tr>
+<tr><td><tt>v</tt></td><td>optional value (value)</td></tr>
+<tr><td><tt>.</tt></td><td>record (selector)</td></tr>
+<tr><td><tt>r[&quot;field&quot;]</tt></td><td>record (selector)</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (empty tuple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (1-uple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (using a tuple for a function call)<br>dictionary (list of keys)<br>dictionary (list of values)<br>dictionary (merge)<br>range
+</blockquote>
+</li><li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
+<table border="1" cellpadding="6">
+<tbody><tr><td><tt>+ / - / * / /</tt></td><td>addition / subtraction / multiplication / division</td></tr>
+<tr><td><tt>&amp; / | / ^</tt></td><td>bitwise operators (and / or / xor)</td></tr>
+<tr><td><tt>~</tt></td><td>bitwise operators (bitwise inversion)</td></tr>
+<tr><td><tt>&lt;&lt; / &gt;&gt; / &gt;&gt;&gt;</tt></td><td>bitwise operators (left shift / right shift / unsigned right shift)</td></tr>
+<tr><td><tt>pow</tt></td><td>exponentiation (power)</td></tr>
+<tr><td><tt>log</tt></td><td>logarithm (base e)</td></tr>
+<tr><td><tt>%</tt></td><td>modulo (modulo of -3 / 2 is -1)</td></tr>
+<tr><td><tt>-</tt></td><td>negation</td></tr>
+<tr><td><tt>1000., 1E3</tt></td><td>numbers syntax (floating point)</td></tr>
+<tr><td><tt>07, 0xf</tt></td><td>numbers syntax (integers in base 2, octal and hexadecimal)</td></tr>
+<tr><td><tt>1000</tt></td><td>numbers syntax (integers)</td></tr>
+<tr><td><tt>sqrt / exp / abs</tt></td><td>square root / e-exponential / absolute value</td></tr>
+<tr><td><tt>sin / cos / tan</tt></td><td>trigonometry (basic)</td></tr>
+<tr><td><tt>asin / acos / atan<a href="#9">(9)</a></tt></td><td>trigonometry (inverse)</td></tr>
+<tr><td><tt>int / round / floor / ceil</tt></td><td>truncate / round / floor / ceil</td></tr>
+</tbody></table></p><p>
+Unknown: </p><blockquote>random (random number)<br>random (seed the pseudo random generator)<br>operator priorities and associativities<br>logarithm (base 10)
+</blockquote>
+</li>
