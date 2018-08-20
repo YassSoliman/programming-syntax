@@ -1,18 +1,28 @@
+<html><head><title>syntax in YAML </title></head><body>
 
+<p>
+The "Unknown:"s below indicate that an entry is incomplete.
+<ul>
+<li>either the entry exist in the language, and <a href="mailto:pixel@rigaux.org">please tell</a>.
+<li>either the entry doesn't exist in the language, and <a href="mailto:pixel@rigaux.org">please tell so</a>.
+The entry will be marked as such and won't appear as missing anymore.
+</ul>
+
+<hr><ul>
 <li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>#</tt></td><td>commenting (until end of line)</td></tr>
+<table border=1 cellpadding=6>
+<tr><td><tt>#</tt></td><td>commenting (until end of line)</td></tr>
 <tr><td><tt>case-sensitive</tt></td><td>tokens (case-sensitivity (keywords, variable identifiers...))</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>&apos;...&apos;</tt></td><td>strings (with no interpolation of variables)</td></tr>
-<tr><td><tt>&quot;...&quot;</tt></td><td>strings (with no interpolation of variables)</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>'...'</tt></td><td>strings (with no interpolation of variables)</td></tr>
+<tr><td><tt>"..."</tt></td><td>strings (with no interpolation of variables)</td></tr>
 <tr><td><tt>str</tt></td><td>type name</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>false</tt></td><td>false value</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>false</tt></td><td>false value</td></tr>
 <tr><td><tt>n</tt></td><td>false value</td></tr>
 <tr><td><tt>no</tt></td><td>false value</td></tr>
 <tr><td><tt>off</tt></td><td>false value</td></tr>
@@ -21,26 +31,36 @@
 <tr><td><tt>yes</tt></td><td>true value</td></tr>
 <tr><td><tt>on</tt></td><td>true value</td></tr>
 <tr><td><tt>bool</tt></td><td>type name</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>[ a, b, c ]<a href="#1">(1)</a></tt></td><td>list constructor</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>[ a, b, c ]<a href="#1">(1)</a></tt></td><td>list constructor</td></tr>
 <tr><td><tt><pre>  - a
   - b
   - c</pre></tt></td><td>list constructor</td></tr>
 <tr><td><tt>seq</tt></td><td>type name</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>{ a: b, c: d }</tt></td><td>dictionary (constructor)</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>{ a: b, c: d }</tt></td><td>dictionary (constructor)</td></tr>
 <tr><td><tt><pre>  a: b
   c: d</pre></tt></td><td>dictionary (constructor)</td></tr>
 <tr><td><tt>map</tt></td><td>dictionary (type name)</td></tr>
 <tr><td><tt>(empty) / ~ / null</tt></td><td>optional value (null value)</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>float</tt></td><td>type name (floating point)</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>float</tt></td><td>type name (floating point)</td></tr>
 <tr><td><tt>int</tt></td><td>type name (integers)</td></tr>
-</tbody></table></p><p>
-</p></li>
+</table><p>
+</ul>
+<h2>Remarks</h2>
+<ul>
+<li><a name="1">(1)</a> new in PHP 5.4
+</ul>
+<hr><address><a href="mailto:pixel@rigaux.org">Pixel</a></address>
+This document is licensed under <a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> (GNU Free Documentation License).
+<br>Generated from <a href="../syntax-across-languages.html.pl">syntax-across-languages.html.pl</a>
+<br> $Id: syntax-across-languages.html.pl 408 2008-08-29 08:32:23Z pixel $
+
+</body></html>

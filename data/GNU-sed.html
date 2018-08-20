@@ -1,25 +1,42 @@
+<html><head><title>syntax in GNU-sed </title></head><body>
 
+<p>
+The "Unknown:"s below indicate that an entry is incomplete.
+<ul>
+<li>either the entry exist in the language, and <a href="mailto:pixel@rigaux.org">please tell</a>.
+<li>either the entry doesn't exist in the language, and <a href="mailto:pixel@rigaux.org">please tell so</a>.
+The entry will be marked as such and won't appear as missing anymore.
+</ul>
+
+<hr><ul>
 <li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>{ ... }</tt></td><td>block (grouping statements, especially when statements are not expressions)</td></tr>
+<table border=1 cellpadding=6>
+<tr><td><tt>{ ... }</tt></td><td>block (grouping statements, especially when statements are not expressions)</td></tr>
 <tr><td><tt>#</tt></td><td>commenting (until end of line)</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>b</tt></td><td>breaking control flow (goto (unconditional jump))</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>b</tt></td><td>breaking control flow (goto (unconditional jump))</td></tr>
 <tr><td><tt>t label</tt></td><td>if_then</td></tr>
 <tr><td><tt>;</tt></td><td>sequence</td></tr>
 <tr><td><tt>end-of-line</tt></td><td>sequence</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>s/.{n}(.).*/\1/</tt></td><td>accessing n-th character</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>s/.{n}(.).*/\1/</tt></td><td>accessing n-th character</td></tr>
 <tr><td><tt>s/.{n}(.{len}).*/\1/</tt></td><td>extract a substring</td></tr>
 <tr><td><tt>p or i</tt></td><td>simple print (on strings)</td></tr>
 <tr><td><tt>\U / \L / \C</tt></td><td>upper / lower case character</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>/elt/</tt></td><td>is an element in the list</td></tr>
-</tbody></table></p><p>
-</p></li>
+</table><p>
+<li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>/elt/</tt></td><td>is an element in the list</td></tr>
+</table><p>
+</ul>
+
+<hr><address><a href="mailto:pixel@rigaux.org">Pixel</a></address>
+This document is licensed under <a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> (GNU Free Documentation License).
+<br>Generated from <a href="../syntax-across-languages.html.pl">syntax-across-languages.html.pl</a>
+<br> $Id: syntax-across-languages.html.pl 408 2008-08-29 08:32:23Z pixel $
+
+</body></html>

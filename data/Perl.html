@@ -1,8 +1,18 @@
+<html><head><title>syntax in Perl </title></head><body>
 
+<p>
+The "Unknown:"s below indicate that an entry is incomplete.
+<ul>
+<li>either the entry exist in the language, and <a href="mailto:pixel@rigaux.org">please tell</a>.
+<li>either the entry doesn't exist in the language, and <a href="mailto:pixel@rigaux.org">please tell so</a>.
+The entry will be marked as such and won't appear as missing anymore.
+</ul>
+
+<hr><ul>
 <li><a href="categories.html">Category</a>: Object Oriented, Dynamically typed, Has anonymous functions<p>
-</p></li><li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>{ ... }<a href="#1">(1)</a></tt></td><td>block (grouping statements, especially when statements are not expressions)</td></tr>
+<li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>{ ... }<a href="#1">(1)</a></tt></td><td>block (grouping statements, especially when statements are not expressions)</td></tr>
 <tr><td><tt>nothing needed</tt></td><td>breaking lines (useful when end-of-line and/or indentation has a special meaning)</td></tr>
 <tr><td><tt>#</tt></td><td>commenting (until end of line)</td></tr>
 <tr><td><tt>&lt; &gt; &lt;= &gt;=</tt></td><td>comparison</td></tr>
@@ -24,27 +34,27 @@
 <tr><td><tt>do</tt></td><td>use a block as a return value (when statements are not expressions)</td></tr>
 <tr><td><tt>=</tt></td><td>variable assignment or declaration (assignment)</td></tr>
 <tr><td><tt>my / our / local / use vars</tt></td><td>variable assignment or declaration (declaration)</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>sub { my ($a, $b) = @_; ... }</tt></td><td>anonymous function</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>sub { my ($a, $b) = @_; ... }</tt></td><td>anonymous function</td></tr>
 <tr><td><tt>{ my ($a, $b) = @_; ... }<a href="#4">(4)</a></tt></td><td>anonymous function</td></tr>
 <tr><td><tt>f(a,b,...)</tt></td><td>function call</td></tr>
-<tr><td><tt>&amp;$f(a,b,...) or $f-&gt;(a,b,...)</tt></td><td>function call</td></tr>
+<tr><td><tt>&$f(a,b,...) or $f-&gt;(a,b,...)</tt></td><td>function call</td></tr>
 <tr><td><tt>f a, b, ...</tt></td><td>function call</td></tr>
 <tr><td><tt>f</tt></td><td>function call (with no parameter)</td></tr>
 <tr><td><tt>f()</tt></td><td>function call (with no parameter)</td></tr>
-<tr><td><tt>&amp;$f or $f-&gt;()</tt></td><td>function call (with no parameter)</td></tr>
+<tr><td><tt>&$f or $f-&gt;()</tt></td><td>function call (with no parameter)</td></tr>
 <tr><td><tt>AUTOLOAD</tt></td><td>function called when a function is not defined (in dynamic languages)</td></tr>
 <tr><td><tt>sub f { ... }</tt></td><td>function definition</td></tr>
 <tr><td><tt>sub f { ... @_ }</tt></td><td>function definition (variable number of arguments)</td></tr>
 <tr><td><tt>return<a href="#5">(5)</a></tt></td><td>function return value (breaks the control flow)</td></tr>
 <tr><td><tt>no syntax needed<a href="#6">(6)</a></tt></td><td>function return value (function body is the result)</td></tr>
 <tr><td><tt>caller</tt></td><td>runtime inspecting the caller information</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>next / last</tt></td><td>breaking control flow (continue / break)</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>next / last</tt></td><td>breaking control flow (continue / break)</td></tr>
 <tr><td><tt>goto</tt></td><td>breaking control flow (goto (unconditional jump))</td></tr>
 <tr><td><tt>redo/</tt></td><td>breaking control flow (redo / retry)</td></tr>
 <tr><td><tt>return<a href="#5">(5)</a></tt></td><td>breaking control flow (returning a value)</td></tr>
@@ -58,7 +68,7 @@
 <tr><td><tt>c ? b1 : b2</tt></td><td>if_then_else</td></tr>
 <tr><td><tt>unless</tt></td><td>ifnot_then (unless)</td></tr>
 <tr><td><tt>do {...} until c</tt></td><td>loop (do something until condition)</td></tr>
-<tr><td><tt>for</tt></td><td>loop (for &quot;a la C&quot; (while + initialisation))</td></tr>
+<tr><td><tt>for</tt></td><td>loop (for "a la C" (while + initialisation))</td></tr>
 <tr><td><tt>for (my $i = 10; $i &gt;= 1; $i--) { ... }</tt></td><td>loop (for each value in a numeric range, 1 decrement)</td></tr>
 <tr><td><tt>foreach my $i (1 .. 10) { ... }</tt></td><td>loop (for each value in a numeric range, 1 increment (see also the entries about ranges))</td></tr>
 <tr><td><tt>for (my $i = 1; $i &lt;= 10; $i += 2) { ... }</tt></td><td>loop (for each value in a numeric range, free increment)</td></tr>
@@ -76,38 +86,38 @@ switch ($val) {
 })</pre><a href="#7">(7)</a></tt></td><td>multiple selection (switch)</td></tr>
 <tr><td><tt>,</tt></td><td>sequence</td></tr>
 <tr><td><tt>;</tt></td><td>sequence</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/bjcrntRfl.html">Object Oriented &amp; Reflexivity</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>$o-&gt;SUPER::method(...)</tt></td><td>accessing parent method</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/bjcrntRfl.html">Object Oriented & Reflexivity</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>$o-&gt;SUPER::method(...)</tt></td><td>accessing parent method</td></tr>
 <tr><td><tt>first parameter<a href="#8">(8)</a></tt></td><td>current instance</td></tr>
 <tr><td><tt>ref</tt></td><td>get the type/class corresponding to an object/instance/value</td></tr>
 <tr><td><tt>can</tt></td><td>has the method</td></tr>
 <tr><td><tt>@ISA = qw(parent1 parent2)</tt></td><td>inheritance</td></tr>
-<tr><td><tt>DESTROY</tt></td><td>manually call an object&apos;s destructor</td></tr>
+<tr><td><tt>DESTROY</tt></td><td>manually call an object's destructor</td></tr>
 <tr><td><tt>object-&gt;method(para)</tt></td><td>method invocation</td></tr>
 <tr><td><tt>object-&gt;method</tt></td><td>method invocation (with no parameter)</td></tr>
 <tr><td><tt>Storable::dclone</tt></td><td>object cloning</td></tr>
 <tr><td><tt>new class_name(...)</tt></td><td>object creation</td></tr>
 <tr><td><tt>isa</tt></td><td>testing class membership</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>package p;</tt></td><td>declare</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>package p;</tt></td><td>declare</td></tr>
 <tr><td><tt>@ISA = qw(Exporter); @EXPORT = qw(name1 name2 ...);</tt></td><td>declare (selective export)</td></tr>
 <tr><td><tt>use p<a href="#9">(9)</a></tt></td><td>import (everything into current namespace)</td></tr>
 <tr><td><tt>use p;<a href="#10">(10)</a></tt></td><td>import (package (ie. load the package))</td></tr>
 <tr><td><tt>require p</tt></td><td>import (package (ie. load the package))</td></tr>
 <tr><td><tt>use p qw(name1 name2 ...)</tt></td><td>import (selectively)</td></tr>
 <tr><td><tt>::</tt></td><td>package scope</td></tr>
-<tr><td><tt>&apos;</tt></td><td>package scope</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>chr</tt></td><td>ascii to character</td></tr>
+<tr><td><tt>'</tt></td><td>package scope</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>chr</tt></td><td>ascii to character</td></tr>
 <tr><td><tt>ord</tt></td><td>character to ascii</td></tr>
 <tr><td><tt>Dumper</tt></td><td>convert something to a string (see also string interpolation)</td></tr>
-<tr><td><tt>&quot;&quot; . e</tt></td><td>convert something to a string (see also string interpolation)</td></tr>
+<tr><td><tt>"" . e</tt></td><td>convert something to a string (see also string interpolation)</td></tr>
 <tr><td><tt>x</tt></td><td>duplicate n times</td></tr>
 <tr><td><tt>substr</tt></td><td>extract a substring</td></tr>
 <tr><td><tt>index</tt></td><td>locate a substring</td></tr>
@@ -119,37 +129,37 @@ switch ($val) {
 <tr><td><tt>sprintf</tt></td><td>sprintf-like</td></tr>
 <tr><td><tt>Storable::retrieve</tt></td><td>sprintf-like</td></tr>
 <tr><td><tt>.</tt></td><td>string concatenation</td></tr>
-<tr><td><tt>eq ne</tt></td><td>string equality &amp; inequality</td></tr>
+<tr><td><tt>eq ne</tt></td><td>string equality & inequality</td></tr>
 <tr><td><tt>length</tt></td><td>string size</td></tr>
-<tr><td><tt>&quot;\n&quot;</tt></td><td>strings (end-of-line (without writing the real CR or LF character))</td></tr>
-<tr><td><tt>&quot;... $v ...&quot;</tt></td><td>strings (with interpolation of variables)</td></tr>
+<tr><td><tt>"\n"</tt></td><td>strings (end-of-line (without writing the real CR or LF character))</td></tr>
+<tr><td><tt>"... $v ..."</tt></td><td>strings (with interpolation of variables)</td></tr>
 <tr><td><tt>&lt;&lt;MARK ... $v ... MARK</tt></td><td>strings (with interpolation of variables)</td></tr>
 <tr><td><tt>qq(...(... $v ...)...), qq[...], qq{...}, qq&lt;...&gt;, qq/.../</tt></td><td>strings (with interpolation of variables)</td></tr>
-<tr><td><tt>&apos;...&apos;</tt></td><td>strings (with no interpolation of variables)</td></tr>
-<tr><td><tt>&lt;&lt;&apos;MARK&apos; ... MARK</tt></td><td>strings (with no interpolation of variables)</td></tr>
+<tr><td><tt>'...'</tt></td><td>strings (with no interpolation of variables)</td></tr>
+<tr><td><tt>&lt;&lt;'MARK' ... MARK</tt></td><td>strings (with no interpolation of variables)</td></tr>
 <tr><td><tt>q(...(...)...), q[...], q{...}, q&lt;...&gt;, q/.../</tt></td><td>strings (with no interpolation of variables)</td></tr>
 <tr><td><tt>Storable::store</tt></td><td>unserialize (un-marshalling)</td></tr>
 <tr><td><tt>uc / lc</tt></td><td>upper / lower case character</td></tr>
 <tr><td><tt>uc / lc</tt></td><td>uppercase / lowercase / capitalized string</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>undef</tt></td><td>false value</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>undef</tt></td><td>false value</td></tr>
 <tr><td><tt>0<a href="#11">(11)</a></tt></td><td>false value</td></tr>
 <tr><td><tt>0.0</tt></td><td>false value</td></tr>
-<tr><td><tt>&quot;&quot;</tt></td><td>false value</td></tr>
-<tr><td><tt>&quot;0&quot;</tt></td><td>false value</td></tr>
-<tr><td><tt>&apos;&apos;</tt></td><td>false value</td></tr>
+<tr><td><tt>""</tt></td><td>false value</td></tr>
+<tr><td><tt>"0"</tt></td><td>false value</td></tr>
+<tr><td><tt>''</tt></td><td>false value</td></tr>
 <tr><td><tt>()</tt></td><td>false value</td></tr>
 <tr><td><tt>!</tt></td><td>logical not</td></tr>
 <tr><td><tt>not<a href="#12">(12)</a></tt></td><td>logical not</td></tr>
-<tr><td><tt>|| / &amp;&amp;</tt></td><td>logical or / and (short circuit)</td></tr>
+<tr><td><tt>|| / &&</tt></td><td>logical or / and (short circuit)</td></tr>
 <tr><td><tt>or / and</tt></td><td>logical or / and (short circuit)</td></tr>
 <tr><td><tt>anything not false</tt></td><td>true value</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>splice(@a, $i, 0, $e)</tt></td><td>adding an element at index (side-effect)</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>splice(@a, $i, 0, $e)</tt></td><td>adding an element at index (side-effect)</td></tr>
 <tr><td><tt>unshift</tt></td><td>adding an element at the beginning (list cons) (side-effect)</td></tr>
 <tr><td><tt>push</tt></td><td>adding an element at the end (side-effect)</td></tr>
 <tr><td><tt>reduce<a href="#13">(13)</a></tt></td><td>f(... f(f(init, e1), e2) ..., en)</td></tr>
@@ -171,10 +181,10 @@ switch ($val) {
 <tr><td><tt>sort<a href="#15">(15)</a></tt></td><td>sort</td></tr>
 <tr><td><tt>map</tt></td><td>transform a list (or bag) in another one</td></tr>
 <tr><td><tt>ARRAY</tt></td><td>type name</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>(a)</tt></td><td>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (1-uple)</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>(a)</tt></td><td>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (1-uple)</td></tr>
 <tr><td><tt>()</tt></td><td>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (empty tuple)</td></tr>
 <tr><td><tt>t</tt></td><td>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (using a tuple for a function call)</td></tr>
 <tr><td><tt>$h{k}</tt></td><td>dictionary (access: read/write)</td></tr>
@@ -193,14 +203,14 @@ switch ($val) {
 <tr><td><tt>v</tt></td><td>optional value (value)</td></tr>
 <tr><td><tt>a .. b</tt></td><td>range (inclusive .. inclusive)</td></tr>
 <tr><td><tt>\</tt></td><td>reference (pointer) (creation)</td></tr>
-<tr><td><tt>$ @ % &amp;<a href="#18">(18)</a></tt></td><td>reference (pointer) (dereference)</td></tr>
+<tr><td><tt>$ @ % &<a href="#18">(18)</a></tt></td><td>reference (pointer) (dereference)</td></tr>
 <tr><td><tt>-&gt;[...] -&gt;{...} -&gt;(...)<a href="#19">(19)</a></tt></td><td>reference (pointer) (dereference)</td></tr>
 <tr><td><tt>( a, b, c )</tt></td><td>tuple constructor</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>+ / - / * / /</tt></td><td>addition / subtraction / multiplication / division</td></tr>
-<tr><td><tt>&amp; / | / ^</tt></td><td>bitwise operators (and / or / xor)</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>+ / - / * / /</tt></td><td>addition / subtraction / multiplication / division</td></tr>
+<tr><td><tt>& / | / ^</tt></td><td>bitwise operators (and / or / xor)</td></tr>
 <tr><td><tt>~</tt></td><td>bitwise operators (bitwise inversion)</td></tr>
 <tr><td><tt>&lt;&lt; / &gt;&gt;</tt></td><td>bitwise operators (left shift / right shift / unsigned right shift)</td></tr>
 <tr><td><tt>**</tt></td><td>exponentiation (power)</td></tr>
@@ -220,5 +230,36 @@ switch ($val) {
 <tr><td><tt>sin / cos / tan</tt></td><td>trigonometry (basic)</td></tr>
 <tr><td><tt>asin / acos / atan<a href="#22">(22)</a></tt></td><td>trigonometry (inverse)</td></tr>
 <tr><td><tt>int / / floor / ceil</tt></td><td>truncate / round / floor / ceil</td></tr>
-</tbody></table></p><p>
-</p></li>
+</table><p>
+</ul>
+<h2>Remarks</h2>
+<ul>
+<li><a name="1">(1)</a> introduce scope
+<li><a name="2">(2)</a> in List::Util
+<li><a name="3">(3)</a> see also =head1, =head2, =over, etc
+<li><a name="4">(4)</a> when callee has special "&" prototype
+<li><a name="5">(5)</a> in Lua, "return xxx" can only appear before a block end. in Matlab, only in inline('...')
+<li><a name="6">(6)</a> in Matlab, only for anonymous function
+<li><a name="7">(7)</a> Perl &gt;= 5.8.0
+<li><a name="8">(8)</a> in Python, usually called self
+<li><a name="9">(9)</a> if names are exported using @EXPORT
+<li><a name="10">(10)</a> if names are not exported or are exported using @EXPORT_OK
+<li><a name="11">(11)</a> beware of 0.0 which is true in Pike!
+<li><a name="12">(12)</a> Smalltalk: postfix operator
+<li><a name="13">(13)</a> in Perl, in List::Util
+<li><a name="14">(14)</a> new in PHP 5.4
+<li><a name="15">(15)</a> in Scheme, not standard, but nearly standard
+<li><a name="16">(16)</a> right-bias
+<li><a name="17">(17)</a> introduced in Perl 5.10
+<li><a name="18">(18)</a> prefix
+<li><a name="19">(19)</a> postfix
+<li><a name="20">(20)</a> integers are decimals
+<li><a name="21">(21)</a> 0b1 new in PHP 5.4
+<li><a name="22">(22)</a> Ruby &gt;= 1.7
+</ul>
+<hr><address><a href="mailto:pixel@rigaux.org">Pixel</a></address>
+This document is licensed under <a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> (GNU Free Documentation License).
+<br>Generated from <a href="../syntax-across-languages.html.pl">syntax-across-languages.html.pl</a>
+<br> $Id: syntax-across-languages.html.pl 408 2008-08-29 08:32:23Z pixel $
+
+</body></html>

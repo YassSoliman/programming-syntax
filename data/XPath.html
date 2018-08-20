@@ -1,66 +1,87 @@
+<html><head><title>syntax in XPath </title></head><body>
 
+<p>
+The "Unknown:"s below indicate that an entry is incomplete.
+<ul>
+<li>either the entry exist in the language, and <a href="mailto:pixel@rigaux.org">please tell</a>.
+<li>either the entry doesn't exist in the language, and <a href="mailto:pixel@rigaux.org">please tell so</a>.
+The entry will be marked as such and won't appear as missing anymore.
+</ul>
+
+<hr><ul>
 <li><a href="categories.html">Category</a>: Dynamically typed<p>
-</p></li><li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>&lt; &gt; &lt;= &gt;=</tt></td><td>comparison</td></tr>
+<li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>&lt; &gt; &lt;= &gt;=</tt></td><td>comparison</td></tr>
 <tr><td><tt>= !=</tt></td><td>equality / inequality (deep)</td></tr>
 <tr><td><tt>( ... )</tt></td><td>grouping expressions</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>commenting<br>documentation comment<br>information about the current line and file<br>tokens (case-sensitivity (keywords, variable identifiers...))<br>tokens (what is the standard way for <a href="http://c2.com/cgi/wiki?CapitalizationRules">scrunching together multiple words</a>)<br>tokens (variable identifier regexp)<br>breaking lines (useful when end-of-line and/or indentation has a special meaning)<br>variable assignment or declaration<br>block (grouping statements, especially when statements are not expressions)<br>comparison (returns 3 values (i.e. inferior, equal or superior))<br>comparison (min / max (binary or more))<br>runtime evaluation<br>force garbage collection
+</table><p>
+Unknown: <blockquote>commenting<br>documentation comment<br>information about the current line and file<br>tokens (case-sensitivity (keywords, variable identifiers...))<br>tokens (what is the standard way for <a href="http://c2.com/cgi/wiki?CapitalizationRules">scrunching together multiple words</a>)<br>tokens (variable identifier regexp)<br>breaking lines (useful when end-of-line and/or indentation has a special meaning)<br>variable assignment or declaration<br>block (grouping statements, especially when statements are not expressions)<br>comparison (returns 3 values (i.e. inferior, equal or superior))<br>comparison (min / max (binary or more))<br>runtime evaluation<br>force garbage collection
 </blockquote>
-</li><li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>f(a,b,...)</tt></td><td>function call</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>function call (with no parameter)<br>function definition<br>function return value<br>function called when a function is not defined (in dynamic languages)<br>runtime inspecting the caller information
+<li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>f(a,b,...)</tt></td><td>function call</td></tr>
+</table><p>
+Unknown: <blockquote>function call (with no parameter)<br>function definition<br>function return value<br>function called when a function is not defined (in dynamic languages)<br>runtime inspecting the caller information
 </blockquote>
-</li><li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
-Unknown: </p><blockquote>sequence<br>if_then<br>if_then_else<br>multiple selection (switch)<br>loop (forever loop)<br>loop (while condition do something)<br>loop (do something until condition)<br>loop (for each value in a numeric range, 1 increment (see also the entries about ranges))<br>loop (for each value in a numeric range, 1 decrement)<br>loop (for each value in a numeric range, free increment)<br>loop (for &quot;a la C&quot; (while + initialisation))<br>breaking control flow (returning a value)<br>breaking control flow (goto (unconditional jump))<br>breaking control flow (continue / break)<br>exception (throwing)<br>exception (catching)
+<li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
+Unknown: <blockquote>sequence<br>if_then<br>if_then_else<br>multiple selection (switch)<br>loop (forever loop)<br>loop (while condition do something)<br>loop (do something until condition)<br>loop (for each value in a numeric range, 1 increment (see also the entries about ranges))<br>loop (for each value in a numeric range, 1 decrement)<br>loop (for each value in a numeric range, free increment)<br>loop (for "a la C" (while + initialisation))<br>breaking control flow (returning a value)<br>breaking control flow (goto (unconditional jump))<br>breaking control flow (continue / break)<br>exception (throwing)<br>exception (catching)
 </blockquote>
-</li><li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
-Unknown: </p><blockquote>package scope<br>declare<br>import
+<li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
+Unknown: <blockquote>package scope<br>declare<br>import
 </blockquote>
-</li><li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>substring</tt></td><td>extract a substring</td></tr>
+<li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>substring</tt></td><td>extract a substring</td></tr>
 <tr><td><tt>concat</tt></td><td>string concatenation</td></tr>
-<tr><td><tt>= !=</tt></td><td>string equality &amp; inequality</td></tr>
+<tr><td><tt>= !=</tt></td><td>string equality & inequality</td></tr>
 <tr><td><tt>string-length</tt></td><td>string size</td></tr>
-<tr><td><tt>&apos;...&apos;</tt></td><td>strings (with no interpolation of variables)</td></tr>
-<tr><td><tt>&quot;...&quot;</tt></td><td>strings (with no interpolation of variables)</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>character &quot;z&quot;<br>strings (with interpolation of variables)<br>strings (end-of-line (without writing the real CR or LF character))<br>multi-line<br>convert something to a string (see also string interpolation)<br>serialize (marshalling)<br>unserialize (un-marshalling)<br>sprintf-like<br>simple print<br>duplicate n times<br>upper / lower case character<br>uppercase / lowercase / capitalized string<br>ascii to character<br>character to ascii<br>accessing n-th character<br>locate a substring<br>locate a substring (starting at the end)
+<tr><td><tt>'...'</tt></td><td>strings (with no interpolation of variables)</td></tr>
+<tr><td><tt>"..."</tt></td><td>strings (with no interpolation of variables)</td></tr>
+</table><p>
+Unknown: <blockquote>character "z"<br>strings (with interpolation of variables)<br>strings (end-of-line (without writing the real CR or LF character))<br>multi-line<br>convert something to a string (see also string interpolation)<br>serialize (marshalling)<br>unserialize (un-marshalling)<br>sprintf-like<br>simple print<br>duplicate n times<br>upper / lower case character<br>uppercase / lowercase / capitalized string<br>ascii to character<br>character to ascii<br>accessing n-th character<br>locate a substring<br>locate a substring (starting at the end)
 </blockquote>
-</li><li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>false()</tt></td><td>false value</td></tr>
+<li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>false()</tt></td><td>false value</td></tr>
 <tr><td><tt>0<a href="#1">(1)</a></tt></td><td>false value</td></tr>
 <tr><td><tt>NaN</tt></td><td>false value</td></tr>
-<tr><td><tt>&quot;&quot;</tt></td><td>false value</td></tr>
+<tr><td><tt>""</tt></td><td>false value</td></tr>
 <tr><td><tt>not<a href="#2">(2)</a></tt></td><td>logical not</td></tr>
 <tr><td><tt>or / and</tt></td><td>logical or / and (non short circuit (always evaluates both arguments))</td></tr>
 <tr><td><tt>true()</tt></td><td>true value</td></tr>
 <tr><td><tt>anything not false</tt></td><td>true value</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>node[last()]</tt></td><td>last element</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>node[last()]</tt></td><td>last element</td></tr>
 <tr><td><tt>count</tt></td><td>list size</td></tr>
 <tr><td><tt>node[i]</tt></td><td>list/array indexing</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>list concatenation<br>list flattening<br>list constructor<br>adding an element at the beginning (list cons)<br>adding an element at index<br>adding an element at the end<br>first element<br>all but the first element<br>get the first element and remove it<br>get the last element and remove it<br>for each element do something<br>is an element in the list<br>smallest / biggest element<br>join a list of strings in a string using a glue string<br>iterate with index<br>remove duplicates<br>sort<br>reverse
+</table><p>
+Unknown: <blockquote>list concatenation<br>list flattening<br>list constructor<br>adding an element at the beginning (list cons)<br>adding an element at index<br>adding an element at the end<br>first element<br>all but the first element<br>get the first element and remove it<br>get the last element and remove it<br>for each element do something<br>is an element in the list<br>smallest / biggest element<br>join a list of strings in a string using a glue string<br>iterate with index<br>remove duplicates<br>sort<br>reverse
 </blockquote>
-</li><li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>::</tt></td><td>record (selector)</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>tuple constructor<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (empty tuple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (1-uple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (using a tuple for a function call)<br>reference (pointer) (creation)<br>reference (pointer) (dereference)<br>optional value (null value)<br>optional value (value)<br>optional value (null coalescing)<br>dictionary (constructor)<br>dictionary (access)<br>dictionary (has the key ?)<br>dictionary (remove by key)<br>dictionary (list of keys)<br>dictionary (list of values)<br>dictionary (merge)<br>range
+<li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>::</tt></td><td>record (selector)</td></tr>
+</table><p>
+Unknown: <blockquote>tuple constructor<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (empty tuple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (1-uple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (using a tuple for a function call)<br>reference (pointer) (creation)<br>reference (pointer) (dereference)<br>optional value (null value)<br>optional value (value)<br>optional value (null coalescing)<br>dictionary (constructor)<br>dictionary (access)<br>dictionary (has the key ?)<br>dictionary (remove by key)<br>dictionary (list of keys)<br>dictionary (list of values)<br>dictionary (merge)<br>range
 </blockquote>
-</li><li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>mod</tt></td><td>modulo (modulo of -3 / 2 is -1)</td></tr>
+<li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>mod</tt></td><td>modulo (modulo of -3 / 2 is -1)</td></tr>
 <tr><td><tt>/ round / floor / ceiling</tt></td><td>truncate / round / floor / ceil</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>numbers syntax (integers)<br>numbers syntax (integers in base 2, octal and hexadecimal)<br>numbers syntax (floating point)<br>addition / subtraction / multiplication / division<br>exponentiation (power)<br>negation<br>random (random number)<br>random (seed the pseudo random generator)<br>operator priorities and associativities<br>square root / e-exponential / absolute value<br>trigonometry (basic)<br>trigonometry (inverse)<br>logarithm (base e)<br>logarithm (base 10)<br>bitwise operators
+</table><p>
+Unknown: <blockquote>numbers syntax (integers)<br>numbers syntax (integers in base 2, octal and hexadecimal)<br>numbers syntax (floating point)<br>addition / subtraction / multiplication / division<br>exponentiation (power)<br>negation<br>random (random number)<br>random (seed the pseudo random generator)<br>operator priorities and associativities<br>square root / e-exponential / absolute value<br>trigonometry (basic)<br>trigonometry (inverse)<br>logarithm (base e)<br>logarithm (base 10)<br>bitwise operators
 </blockquote>
-</li>
+</ul>
+<h2>Remarks</h2>
+<ul>
+<li><a name="1">(1)</a> beware of 0.0 which is true in Pike!
+<li><a name="2">(2)</a> Smalltalk: postfix operator
+</ul>
+<hr><address><a href="mailto:pixel@rigaux.org">Pixel</a></address>
+This document is licensed under <a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> (GNU Free Documentation License).
+<br>Generated from <a href="../syntax-across-languages.html.pl">syntax-across-languages.html.pl</a>
+<br> $Id: syntax-across-languages.html.pl 408 2008-08-29 08:32:23Z pixel $
+
+</body></html>

@@ -1,8 +1,18 @@
+<html><head><title>syntax in Pliant </title></head><body>
 
+<p>
+The "Unknown:"s below indicate that an entry is incomplete.
+<ul>
+<li>either the entry exist in the language, and <a href="mailto:pixel@rigaux.org">please tell</a>.
+<li>either the entry doesn't exist in the language, and <a href="mailto:pixel@rigaux.org">please tell so</a>.
+The entry will be marked as such and won't appear as missing anymore.
+</ul>
+
+<hr><ul>
 <li><a href="categories.html">Category</a>: Object Oriented, Reflexive, Statically typed<p>
-</p></li><li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>indentation</tt></td><td>block (grouping statements, especially when statements are not expressions)</td></tr>
+<li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>indentation</tt></td><td>block (grouping statements, especially when statements are not expressions)</td></tr>
 <tr><td><tt>#</tt></td><td>commenting (until end of line)</td></tr>
 <tr><td><tt>&lt; &gt; &lt;= &gt;=</tt></td><td>comparison</td></tr>
 <tr><td><tt>min / max</tt></td><td>comparison (min / max (binary or more))</td></tr>
@@ -12,26 +22,26 @@
 <tr><td><tt>( ... )</tt></td><td>grouping expressions</td></tr>
 <tr><td><tt>runtime_compile / compile + execute</tt></td><td>runtime evaluation</td></tr>
 <tr><td><tt>case-sensitive</tt></td><td>tokens (case-sensitivity (keywords, variable identifiers...))</td></tr>
-<tr><td><tt>[_a-zA-Z][_a-zA-Z0-9]* or &apos;[^&apos;]*&apos;</tt></td><td>tokens (variable identifier regexp)</td></tr>
+<tr><td><tt>[_a-zA-Z][_a-zA-Z0-9]* or '[^']*'</tt></td><td>tokens (variable identifier regexp)</td></tr>
 <tr><td><tt>CamelCase for types, underscores for functions, variables, ...</tt></td><td>tokens (what is the standard way for <a href="http://c2.com/cgi/wiki?CapitalizationRules">scrunching together multiple words</a>)</td></tr>
 <tr><td><tt>:=</tt></td><td>variable assignment or declaration (assignment)</td></tr>
 <tr><td><tt>var</tt></td><td>variable assignment or declaration (declaration)</td></tr>
 <tr><td><tt>gvar</tt></td><td>variable assignment or declaration (declaration)</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>documentation comment<br>information about the current line and file<br>force garbage collection
+</table><p>
+Unknown: <blockquote>documentation comment<br>information about the current line and file<br>force garbage collection
 </blockquote>
-</li><li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>f a b ...</tt></td><td>function call</td></tr>
+<li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>f a b ...</tt></td><td>function call</td></tr>
 <tr><td><tt>f</tt></td><td>function call (with no parameter)</td></tr>
 <tr><td><tt><pre>function f para1 para2 -&gt; retval
   arg typ1 para1; arg typ2 para2; arg rettyp retval;
   ...</pre></tt></td><td>function definition</td></tr>
 <tr><td><tt>return<a href="#1">(1)</a></tt></td><td>function return value (breaks the control flow)</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>restart / leave</tt></td><td>breaking control flow (continue / break)</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>restart / leave</tt></td><td>breaking control flow (continue / break)</td></tr>
 <tr><td><tt>return<a href="#1">(1)</a></tt></td><td>breaking control flow (returning a value)</td></tr>
 <tr><td><tt>?, shy, safe</tt></td><td>exception (catching)</td></tr>
 <tr><td><tt>error</tt></td><td>exception (throwing)</td></tr>
@@ -42,32 +52,32 @@ Unknown: </p><blockquote>documentation comment<br>information about the current 
     ...</pre></tt></td><td>loop (while condition do something)</td></tr>
 <tr><td><tt>;</tt></td><td>sequence</td></tr>
 <tr><td><tt>end-of-line</tt></td><td>sequence</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>loop (for each value in a numeric range, 1 increment (see also the entries about ranges))<br>loop (for each value in a numeric range, 1 decrement)<br>loop (for each value in a numeric range, free increment)
+</table><p>
+Unknown: <blockquote>loop (for each value in a numeric range, 1 increment (see also the entries about ranges))<br>loop (for each value in a numeric range, 1 decrement)<br>loop (for each value in a numeric range, free increment)
 </blockquote>
-</li><li><a href="../syntax-across-languages/Tps.html">Types</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>t v</tt></td><td>annotation (or variable declaration)</td></tr>
+<li><a href="../syntax-across-languages/Tps.html">Types</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>t v</tt></td><td>annotation (or variable declaration)</td></tr>
 <tr><td><tt>cast e t</tt></td><td>cast (computed conversion (calls an internal or a user-defined function))</td></tr>
 <tr><td><tt>... cast t</tt></td><td>cast (computed conversion (calls an internal or a user-defined function))</td></tr>
 <tr><td><tt>type n ...</tt></td><td>declaration</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>mutability, constness (type of a mutable value)<br>mutability, constness (type of a constant value)
+</table><p>
+Unknown: <blockquote>mutability, constness (type of a mutable value)<br>mutability, constness (type of a constant value)
 </blockquote>
-</li><li><a href="../syntax-across-languages/bjcrntRfl.html">Object Oriented &amp; Reflexivity</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>type</tt></td><td>class declaration</td></tr>
+<li><a href="../syntax-across-languages/bjcrntRfl.html">Object Oriented & Reflexivity</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>type</tt></td><td>class declaration</td></tr>
 <tr><td><tt>first parameter<a href="#2">(2)</a></tt></td><td>current instance</td></tr>
 <tr><td><tt>object method para</tt></td><td>method invocation</td></tr>
 <tr><td><tt>object:method</tt></td><td>method invocation (with no parameter)</td></tr>
 <tr><td><tt>new</tt></td><td>object creation</td></tr>
 <tr><td><tt>entry_type</tt></td><td>testing class membership</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>object cloning<br>manually call an object&apos;s destructor<br>get the type/class corresponding to an object/instance/value<br>inheritance<br>accessing parent method
+</table><p>
+Unknown: <blockquote>object cloning<br>manually call an object's destructor<br>get the type/class corresponding to an object/instance/value<br>inheritance<br>accessing parent method
 </blockquote>
-</li><li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>s:n</tt></td><td>accessing n-th character</td></tr>
+<li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>s:n</tt></td><td>accessing n-th character</td></tr>
 <tr><td><tt>character</tt></td><td>ascii to character</td></tr>
 <tr><td><tt>number</tt></td><td>character to ascii</td></tr>
 <tr><td><tt>to_string</tt></td><td>convert something to a string (see also string interpolation)</td></tr>
@@ -76,26 +86,26 @@ Unknown: </p><blockquote>object cloning<br>manually call an object&apos;s destru
 <tr><td><tt>s n len</tt></td><td>extract a substring</td></tr>
 <tr><td><tt>console</tt></td><td>simple print (on strings)</td></tr>
 <tr><td><tt>+</tt></td><td>string concatenation</td></tr>
-<tr><td><tt>= &lt;&gt;</tt></td><td>string equality &amp; inequality</td></tr>
+<tr><td><tt>= &lt;&gt;</tt></td><td>string equality & inequality</td></tr>
 <tr><td><tt>len</tt></td><td>string size</td></tr>
-<tr><td><tt>&quot;[lf]&quot;</tt></td><td>strings (end-of-line (without writing the real CR or LF character))</td></tr>
-<tr><td><tt>&quot;...&quot;</tt></td><td>strings (with no interpolation of variables)</td></tr>
+<tr><td><tt>"[lf]"</tt></td><td>strings (end-of-line (without writing the real CR or LF character))</td></tr>
+<tr><td><tt>"..."</tt></td><td>strings (with no interpolation of variables)</td></tr>
 <tr><td><tt>Str</tt></td><td>type name</td></tr>
 <tr><td><tt>upper / lower<a href="#3">(3)</a></tt></td><td>upper / lower case character</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>character &quot;z&quot;<br>strings (with interpolation of variables)<br>multi-line<br>serialize (marshalling)<br>unserialize (un-marshalling)<br>sprintf-like<br>uppercase / lowercase / capitalized string<br>locate a substring<br>locate a substring (starting at the end)
+</table><p>
+Unknown: <blockquote>character "z"<br>strings (with interpolation of variables)<br>multi-line<br>serialize (marshalling)<br>unserialize (un-marshalling)<br>sprintf-like<br>uppercase / lowercase / capitalized string<br>locate a substring<br>locate a substring (starting at the end)
 </blockquote>
-</li><li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>false</tt></td><td>false value</td></tr>
+<li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>false</tt></td><td>false value</td></tr>
 <tr><td><tt>not<a href="#4">(4)</a></tt></td><td>logical not</td></tr>
 <tr><td><tt>or / and</tt></td><td>logical or / and (short circuit)</td></tr>
 <tr><td><tt>true</tt></td><td>true value</td></tr>
 <tr><td><tt>Bool</tt></td><td>type name</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>append</tt></td><td>adding an element at the end (side-effect)</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>append</tt></td><td>adding an element at the end (side-effect)</td></tr>
 <tr><td><tt>+=</tt></td><td>adding an element at the end (side-effect)</td></tr>
 <tr><td><tt>first</tt></td><td>first element</td></tr>
 <tr><td><tt>each</tt></td><td>for each element do something</td></tr>
@@ -103,22 +113,22 @@ Unknown: </p><blockquote>character &quot;z&quot;<br>strings (with interpolation 
 <tr><td><tt>size</tt></td><td>list size</td></tr>
 <tr><td><tt>a:i</tt></td><td>list/array indexing</td></tr>
 <tr><td><tt>List</tt></td><td>type name</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>list concatenation<br>list flattening<br>list constructor<br>adding an element at the beginning (list cons)<br>adding an element at index<br>all but the first element<br>get the first element and remove it<br>get the last element and remove it<br>is an element in the list<br>smallest / biggest element<br>join a list of strings in a string using a glue string<br>iterate with index<br>remove duplicates<br>sort<br>reverse
+</table><p>
+Unknown: <blockquote>list concatenation<br>list flattening<br>list constructor<br>adding an element at the beginning (list cons)<br>adding an element at index<br>all but the first element<br>get the first element and remove it<br>get the last element and remove it<br>is an element in the list<br>smallest / biggest element<br>join a list of strings in a string using a glue string<br>iterate with index<br>remove duplicates<br>sort<br>reverse
 </blockquote>
-</li><li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>h:k</tt></td><td>dictionary (access: read/write)</td></tr>
+<li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>h:k</tt></td><td>dictionary (access: read/write)</td></tr>
 <tr><td><tt>exists</tt></td><td>dictionary (has the key ?)</td></tr>
 <tr><td><tt>Dictionary</tt></td><td>dictionary (type name)</td></tr>
 <tr><td><tt>r:field</tt></td><td>record (selector)</td></tr>
 <tr><td><tt>:&gt; :&gt;&gt;</tt></td><td>reference (pointer) (creation)</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>tuple type<br>tuple constructor<br>reference (pointer) (dereference)<br>optional value (null value)<br>optional value (value)<br>optional value (null coalescing)<br>record (type declaration)<br>union type declaration<br>enumerated type declaration<br>dictionary (constructor)<br>dictionary (remove by key)<br>dictionary (list of keys)<br>dictionary (list of values)<br>dictionary (merge)<br>range
+</table><p>
+Unknown: <blockquote>tuple type<br>tuple constructor<br>reference (pointer) (dereference)<br>optional value (null value)<br>optional value (value)<br>optional value (null coalescing)<br>record (type declaration)<br>union type declaration<br>enumerated type declaration<br>dictionary (constructor)<br>dictionary (remove by key)<br>dictionary (list of keys)<br>dictionary (list of values)<br>dictionary (merge)<br>range
 </blockquote>
-</li><li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>+ / - / * / /</tt></td><td>addition / subtraction / multiplication / division</td></tr>
+<li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>+ / - / * / /</tt></td><td>addition / subtraction / multiplication / division</td></tr>
 <tr><td><tt>^</tt></td><td>exponentiation (power)</td></tr>
 <tr><td><tt>log10</tt></td><td>logarithm (base 10)</td></tr>
 <tr><td><tt>log</tt></td><td>logarithm (base e)</td></tr>
@@ -131,12 +141,12 @@ Unknown: </p><blockquote>tuple type<br>tuple constructor<br>reference (pointer) 
 <tr><td><tt>asin / acos / atan<a href="#5">(5)</a></tt></td><td>trigonometry (inverse)</td></tr>
 <tr><td><tt>Float, Float32, Float64</tt></td><td>type name (floating point)</td></tr>
 <tr><td><tt>Int, uInt, Int8, Int16...</tt></td><td>type name (integers)</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>numbers syntax (floating point)<br>random (random number)<br>random (seed the pseudo random generator)<br>operator priorities and associativities<br>truncate / round / floor / ceil<br>bitwise operators
+</table><p>
+Unknown: <blockquote>numbers syntax (floating point)<br>random (random number)<br>random (seed the pseudo random generator)<br>operator priorities and associativities<br>truncate / round / floor / ceil<br>bitwise operators
 </blockquote>
-</li><li><a href="../syntax-across-languages/Thrds.html">Threads</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>common variables are copied at thread creation, in abscence of a &quot;share&quot; statement</tt></td><td>passing data directly between threads</td></tr>
+<li><a href="../syntax-across-languages/Thrds.html">Threads</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>common variables are copied at thread creation, in abscence of a "share" statement</tt></td><td>passing data directly between threads</td></tr>
 <tr><td><tt>thread ...</tt></td><td>thread definition</td></tr>
 <tr><td><tt><pre>parallel [threads nb_threads] [mini mini_threshold] [maxi maxi_threshold] [active]
    ...
@@ -145,5 +155,19 @@ Unknown: </p><blockquote>numbers syntax (floating point)<br>random (random numbe
    [post
      sequential_instructions]
    ...</pre></tt></td><td>thread definition</td></tr>
-</tbody></table></p><p>
-</p></li>
+</table><p>
+</ul>
+<h2>Remarks</h2>
+<ul>
+<li><a name="1">(1)</a> in Lua, "return xxx" can only appear before a block end. in Matlab, only in inline('...')
+<li><a name="2">(2)</a> in Python, usually called self
+<li><a name="3">(3)</a> in Lua &gt;= 5.0
+<li><a name="4">(4)</a> Smalltalk: postfix operator
+<li><a name="5">(5)</a> Ruby &gt;= 1.7
+</ul>
+<hr><address><a href="mailto:pixel@rigaux.org">Pixel</a></address>
+This document is licensed under <a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> (GNU Free Documentation License).
+<br>Generated from <a href="../syntax-across-languages.html.pl">syntax-across-languages.html.pl</a>
+<br> $Id: syntax-across-languages.html.pl 408 2008-08-29 08:32:23Z pixel $
+
+</body></html>

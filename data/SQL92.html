@@ -1,59 +1,76 @@
+<html><head><title>syntax in SQL92 </title></head><body>
 
+<p>
+The "Unknown:"s below indicate that an entry is incomplete.
+<ul>
+<li>either the entry exist in the language, and <a href="mailto:pixel@rigaux.org">please tell</a>.
+<li>either the entry doesn't exist in the language, and <a href="mailto:pixel@rigaux.org">please tell so</a>.
+The entry will be marked as such and won't appear as missing anymore.
+</ul>
+
+<hr><ul>
 <li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>--</tt></td><td>commenting (until end of line)</td></tr>
+<table border=1 cellpadding=6>
+<tr><td><tt>--</tt></td><td>commenting (until end of line)</td></tr>
 <tr><td><tt>&lt; &gt; &lt;= &gt;=</tt></td><td>comparison</td></tr>
 <tr><td><tt>min / max</tt></td><td>comparison (min / max (binary or more))</td></tr>
 <tr><td><tt>= &lt;&gt;</tt></td><td>equality / inequality (deep)</td></tr>
 <tr><td><tt>( ... )</tt></td><td>grouping expressions</td></tr>
 <tr><td><tt>case-insensitive</tt></td><td>tokens (case-sensitivity (keywords, variable identifiers...))</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt><pre>CASE val
+</table><p>
+<li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt><pre>CASE val
     WHEN v1 THEN ...
     WHEN v2 THEN ...
     ELSE ...
 END</pre></tt></td><td>multiple selection (switch)</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/Tps.html">Types</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>CAST(e as t)</tt></td><td>cast (upcast)</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>SUBSTRING(s FROM n len)</tt></td><td>extract a substring</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/Tps.html">Types</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>CAST(e as t)</tt></td><td>cast (upcast)</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>SUBSTRING(s FROM n len)</tt></td><td>extract a substring</td></tr>
 <tr><td><tt>POSITION(needle IN s)</tt></td><td>locate a substring</td></tr>
 <tr><td><tt>||</tt></td><td>string concatenation</td></tr>
 <tr><td><tt>CHARACTER_LENGTH</tt></td><td>string size</td></tr>
-<tr><td><tt>&apos;...&apos;</tt></td><td>strings (with no interpolation of variables)</td></tr>
+<tr><td><tt>'...'</tt></td><td>strings (with no interpolation of variables)</td></tr>
 <tr><td><tt>CHAR, VARCHAR(size)</tt></td><td>type name</td></tr>
 <tr><td><tt>upper / lower</tt></td><td>uppercase / lowercase / capitalized string</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>FALSE</tt></td><td>false value</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>FALSE</tt></td><td>false value</td></tr>
 <tr><td><tt>TRUE</tt></td><td>true value</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>in</tt></td><td>is an element in the list</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>in</tt></td><td>is an element in the list</td></tr>
 <tr><td><tt>count</tt></td><td>list size</td></tr>
 <tr><td><tt>distinct</tt></td><td>remove duplicates</td></tr>
 <tr><td><tt>order by</tt></td><td>sort</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>COALESCE</tt></td><td>optional value (null coalescing)</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>COALESCE</tt></td><td>optional value (null coalescing)</td></tr>
 <tr><td><tt>NULL</tt></td><td>optional value (null value)</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>+ / - / * / /</tt></td><td>addition / subtraction / multiplication / division</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>+ / - / * / /</tt></td><td>addition / subtraction / multiplication / division</td></tr>
 <tr><td><tt>1000., 1E3</tt></td><td>numbers syntax (floating point)</td></tr>
-<tr><td><tt>B&apos;1&apos;, X&apos;F&apos;</tt></td><td>numbers syntax (integers in base 2, octal and hexadecimal)</td></tr>
+<tr><td><tt>B'1', X'F'</tt></td><td>numbers syntax (integers in base 2, octal and hexadecimal)</td></tr>
 <tr><td><tt>1000</tt></td><td>numbers syntax (integers)</td></tr>
 <tr><td><tt>NUMERIC, DECIMAL, DOUBLE PRECISION</tt></td><td>type name (floating point)</td></tr>
 <tr><td><tt>INTEGER, INT, SMALLINT</tt></td><td>type name (integers)</td></tr>
-</tbody></table></p><p>
-</p></li>
+</table><p>
+</ul>
+
+<hr><address><a href="mailto:pixel@rigaux.org">Pixel</a></address>
+This document is licensed under <a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> (GNU Free Documentation License).
+<br>Generated from <a href="../syntax-across-languages.html.pl">syntax-across-languages.html.pl</a>
+<br> $Id: syntax-across-languages.html.pl 408 2008-08-29 08:32:23Z pixel $
+
+</body></html>

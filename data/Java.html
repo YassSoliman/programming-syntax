@@ -1,8 +1,18 @@
+<html><head><title>syntax in Java </title></head><body>
 
+<p>
+The "Unknown:"s below indicate that an entry is incomplete.
+<ul>
+<li>either the entry exist in the language, and <a href="mailto:pixel@rigaux.org">please tell</a>.
+<li>either the entry doesn't exist in the language, and <a href="mailto:pixel@rigaux.org">please tell so</a>.
+The entry will be marked as such and won't appear as missing anymore.
+</ul>
+
+<hr><ul>
 <li><a href="categories.html">Category</a>: Object Oriented, Reflexive, Statically typed<p>
-</p></li><li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>{ ... }<a href="#1">(1)</a></tt></td><td>block (grouping statements, especially when statements are not expressions)</td></tr>
+<li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>{ ... }<a href="#1">(1)</a></tt></td><td>block (grouping statements, especially when statements are not expressions)</td></tr>
 <tr><td><tt>nothing needed</tt></td><td>breaking lines (useful when end-of-line and/or indentation has a special meaning)</td></tr>
 <tr><td><tt>/* ... */</tt></td><td>commenting (non nestable)</td></tr>
 <tr><td><tt>//</tt></td><td>commenting (until end of line)</td></tr>
@@ -22,17 +32,17 @@ Thread.currentThread().getStackTrace()[1].getFileName();</pre></tt></td><td>info
 <tr><td><tt>CamelCase or camelCase</tt></td><td>tokens (what is the standard way for <a href="http://c2.com/cgi/wiki?CapitalizationRules">scrunching together multiple words</a>)</td></tr>
 <tr><td><tt>=</tt></td><td>variable assignment or declaration (assignment)</td></tr>
 <tr><td><tt>t v</tt></td><td>variable assignment or declaration (declaration)</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>f(a,b,...)</tt></td><td>function call</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>f(a,b,...)</tt></td><td>function call</td></tr>
 <tr><td><tt>f()</tt></td><td>function call (with no parameter)</td></tr>
 <tr><td><tt>one can use overloading on different number of arguments</tt></td><td>function definition (variable number of arguments)</td></tr>
 <tr><td><tt>return<a href="#3">(3)</a></tt></td><td>function return value (breaks the control flow)</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>continue / break</tt></td><td>breaking control flow (continue / break)</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>continue / break</tt></td><td>breaking control flow (continue / break)</td></tr>
 <tr><td><tt>return<a href="#3">(3)</a></tt></td><td>breaking control flow (returning a value)</td></tr>
 <tr><td><tt>try a catch (exn) ...</tt></td><td>exception (catching)</td></tr>
 <tr><td><tt>finally</tt></td><td>exception (cleanup: code executed before leaving)</td></tr>
@@ -41,7 +51,7 @@ Thread.currentThread().getStackTrace()[1].getFileName();</pre></tt></td><td>info
 <tr><td><tt>if (c) b1 else b2</tt></td><td>if_then_else</td></tr>
 <tr><td><tt>c ? b1 : b2</tt></td><td>if_then_else</td></tr>
 <tr><td><tt>do ... while (!c)</tt></td><td>loop (do something until condition)</td></tr>
-<tr><td><tt>for</tt></td><td>loop (for &quot;a la C&quot; (while + initialisation))</td></tr>
+<tr><td><tt>for</tt></td><td>loop (for "a la C" (while + initialisation))</td></tr>
 <tr><td><tt>while (c) ...</tt></td><td>loop (while condition do something)</td></tr>
 <tr><td><tt><pre>switch (val) { 
    case v1: ...; break; 
@@ -49,22 +59,22 @@ Thread.currentThread().getStackTrace()[1].getFileName();</pre></tt></td><td>info
    default: ...;
  }</pre></tt></td><td>multiple selection (switch)</td></tr>
 <tr><td><tt>;</tt></td><td>sequence</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>loop (for each value in a numeric range, 1 increment (see also the entries about ranges))<br>loop (for each value in a numeric range, 1 decrement)<br>loop (for each value in a numeric range, free increment)
+</table><p>
+Unknown: <blockquote>loop (for each value in a numeric range, 1 increment (see also the entries about ranges))<br>loop (for each value in a numeric range, 1 decrement)<br>loop (for each value in a numeric range, free increment)
 </blockquote>
-</li><li><a href="../syntax-across-languages/Tps.html">Types</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>t v</tt></td><td>annotation (or variable declaration)</td></tr>
+<li><a href="../syntax-across-languages/Tps.html">Types</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>t v</tt></td><td>annotation (or variable declaration)</td></tr>
 <tr><td><tt>(t) e</tt></td><td>cast (downcast (need runtime checking))</td></tr>
 <tr><td><tt>(t) e</tt></td><td>cast (upcast)</td></tr>
-<tr><td><tt>&quot;final&quot; fields, parameters, local variables<a href="#4">(4)</a></tt></td><td>mutability, constness (special cases)</td></tr>
+<tr><td><tt>"final" fields, parameters, local variables<a href="#4">(4)</a></tt></td><td>mutability, constness (special cases)</td></tr>
 <tr><td><tt>mutability is the default</tt></td><td>mutability, constness (type of a mutable value)</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>declaration<br>mutability, constness (type of a constant value)
+</table><p>
+Unknown: <blockquote>declaration<br>mutability, constness (type of a constant value)
 </blockquote>
-</li><li><a href="../syntax-across-languages/bjcrntRfl.html">Object Oriented &amp; Reflexivity</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>super</tt></td><td>accessing parent method</td></tr>
+<li><a href="../syntax-across-languages/bjcrntRfl.html">Object Oriented & Reflexivity</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>super</tt></td><td>accessing parent method</td></tr>
 <tr><td><tt>class</tt></td><td>class declaration</td></tr>
 <tr><td><tt>this</tt></td><td>current instance</td></tr>
 <tr><td><tt>getClass</tt></td><td>get the type/class corresponding to an object/instance/value</td></tr>
@@ -75,24 +85,24 @@ Unknown: </p><blockquote>declaration<br>mutability, constness (type of a constan
 <tr><td><tt>o.clone()</tt></td><td>object cloning</td></tr>
 <tr><td><tt>new class_name(...)</tt></td><td>object creation</td></tr>
 <tr><td><tt>instanceof</tt></td><td>testing class membership</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>package p;</tt></td><td>declare</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>package p;</tt></td><td>declare</td></tr>
 <tr><td><tt>attached to each name (public, private...)</tt></td><td>declare (selective export)</td></tr>
 <tr><td><tt>import p.*</tt></td><td>import (everything into current namespace)</td></tr>
 <tr><td><tt>automatically done<a href="#5">(5)</a></tt></td><td>import (package (ie. load the package))</td></tr>
 <tr><td><tt>import p.name1; import p.name2</tt></td><td>import (selectively)</td></tr>
 <tr><td><tt>.</tt></td><td>package scope</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>charAt</tt></td><td>accessing n-th character</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>charAt</tt></td><td>accessing n-th character</td></tr>
 <tr><td><tt>(char) c</tt></td><td>ascii to character</td></tr>
 <tr><td><tt>getNumericValue</tt></td><td>character to ascii</td></tr>
 <tr><td><tt>(int) c</tt></td><td>character to ascii</td></tr>
 <tr><td><tt>toString</tt></td><td>convert something to a string (see also string interpolation)</td></tr>
-<tr><td><tt>&quot;&quot; + e</tt></td><td>convert something to a string (see also string interpolation)</td></tr>
+<tr><td><tt>"" + e</tt></td><td>convert something to a string (see also string interpolation)</td></tr>
 <tr><td><tt>substring</tt></td><td>extract a substring</td></tr>
 <tr><td><tt>indexOf</tt></td><td>locate a substring</td></tr>
 <tr><td><tt>lastIndexOf</tt></td><td>locate a substring (starting at the end)</td></tr>
@@ -100,28 +110,28 @@ Unknown: </p><blockquote>declaration<br>mutability, constness (type of a constan
 <tr><td><tt>println<a href="#6">(6)</a></tt></td><td>simple print (on strings)</td></tr>
 <tr><td><tt>format</tt></td><td>sprintf-like</td></tr>
 <tr><td><tt>+</tt></td><td>string concatenation</td></tr>
-<tr><td><tt>equals</tt></td><td>string equality &amp; inequality</td></tr>
+<tr><td><tt>equals</tt></td><td>string equality & inequality</td></tr>
 <tr><td><tt>length</tt></td><td>string size</td></tr>
-<tr><td><tt>&quot;\n&quot;</tt></td><td>strings (end-of-line (without writing the real CR or LF character))</td></tr>
-<tr><td><tt>&quot;...&quot;</tt></td><td>strings (with no interpolation of variables)</td></tr>
+<tr><td><tt>"\n"</tt></td><td>strings (end-of-line (without writing the real CR or LF character))</td></tr>
+<tr><td><tt>"..."</tt></td><td>strings (with no interpolation of variables)</td></tr>
 <tr><td><tt>String</tt></td><td>type name</td></tr>
 <tr><td><tt>toUpperCase / toLowerCase</tt></td><td>upper / lower case character</td></tr>
 <tr><td><tt>toUpperCase / toLowerCase</tt></td><td>uppercase / lowercase / capitalized string</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>character type name<br>character &quot;z&quot;<br>strings (with interpolation of variables)<br>multi-line<br>serialize (marshalling)<br>unserialize (un-marshalling)
+</table><p>
+Unknown: <blockquote>character type name<br>character "z"<br>strings (with interpolation of variables)<br>multi-line<br>serialize (marshalling)<br>unserialize (un-marshalling)
 </blockquote>
-</li><li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>false</tt></td><td>false value</td></tr>
+<li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>false</tt></td><td>false value</td></tr>
 <tr><td><tt>!</tt></td><td>logical not</td></tr>
-<tr><td><tt>| / &amp;</tt></td><td>logical or / and (non short circuit (always evaluates both arguments))</td></tr>
-<tr><td><tt>|| / &amp;&amp;</tt></td><td>logical or / and (short circuit)</td></tr>
+<tr><td><tt>| / &</tt></td><td>logical or / and (non short circuit (always evaluates both arguments))</td></tr>
+<tr><td><tt>|| / &&</tt></td><td>logical or / and (short circuit)</td></tr>
 <tr><td><tt>true</tt></td><td>true value</td></tr>
 <tr><td><tt>boolean</tt></td><td>type name</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>add</tt></td><td>adding an element at the end (side-effect)</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>add</tt></td><td>adding an element at the end (side-effect)</td></tr>
 <tr><td><tt>toArray</tt></td><td>list out of a bag</td></tr>
 <tr><td><tt>size</tt></td><td>list size</td></tr>
 <tr><td><tt>length</tt></td><td>list size</td></tr>
@@ -129,12 +139,12 @@ Unknown: </p><blockquote>character type name<br>character &quot;z&quot;<br>strin
 <tr><td><tt>reverse</tt></td><td>reverse</td></tr>
 <tr><td><tt>min / max</tt></td><td>smallest / biggest element</td></tr>
 <tr><td><tt>sort<a href="#7">(7)</a></tt></td><td>sort</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>type name<br>list concatenation<br>list flattening<br>list constructor<br>adding an element at the beginning (list cons)<br>adding an element at index<br>first element<br>all but the first element<br>last element<br>get the first element and remove it<br>get the last element and remove it<br>for each element do something<br>is an element in the list<br>join a list of strings in a string using a glue string<br>iterate with index<br>remove duplicates
+</table><p>
+Unknown: <blockquote>type name<br>list concatenation<br>list flattening<br>list constructor<br>adding an element at the beginning (list cons)<br>adding an element at index<br>first element<br>all but the first element<br>last element<br>get the first element and remove it<br>get the last element and remove it<br>for each element do something<br>is an element in the list<br>join a list of strings in a string using a glue string<br>iterate with index<br>remove duplicates
 </blockquote>
-</li><li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>get</tt></td><td>dictionary (access: read)</td></tr>
+<li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>get</tt></td><td>dictionary (access: read)</td></tr>
 <tr><td><tt>put</tt></td><td>dictionary (access: write)</td></tr>
 <tr><td><tt>containsKey</tt></td><td>dictionary (has the key ?)</td></tr>
 <tr><td><tt>keySet</tt></td><td>dictionary (list of keys)</td></tr>
@@ -146,13 +156,13 @@ Unknown: </p><blockquote>type name<br>list concatenation<br>list flattening<br>l
 <tr><td><tt>null</tt></td><td>optional value (null value)</td></tr>
 <tr><td><tt>v</tt></td><td>optional value (value)</td></tr>
 <tr><td><tt>.</tt></td><td>record (selector)</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>optional value (null coalescing)<br>record (type declaration)<br>union type declaration
+</table><p>
+Unknown: <blockquote>optional value (null coalescing)<br>record (type declaration)<br>union type declaration
 </blockquote>
-</li><li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>+ / - / * / /</tt></td><td>addition / subtraction / multiplication / division</td></tr>
-<tr><td><tt>&amp; / | / ^</tt></td><td>bitwise operators (and / or / xor)</td></tr>
+<li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>+ / - / * / /</tt></td><td>addition / subtraction / multiplication / division</td></tr>
+<tr><td><tt>& / | / ^</tt></td><td>bitwise operators (and / or / xor)</td></tr>
 <tr><td><tt>~</tt></td><td>bitwise operators (bitwise inversion)</td></tr>
 <tr><td><tt>&lt;&lt; / &gt;&gt; / &gt;&gt;&gt;</tt></td><td>bitwise operators (left shift / right shift / unsigned right shift)</td></tr>
 <tr><td><tt>pow</tt></td><td>exponentiation (power)</td></tr>
@@ -165,12 +175,12 @@ Unknown: </p><blockquote>optional value (null coalescing)<br>record (type declar
 <tr><td><tt>sqrt / exp / abs</tt></td><td>square root / e-exponential / absolute value</td></tr>
 <tr><td><tt>sin / cos / tan</tt></td><td>trigonometry (basic)</td></tr>
 <tr><td><tt>/ round / floor / ceil</tt></td><td>truncate / round / floor / ceil</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>type name<br>numbers syntax (integers in base 2, octal and hexadecimal)<br>random (random number)<br>random (seed the pseudo random generator)<br>trigonometry (inverse)<br>logarithm (base 10)
+</table><p>
+Unknown: <blockquote>type name<br>numbers syntax (integers in base 2, octal and hexadecimal)<br>random (random number)<br>random (seed the pseudo random generator)<br>trigonometry (inverse)<br>logarithm (base 10)
 </blockquote>
-</li><li><a href="../syntax-across-languages/Thrds.html">Threads</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>OtherThread.join()</tt></td><td>Joining Another Thread (Suspending a thread until another thread completes)</td></tr>
+<li><a href="../syntax-across-languages/Thrds.html">Threads</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>OtherThread.join()</tt></td><td>Joining Another Thread (Suspending a thread until another thread completes)</td></tr>
 <tr><td><tt>setPriority(newPriority);</tt></td><td>Thread Prioritization (Changing Thead Priority)</td></tr>
 <tr><td><tt>synchronize (this){ ... }</tt></td><td>Thread Synchronization (Defining a Synchronized Shared Resource)</td></tr>
 <tr><td><tt>Object_Name.GetMethod()</tt></td><td>Thread Synchronization (Synchronized Reading of a Shared Resource)</td></tr>
@@ -179,5 +189,24 @@ Unknown: </p><blockquote>type name<br>numbers syntax (integers in base 2, octal 
 <tr><td><tt>start() / stop()<a href="#10">(10)</a></tt></td><td>starting / stopping threads</td></tr>
 <tr><td><tt>class class_name extends Thread {[override run method] }</tt></td><td>thread definition</td></tr>
 <tr><td><tt>class_name MyThread = new class_name()</tt></td><td>thread object creation</td></tr>
-</tbody></table></p><p>
-</p></li>
+</table><p>
+</ul>
+<h2>Remarks</h2>
+<ul>
+<li><a name="1">(1)</a> introduce scope
+<li><a name="2">(2)</a> for C, it is not a standard convention, but it is the more widespread
+<li><a name="3">(3)</a> in Lua, "return xxx" can only appear before a block end. in Matlab, only in inline('...')
+<li><a name="4">(4)</a> quite bad: only the reference is non-mutable whereas the object is still mutable
+<li><a name="5">(5)</a> using a correspondance from the package name to the file name
+<li><a name="6">(6)</a> adding an end-of-line
+<li><a name="7">(7)</a> in Scheme, not standard, but nearly standard
+<li><a name="8">(8)</a> right-bias
+<li><a name="9">(9)</a> Java: introduced in 1.5
+<li><a name="10">(10)</a> "stop" is now deprecated
+</ul>
+<hr><address><a href="mailto:pixel@rigaux.org">Pixel</a></address>
+This document is licensed under <a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> (GNU Free Documentation License).
+<br>Generated from <a href="../syntax-across-languages.html.pl">syntax-across-languages.html.pl</a>
+<br> $Id: syntax-across-languages.html.pl 408 2008-08-29 08:32:23Z pixel $
+
+</body></html>

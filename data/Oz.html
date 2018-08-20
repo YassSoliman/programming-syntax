@@ -1,8 +1,18 @@
+<html><head><title>syntax in Oz </title></head><body>
 
+<p>
+The "Unknown:"s below indicate that an entry is incomplete.
+<ul>
+<li>either the entry exist in the language, and <a href="mailto:pixel@rigaux.org">please tell</a>.
+<li>either the entry doesn't exist in the language, and <a href="mailto:pixel@rigaux.org">please tell so</a>.
+The entry will be marked as such and won't appear as missing anymore.
+</ul>
+
+<hr><ul>
 <li><a href="categories.html">Category</a>: Object Oriented, Dynamically typed<p>
-</p></li><li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>nothing needed</tt></td><td>breaking lines (useful when end-of-line and/or indentation has a special meaning)</td></tr>
+<li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>nothing needed</tt></td><td>breaking lines (useful when end-of-line and/or indentation has a special meaning)</td></tr>
 <tr><td><tt>/* ... */</tt></td><td>commenting (nestable)</td></tr>
 <tr><td><tt>%</tt></td><td>commenting (until end of line)</td></tr>
 <tr><td><tt>&lt; &gt; =&lt; &gt;=</tt></td><td>comparison</td></tr>
@@ -13,56 +23,56 @@
 <tr><td><tt>Compiler.evalExpression or Compiler.parseOzVirtualString</tt></td><td>runtime evaluation</td></tr>
 <tr><td><tt>=</tt></td><td>variable assignment or declaration (assignment)</td></tr>
 <tr><td><tt>local V1 = e V2 = e2 in ... end</tt></td><td>variable assignment or declaration (declaration)</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>documentation comment<br>information about the current line and file<br>tokens (case-sensitivity (keywords, variable identifiers...))<br>tokens (what is the standard way for <a href="http://c2.com/cgi/wiki?CapitalizationRules">scrunching together multiple words</a>)<br>tokens (variable identifier regexp)<br>comparison (returns 3 values (i.e. inferior, equal or superior))
+</table><p>
+Unknown: <blockquote>documentation comment<br>information about the current line and file<br>tokens (case-sensitivity (keywords, variable identifiers...))<br>tokens (what is the standard way for <a href="http://c2.com/cgi/wiki?CapitalizationRules">scrunching together multiple words</a>)<br>tokens (variable identifier regexp)<br>comparison (returns 3 values (i.e. inferior, equal or superior))
 </blockquote>
-</li><li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>fun {$ A B} ... end<a href="#1">(1)</a></tt></td><td>anonymous function</td></tr>
+<li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>fun {$ A B} ... end<a href="#1">(1)</a></tt></td><td>anonymous function</td></tr>
 <tr><td><tt>{f a b}</tt></td><td>function call</td></tr>
 <tr><td><tt>{f}</tt></td><td>function call (with no parameter)</td></tr>
 <tr><td><tt>fun { F Para1 Para2 } ... end</tt></td><td>function definition</td></tr>
 <tr><td><tt>proc { F Para1 Para2 } ... end</tt></td><td>function definition (procedures)</td></tr>
 <tr><td><tt>no syntax needed<a href="#2">(2)</a></tt></td><td>function return value (function body is the result)</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>runtime inspecting the caller information
+</table><p>
+Unknown: <blockquote>runtime inspecting the caller information
 </blockquote>
-</li><li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>try a catch exn then ... end</tt></td><td>exception (catching)</td></tr>
+<li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>try a catch exn then ... end</tt></td><td>exception (catching)</td></tr>
 <tr><td><tt>raise ... end</tt></td><td>exception (throwing)</td></tr>
 <tr><td><tt>if c then ... end</tt></td><td>if_then</td></tr>
 <tr><td><tt>if c then b1 elseif c2 then b2 else b3 end</tt></td><td>if_then_else</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>multiple selection (switch)<br>loop (forever loop)<br>loop (while condition do something)<br>loop (do something until condition)<br>loop (for each value in a numeric range, 1 increment (see also the entries about ranges))<br>loop (for each value in a numeric range, 1 decrement)<br>loop (for each value in a numeric range, free increment)<br>loop (for &quot;a la C&quot; (while + initialisation))
+</table><p>
+Unknown: <blockquote>multiple selection (switch)<br>loop (forever loop)<br>loop (while condition do something)<br>loop (do something until condition)<br>loop (for each value in a numeric range, 1 increment (see also the entries about ranges))<br>loop (for each value in a numeric range, 1 decrement)<br>loop (for each value in a numeric range, free increment)<br>loop (for "a la C" (while + initialisation))
 </blockquote>
-</li><li><a href="../syntax-across-languages/bjcrntRfl.html">Object Oriented &amp; Reflexivity</a><p>
-Unknown: </p><blockquote>method invocation<br>method invocation (with no parameter)<br>object creation<br>object cloning<br>manually call an object&apos;s destructor<br>class declaration<br>testing class membership<br>get the type/class corresponding to an object/instance/value<br>methods available<br>inheritance<br>has the method<br>current instance<br>accessing parent method
+<li><a href="../syntax-across-languages/bjcrntRfl.html">Object Oriented & Reflexivity</a><p>
+Unknown: <blockquote>method invocation<br>method invocation (with no parameter)<br>object creation<br>object cloning<br>manually call an object's destructor<br>class declaration<br>testing class membership<br>get the type/class corresponding to an object/instance/value<br>methods available<br>inheritance<br>has the method<br>current instance<br>accessing parent method
 </blockquote>
-</li><li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
-Unknown: </p><blockquote>package scope<br>declare<br>import
+<li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
+Unknown: <blockquote>package scope<br>declare<br>import
 </blockquote>
-</li><li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>&amp;z</tt></td><td>character &quot;z&quot;</td></tr>
-<tr><td><tt>== \=</tt></td><td>string equality &amp; inequality</td></tr>
+<li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>&z</tt></td><td>character "z"</td></tr>
+<tr><td><tt>== \=</tt></td><td>string equality & inequality</td></tr>
 <tr><td><tt>Length</tt></td><td>string size</td></tr>
-<tr><td><tt>&quot;...&quot;</tt></td><td>strings (with no interpolation of variables)</td></tr>
+<tr><td><tt>"..."</tt></td><td>strings (with no interpolation of variables)</td></tr>
 <tr><td><tt>ToUpper / ToLower</tt></td><td>upper / lower case character</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>strings (with interpolation of variables)<br>strings (end-of-line (without writing the real CR or LF character))<br>multi-line<br>convert something to a string (see also string interpolation)<br>serialize (marshalling)<br>unserialize (un-marshalling)<br>sprintf-like<br>simple print<br>string concatenation<br>duplicate n times<br>uppercase / lowercase / capitalized string<br>ascii to character<br>character to ascii<br>accessing n-th character<br>extract a substring<br>locate a substring<br>locate a substring (starting at the end)
+</table><p>
+Unknown: <blockquote>strings (with interpolation of variables)<br>strings (end-of-line (without writing the real CR or LF character))<br>multi-line<br>convert something to a string (see also string interpolation)<br>serialize (marshalling)<br>unserialize (un-marshalling)<br>sprintf-like<br>simple print<br>string concatenation<br>duplicate n times<br>uppercase / lowercase / capitalized string<br>ascii to character<br>character to ascii<br>accessing n-th character<br>extract a substring<br>locate a substring<br>locate a substring (starting at the end)
 </blockquote>
-</li><li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>false</tt></td><td>false value</td></tr>
+<li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>false</tt></td><td>false value</td></tr>
 <tr><td><tt>Not</tt></td><td>logical not</td></tr>
 <tr><td><tt>Or / And<a href="#3">(3)</a></tt></td><td>logical or / and (non short circuit (always evaluates both arguments))</td></tr>
 <tr><td><tt>orelse / andthen</tt></td><td>logical or / and (short circuit)</td></tr>
 <tr><td><tt>true</tt></td><td>true value</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>|</tt></td><td>adding an element at the beginning (list cons) (return the new list (no side-effect))</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>|</tt></td><td>adding an element at the beginning (list cons) (return the new list (no side-effect))</td></tr>
 <tr><td><tt>FoldL</tt></td><td>f(... f(f(init, e1), e2) ..., en)</td></tr>
 <tr><td><tt>FoldR</tt></td><td>f(e1, f(e2, ... f(en, init) ...))</td></tr>
 <tr><td><tt>ForAll</tt></td><td>for each element do something</td></tr>
@@ -82,22 +92,22 @@ Unknown: </p><blockquote>strings (with interpolation of variables)<br>strings (e
 <tr><td><tt>Sort</tt></td><td>sort</td></tr>
 <tr><td><tt>Map</tt></td><td>transform a list (or bag) in another one</td></tr>
 <tr><td><tt>Zip</tt></td><td>transform two lists in parallel</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>adding an element at index<br>adding an element at the end<br>first element<br>all but the first element<br>get the first element and remove it<br>get the last element and remove it<br>smallest / biggest element<br>join a list of strings in a string using a glue string<br>remove duplicates
+</table><p>
+Unknown: <blockquote>adding an element at index<br>adding an element at the end<br>first element<br>all but the first element<br>get the first element and remove it<br>get the last element and remove it<br>smallest / biggest element<br>join a list of strings in a string using a glue string<br>remove duplicates
 </blockquote>
-</li><li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>List.number A B Step</tt></td><td>range (inclusive .. inclusive)</td></tr>
+<li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>List.number A B Step</tt></td><td>range (inclusive .. inclusive)</td></tr>
 <tr><td><tt>.</tt></td><td>record (selector)</td></tr>
-<tr><td><tt>Assign</tt></td><td>reference (pointer) (assigning (when dereferencing doesn&apos;t give a lvalue))</td></tr>
+<tr><td><tt>Assign</tt></td><td>reference (pointer) (assigning (when dereferencing doesn't give a lvalue))</td></tr>
 <tr><td><tt>NewCell</tt></td><td>reference (pointer) (creation)</td></tr>
 <tr><td><tt>Access</tt></td><td>reference (pointer) (dereference)</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>tuple constructor<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (empty tuple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (1-uple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (using a tuple for a function call)<br>optional value (null value)<br>optional value (value)<br>optional value (null coalescing)<br>dictionary (constructor)<br>dictionary (access)<br>dictionary (has the key ?)<br>dictionary (remove by key)<br>dictionary (list of keys)<br>dictionary (list of values)<br>dictionary (merge)
+</table><p>
+Unknown: <blockquote>tuple constructor<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (empty tuple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (1-uple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (using a tuple for a function call)<br>optional value (null value)<br>optional value (value)<br>optional value (null coalescing)<br>dictionary (constructor)<br>dictionary (access)<br>dictionary (has the key ?)<br>dictionary (remove by key)<br>dictionary (list of keys)<br>dictionary (list of values)<br>dictionary (merge)
 </blockquote>
-</li><li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>Pow</tt></td><td>exponentiation (power)</td></tr>
+<li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>Pow</tt></td><td>exponentiation (power)</td></tr>
 <tr><td><tt>Log</tt></td><td>logarithm (base e)</td></tr>
 <tr><td><tt>mod</tt></td><td>modulo (modulo of -3 / 2 is -1)</td></tr>
 <tr><td><tt>~</tt></td><td>negation</td></tr>
@@ -108,7 +118,20 @@ Unknown: </p><blockquote>tuple constructor<br>computable tuple (these are a kind
 <tr><td><tt>Sin / Cos / Tan</tt></td><td>trigonometry (basic)</td></tr>
 <tr><td><tt>Asin / Acos / Atan</tt></td><td>trigonometry (inverse)</td></tr>
 <tr><td><tt>/ Round / Floor / Ceil</tt></td><td>truncate / round / floor / ceil</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>addition / subtraction / multiplication / division<br>random (random number)<br>random (seed the pseudo random generator)<br>operator priorities and associativities<br>logarithm (base 10)<br>bitwise operators
+</table><p>
+Unknown: <blockquote>addition / subtraction / multiplication / division<br>random (random number)<br>random (seed the pseudo random generator)<br>operator priorities and associativities<br>logarithm (base 10)<br>bitwise operators
 </blockquote>
-</li>
+</ul>
+<h2>Remarks</h2>
+<ul>
+<li><a name="1">(1)</a> also works for procedures: proc {$ A B} ... end
+<li><a name="2">(2)</a> in Matlab, only for anonymous function
+<li><a name="3">(3)</a> in Oz, simple functions, not operators
+<li><a name="4">(4)</a> 0b1 new in PHP 5.4
+</ul>
+<hr><address><a href="mailto:pixel@rigaux.org">Pixel</a></address>
+This document is licensed under <a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> (GNU Free Documentation License).
+<br>Generated from <a href="../syntax-across-languages.html.pl">syntax-across-languages.html.pl</a>
+<br> $Id: syntax-across-languages.html.pl 408 2008-08-29 08:32:23Z pixel $
+
+</body></html>

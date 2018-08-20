@@ -1,8 +1,18 @@
+<html><head><title>syntax in OCaml </title></head><body>
 
+<p>
+The "Unknown:"s below indicate that an entry is incomplete.
+<ul>
+<li>either the entry exist in the language, and <a href="mailto:pixel@rigaux.org">please tell</a>.
+<li>either the entry doesn't exist in the language, and <a href="mailto:pixel@rigaux.org">please tell so</a>.
+The entry will be marked as such and won't appear as missing anymore.
+</ul>
+
+<hr><ul>
 <li><a href="categories.html">Category</a>: Object Oriented, Functional, Statically typed<p>
-</p></li><li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>nothing needed</tt></td><td>breaking lines (useful when end-of-line and/or indentation has a special meaning)</td></tr>
+<li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>nothing needed</tt></td><td>breaking lines (useful when end-of-line and/or indentation has a special meaning)</td></tr>
 <tr><td><tt>(* ... *)</tt></td><td>commenting (nestable)</td></tr>
 <tr><td><tt>&lt; &gt; &lt;= &gt;=</tt></td><td>comparison</td></tr>
 <tr><td><tt>min / max</tt></td><td>comparison (min / max (binary or more))</td></tr>
@@ -14,26 +24,26 @@
 <tr><td><tt>( ... )</tt></td><td>grouping expressions</td></tr>
 <tr><td><tt>begin ... end</tt></td><td>grouping expressions</td></tr>
 <tr><td><tt>case-sensitive</tt></td><td>tokens (case-sensitivity (keywords, variable identifiers...))</td></tr>
-<tr><td><tt>[_A-Z][_a-zA-Z0-9&apos;]*</tt></td><td>tokens (constant regexp (if different from variable identifier regexp))</td></tr>
-<tr><td><tt>[_a-z][_a-zA-Z0-9&apos;]*</tt></td><td>tokens (type regexp (if different from variable identifier regexp))</td></tr>
-<tr><td><tt>[_a-z][_a-zA-Z0-9&apos;]*</tt></td><td>tokens (variable identifier regexp)</td></tr>
+<tr><td><tt>[_A-Z][_a-zA-Z0-9']*</tt></td><td>tokens (constant regexp (if different from variable identifier regexp))</td></tr>
+<tr><td><tt>[_a-z][_a-zA-Z0-9']*</tt></td><td>tokens (type regexp (if different from variable identifier regexp))</td></tr>
+<tr><td><tt>[_a-z][_a-zA-Z0-9']*</tt></td><td>tokens (variable identifier regexp)</td></tr>
 <tr><td><tt>underscores for functions / types, unclear for modules / constructors</tt></td><td>tokens (what is the standard way for <a href="http://c2.com/cgi/wiki?CapitalizationRules">scrunching together multiple words</a>)</td></tr>
 <tr><td><tt>&lt;-</tt></td><td>variable assignment or declaration (assignment)</td></tr>
 <tr><td><tt>let v = e in</tt></td><td>variable assignment or declaration (declaration)</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>(&gt;) a</tt></td><td><a href="http://www.haskell.org/hawiki/PartialApplication">partial application</a> (in the examples below, a normal call is &quot;f(a,b)&quot;) (give the first argument to operator &quot;&gt;&quot;)</td></tr>
-<tr><td><tt>f a</tt></td><td><a href="http://www.haskell.org/hawiki/PartialApplication">partial application</a> (in the examples below, a normal call is &quot;f(a,b)&quot;) (give the first argument)</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>(&gt;) a</tt></td><td><a href="http://www.haskell.org/hawiki/PartialApplication">partial application</a> (in the examples below, a normal call is "f(a,b)") (give the first argument to operator ">")</td></tr>
+<tr><td><tt>f a</tt></td><td><a href="http://www.haskell.org/hawiki/PartialApplication">partial application</a> (in the examples below, a normal call is "f(a,b)") (give the first argument)</td></tr>
 <tr><td><tt>fun a b -&gt; ...</tt></td><td>anonymous function</td></tr>
 <tr><td><tt>f a b ...</tt></td><td>function call</td></tr>
 <tr><td><tt>f()</tt></td><td>function call (with no parameter)</td></tr>
 <tr><td><tt>let f para1 para2 = ...</tt></td><td>function definition</td></tr>
 <tr><td><tt>no syntax needed<a href="#1">(1)</a></tt></td><td>function return value (function body is the result)</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>try a with exn -&gt; ...</tt></td><td>exception (catching)</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>try a with exn -&gt; ...</tt></td><td>exception (catching)</td></tr>
 <tr><td><tt>raise</tt></td><td>exception (throwing)</td></tr>
 <tr><td><tt>if c then ...</tt></td><td>if_then</td></tr>
 <tr><td><tt>if c then b1 else b2</tt></td><td>if_then_else</td></tr>
@@ -45,39 +55,39 @@
  | v2 | v3 -&gt; ...
  | _ -&gt; ...</pre></tt></td><td>multiple selection (switch)</td></tr>
 <tr><td><tt>;</tt></td><td>sequence</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/Tps.html">Types</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>:</tt></td><td>annotation (or variable declaration)</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/Tps.html">Types</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>:</tt></td><td>annotation (or variable declaration)</td></tr>
 <tr><td><tt>e :&gt; t</tt></td><td>cast (upcast)</td></tr>
 <tr><td><tt>type n = t</tt></td><td>declaration</td></tr>
 <tr><td><tt>constness is the default</tt></td><td>mutability, constness (type of a constant value)</td></tr>
 <tr><td><tt>T ref</tt></td><td>mutability, constness (type of a mutable value)</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/bjcrntRfl.html">Object Oriented &amp; Reflexivity</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>class</tt></td><td>class declaration</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/bjcrntRfl.html">Object Oriented & Reflexivity</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>class</tt></td><td>class declaration</td></tr>
 <tr><td><tt>inherit</tt></td><td>inheritance</td></tr>
 <tr><td><tt>object#method para</tt></td><td>method invocation</td></tr>
 <tr><td><tt>object#method</tt></td><td>method invocation (with no parameter)</td></tr>
 <tr><td><tt>{&lt; &gt;}  or  Oo.copy o</tt></td><td>object cloning</td></tr>
 <tr><td><tt>new class_name ...</tt></td><td>object creation</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>module P = struct ... end</tt></td><td>declare</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>module P = struct ... end</tt></td><td>declare</td></tr>
 <tr><td><tt>automatically done based on the file name</tt></td><td>declare</td></tr>
 <tr><td><tt><pre>module type PType = sig val name1 : type1 ... end
 module P : PType  = struct ... end</pre></tt></td><td>declare (selective export)</td></tr>
 <tr><td><tt>open p</tt></td><td>import (everything into current namespace)</td></tr>
 <tr><td><tt>automatically done<a href="#2">(2)</a></tt></td><td>import (package (ie. load the package))</td></tr>
 <tr><td><tt>.</tt></td><td>package scope</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>s.[n]</tt></td><td>accessing n-th character</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>s.[n]</tt></td><td>accessing n-th character</td></tr>
 <tr><td><tt>chr</tt></td><td>ascii to character</td></tr>
-<tr><td><tt>&apos;z&apos;</tt></td><td>character &quot;z&quot;</td></tr>
+<tr><td><tt>'z'</tt></td><td>character "z"</td></tr>
 <tr><td><tt>code</tt></td><td>character to ascii</td></tr>
 <tr><td><tt>char</tt></td><td>character type name</td></tr>
 <tr><td><tt>sub</tt></td><td>extract a substring</td></tr>
@@ -89,28 +99,28 @@ module P : PType  = struct ... end</pre></tt></td><td>declare (selective export)
 <tr><td><tt>printf</tt></td><td>simple print (printf-like)</td></tr>
 <tr><td><tt>sprintf</tt></td><td>sprintf-like</td></tr>
 <tr><td><tt>^</tt></td><td>string concatenation</td></tr>
-<tr><td><tt>= &lt;&gt;</tt></td><td>string equality &amp; inequality</td></tr>
+<tr><td><tt>= &lt;&gt;</tt></td><td>string equality & inequality</td></tr>
 <tr><td><tt>length</tt></td><td>string size</td></tr>
-<tr><td><tt>&quot;\n&quot;</tt></td><td>strings (end-of-line (without writing the real CR or LF character))</td></tr>
-<tr><td><tt>&quot;...&quot;</tt></td><td>strings (with no interpolation of variables)</td></tr>
+<tr><td><tt>"\n"</tt></td><td>strings (end-of-line (without writing the real CR or LF character))</td></tr>
+<tr><td><tt>"..."</tt></td><td>strings (with no interpolation of variables)</td></tr>
 <tr><td><tt>string</tt></td><td>type name</td></tr>
 <tr><td><tt>Marshal.from_string</tt></td><td>unserialize (un-marshalling)</td></tr>
 <tr><td><tt>uppercase / lowercase</tt></td><td>upper / lower case character</td></tr>
 <tr><td><tt>uppercase/lowercase</tt></td><td>uppercase / lowercase / capitalized string</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>strings (with interpolation of variables)
+</table><p>
+Unknown: <blockquote>strings (with interpolation of variables)
 </blockquote>
-</li><li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>false</tt></td><td>false value</td></tr>
+<li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>false</tt></td><td>false value</td></tr>
 <tr><td><tt>not<a href="#4">(4)</a></tt></td><td>logical not</td></tr>
-<tr><td><tt>|| / &amp;&amp;</tt></td><td>logical or / and (short circuit)</td></tr>
+<tr><td><tt>|| / &&</tt></td><td>logical or / and (short circuit)</td></tr>
 <tr><td><tt>true</tt></td><td>true value</td></tr>
 <tr><td><tt>bool</tt></td><td>type name</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>split</tt></td><td>2 lists from a list of couples</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>split</tt></td><td>2 lists from a list of couples</td></tr>
 <tr><td><tt>::</tt></td><td>adding an element at the beginning (list cons) (return the new list (no side-effect))</td></tr>
 <tr><td><tt>tl</tt></td><td>all but the first element</td></tr>
 <tr><td><tt>fold_left</tt></td><td>f(... f(f(init, e1), e2) ..., en)</td></tr>
@@ -139,12 +149,12 @@ Unknown: </p><blockquote>strings (with interpolation of variables)
 <tr><td><tt>map</tt></td><td>transform a list (or bag) in another one</td></tr>
 <tr><td><tt>map2</tt></td><td>transform two lists in parallel</td></tr>
 <tr><td><tt>a list</tt></td><td>type name</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>split a list
+</table><p>
+Unknown: <blockquote>split a list
 </blockquote>
-</li><li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>find</tt></td><td>dictionary (access: read)</td></tr>
+<li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>find</tt></td><td>dictionary (access: read)</td></tr>
 <tr><td><tt>add, replace</tt></td><td>dictionary (access: write)</td></tr>
 <tr><td><tt>mem</tt></td><td>dictionary (has the key ?)</td></tr>
 <tr><td><tt>remove</tt></td><td>dictionary (remove by key)</td></tr>
@@ -155,18 +165,18 @@ Unknown: </p><blockquote>split a list
 <tr><td><tt>Some v</tt></td><td>optional value (value)</td></tr>
 <tr><td><tt>.</tt></td><td>record (selector)</td></tr>
 <tr><td><tt>type typ = { n1 : typ1; n2 : typ2 }</tt></td><td>record (type declaration)</td></tr>
-<tr><td><tt>:=</tt></td><td>reference (pointer) (assigning (when dereferencing doesn&apos;t give a lvalue))</td></tr>
+<tr><td><tt>:=</tt></td><td>reference (pointer) (assigning (when dereferencing doesn't give a lvalue))</td></tr>
 <tr><td><tt>ref</tt></td><td>reference (pointer) (creation)</td></tr>
 <tr><td><tt>!<a href="#6">(6)</a></tt></td><td>reference (pointer) (dereference)</td></tr>
 <tr><td><tt>a, b, c</tt></td><td>tuple constructor</td></tr>
 <tr><td><tt>typ1 * ... * typn</tt></td><td>tuple type</td></tr>
 <tr><td><tt>type typ = N1 of typ1 | N2 of typ2 | ...</tt></td><td>union type declaration</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>optional value (null coalescing)
+</table><p>
+Unknown: <blockquote>optional value (null coalescing)
 </blockquote>
-</li><li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>+ +. / - -. / * *. / / /.<a href="#7">(7)</a></tt></td><td>addition / subtraction / multiplication / division</td></tr>
+<li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>+ +. / - -. / * *. / / /.<a href="#7">(7)</a></tt></td><td>addition / subtraction / multiplication / division</td></tr>
 <tr><td><tt>land / lor / lxor</tt></td><td>bitwise operators (and / or / xor)</td></tr>
 <tr><td><tt>lnot</tt></td><td>bitwise operators (bitwise inversion)</td></tr>
 <tr><td><tt>lsl / lsr or asr</tt></td><td>bitwise operators (left shift / right shift / unsigned right shift)</td></tr>
@@ -188,5 +198,22 @@ Unknown: </p><blockquote>optional value (null coalescing)
 <tr><td><tt>int_of_float / / floor / ceil</tt></td><td>truncate / round / floor / ceil</td></tr>
 <tr><td><tt>float</tt></td><td>type name (floating point)</td></tr>
 <tr><td><tt>int</tt></td><td>type name (integers)</td></tr>
-</tbody></table></p><p>
-</p></li>
+</table><p>
+</ul>
+<h2>Remarks</h2>
+<ul>
+<li><a name="1">(1)</a> in Matlab, only for anonymous function
+<li><a name="2">(2)</a> using a correspondance from the package name to the file name
+<li><a name="3">(3)</a> adding an end-of-line
+<li><a name="4">(4)</a> Smalltalk: postfix operator
+<li><a name="5">(5)</a> in Scheme, not standard, but nearly standard
+<li><a name="6">(6)</a> prefix
+<li><a name="7">(7)</a> with mathematical priorities
+<li><a name="8">(8)</a> Ruby &gt;= 1.7
+</ul>
+<hr><address><a href="mailto:pixel@rigaux.org">Pixel</a></address>
+This document is licensed under <a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> (GNU Free Documentation License).
+<br>Generated from <a href="../syntax-across-languages.html.pl">syntax-across-languages.html.pl</a>
+<br> $Id: syntax-across-languages.html.pl 408 2008-08-29 08:32:23Z pixel $
+
+</body></html>

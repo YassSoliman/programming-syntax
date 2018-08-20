@@ -1,13 +1,23 @@
+<html><head><title>syntax in Ada </title></head><body>
 
+<p>
+The "Unknown:"s below indicate that an entry is incomplete.
+<ul>
+<li>either the entry exist in the language, and <a href="mailto:pixel@rigaux.org">please tell</a>.
+<li>either the entry doesn't exist in the language, and <a href="mailto:pixel@rigaux.org">please tell so</a>.
+The entry will be marked as such and won't appear as missing anymore.
+</ul>
+
+<hr><ul>
 <li><a href="categories.html">Category</a>: Object Oriented, Statically typed<p>
-</p></li><li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>begin ... end<a href="#1">(1)</a></tt></td><td>block (grouping statements, especially when statements are not expressions)</td></tr>
+<li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>begin ... end<a href="#1">(1)</a></tt></td><td>block (grouping statements, especially when statements are not expressions)</td></tr>
 <tr><td><tt>foo ... end foo  where foo in { if, do, ... }</tt></td><td>block (grouping statements, especially when statements are not expressions)</td></tr>
 <tr><td><tt>nothing needed</tt></td><td>breaking lines (useful when end-of-line and/or indentation has a special meaning)</td></tr>
 <tr><td><tt>--</tt></td><td>commenting (until end of line)</td></tr>
 <tr><td><tt>&lt; &gt; &lt;= &gt;=</tt></td><td>comparison</td></tr>
-<tr><td><tt>Integer&apos;min / Integer&apos;max</tt></td><td>comparison (min / max (binary or more))</td></tr>
+<tr><td><tt>Integer'min / Integer'max</tt></td><td>comparison (min / max (binary or more))</td></tr>
 <tr><td><tt>= /=</tt></td><td>equality / inequality (deep)</td></tr>
 <tr><td><tt>( ... )</tt></td><td>grouping expressions</td></tr>
 <tr><td><tt>new</tt></td><td>manual memory allocation (allocation)</td></tr>
@@ -16,12 +26,12 @@
 <tr><td><tt>Camel_Case</tt></td><td>tokens (what is the standard way for <a href="http://c2.com/cgi/wiki?CapitalizationRules">scrunching together multiple words</a>)</td></tr>
 <tr><td><tt>:=</tt></td><td>variable assignment or declaration (assignment)</td></tr>
 <tr><td><tt>v: t</tt></td><td>variable assignment or declaration (declaration)</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>documentation comment
+</table><p>
+Unknown: <blockquote>documentation comment
 </blockquote>
-</li><li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>f(a,b,...)</tt></td><td>function call</td></tr>
+<li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>f(a,b,...)</tt></td><td>function call</td></tr>
 <tr><td><tt>f</tt></td><td>function call (with no parameter)</td></tr>
 <tr><td><tt><pre>function f(para1 : type1; para2 : typ2; ...) return retval is
 begin
@@ -35,10 +45,10 @@ end f;
 MODE ::= | OUT | IN OUT</pre></tt></td><td>function definition (procedures)</td></tr>
 <tr><td><tt>return<a href="#2">(2)</a></tt></td><td>function return value (breaks the control flow)</td></tr>
 <tr><td><tt>&lt;retvar name&gt; = val;</tt></td><td>function return value (setting the result)</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>/ exit</tt></td><td>breaking control flow (continue / break)</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>/ exit</tt></td><td>breaking control flow (continue / break)</td></tr>
 <tr><td><tt>goto</tt></td><td>breaking control flow (goto (unconditional jump))</td></tr>
 <tr><td><tt>return<a href="#2">(2)</a></tt></td><td>breaking control flow (returning a value)</td></tr>
 <tr><td><tt>exception when exception_name =&gt;</tt></td><td>exception (catching)</td></tr>
@@ -56,38 +66,38 @@ MODE ::= | OUT | IN OUT</pre></tt></td><td>function definition (procedures)</td>
    when others =&gt; ...
  end case;</pre></tt></td><td>multiple selection (switch)</td></tr>
 <tr><td><tt>;</tt></td><td>sequence</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>loop (for each value in a numeric range, free increment)
+</table><p>
+Unknown: <blockquote>loop (for each value in a numeric range, free increment)
 </blockquote>
-</li><li><a href="../syntax-across-languages/Tps.html">Types</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>:</tt></td><td>annotation (or variable declaration)</td></tr>
+<li><a href="../syntax-across-languages/Tps.html">Types</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>:</tt></td><td>annotation (or variable declaration)</td></tr>
 <tr><td><tt>t(e)</tt></td><td>cast (downcast (need runtime checking))</td></tr>
 <tr><td><tt>t(e)</tt></td><td>cast (upcast)</td></tr>
 <tr><td><tt>type n is t</tt></td><td>declaration</td></tr>
 <tr><td><tt>constant T</tt></td><td>mutability, constness (type of a constant value)</td></tr>
 <tr><td><tt>in out T<a href="#3">(3)</a></tt></td><td>mutability, constness (type of a mutable value)</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/bjcrntRfl.html">Object Oriented &amp; Reflexivity</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>method(parent(dispatching-parameter))</tt></td><td>accessing parent method</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/bjcrntRfl.html">Object Oriented & Reflexivity</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>method(parent(dispatching-parameter))</tt></td><td>accessing parent method</td></tr>
 <tr><td><tt>parent(dispatching-parameter).method</tt></td><td>accessing parent method</td></tr>
 <tr><td><tt>type c is tagged record ... end record<a href="#4">(4)</a></tt></td><td>class declaration</td></tr>
 <tr><td><tt>dispatching parameter</tt></td><td>current instance</td></tr>
 <tr><td><tt>type child is new parent with record ... end record</tt></td><td>inheritance</td></tr>
-<tr><td><tt>Requires instantiation of Ada.Unchecked_Deallocation</tt></td><td>manually call an object&apos;s destructor</td></tr>
+<tr><td><tt>Requires instantiation of Ada.Unchecked_Deallocation</tt></td><td>manually call an object's destructor</td></tr>
 <tr><td><tt>object.method(para)</tt></td><td>method invocation</td></tr>
 <tr><td><tt>method(object, para)</tt></td><td>method invocation</td></tr>
 <tr><td><tt>object.method</tt></td><td>method invocation (with no parameter)</td></tr>
 <tr><td><tt>method(object)</tt></td><td>method invocation (with no parameter)</td></tr>
 <tr><td><tt>o2.all := o.all</tt></td><td>object cloning</td></tr>
-<tr><td><tt>o_ : T&apos;Class := o<a href="#5">(5)</a></tt></td><td>object cloning</td></tr>
+<tr><td><tt>o_ : T'Class := o<a href="#5">(5)</a></tt></td><td>object cloning</td></tr>
 <tr><td><tt>v : class_name</tt></td><td>object creation</td></tr>
 <tr><td><tt>in</tt></td><td>testing class membership</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt><pre>package p is
+</table><p>
+<li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt><pre>package p is
    -- Declare public package members here
 private
    -- Declare private package members here
@@ -101,46 +111,46 @@ end p;</pre></tt></td><td>declare</td></tr>
 <tr><td><tt>with p;</tt></td><td>import (package (ie. load the package))</td></tr>
 <tr><td><tt>with p; use type p.type1; ...</tt></td><td>import (selectively)</td></tr>
 <tr><td><tt>.</tt></td><td>package scope</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>s(n)</tt></td><td>accessing n-th character</td></tr>
-<tr><td><tt>&apos;Val</tt></td><td>ascii to character</td></tr>
-<tr><td><tt>&apos;z&apos;</tt></td><td>character &quot;z&quot;</td></tr>
-<tr><td><tt>&apos;Pos</tt></td><td>character to ascii</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>s(n)</tt></td><td>accessing n-th character</td></tr>
+<tr><td><tt>'Val</tt></td><td>ascii to character</td></tr>
+<tr><td><tt>'z'</tt></td><td>character "z"</td></tr>
+<tr><td><tt>'Pos</tt></td><td>character to ascii</td></tr>
 <tr><td><tt>Character</tt></td><td>character type name</td></tr>
-<tr><td><tt>T&apos;Image(e)<a href="#6">(6)</a></tt></td><td>convert something to a string (see also string interpolation)</td></tr>
+<tr><td><tt>T'Image(e)<a href="#6">(6)</a></tt></td><td>convert something to a string (see also string interpolation)</td></tr>
 <tr><td><tt>*</tt></td><td>duplicate n times</td></tr>
 <tr><td><tt>s(n..m)</tt></td><td>extract a substring</td></tr>
 <tr><td><tt>index</tt></td><td>locate a substring</td></tr>
 <tr><td><tt>index_non_blank / find_token</tt></td><td>locate a substring</td></tr>
 <tr><td><tt>index(Going =&gt; Backward)</tt></td><td>locate a substring (starting at the end)</td></tr>
-<tr><td><tt>T&apos;Output<a href="#6">(6)</a></tt></td><td>serialize (marshalling)</td></tr>
+<tr><td><tt>T'Output<a href="#6">(6)</a></tt></td><td>serialize (marshalling)</td></tr>
 <tr><td><tt>Put</tt></td><td>simple print (on any objects)</td></tr>
 <tr><td><tt>Put_Line</tt></td><td>simple print (on strings)</td></tr>
-<tr><td><tt>&amp;</tt></td><td>string concatenation</td></tr>
-<tr><td><tt>= /=</tt></td><td>string equality &amp; inequality</td></tr>
-<tr><td><tt>&apos;Length</tt></td><td>string size</td></tr>
-<tr><td><tt>&quot;...&quot;</tt></td><td>strings (with no interpolation of variables)</td></tr>
+<tr><td><tt>&</tt></td><td>string concatenation</td></tr>
+<tr><td><tt>= /=</tt></td><td>string equality & inequality</td></tr>
+<tr><td><tt>'Length</tt></td><td>string size</td></tr>
+<tr><td><tt>"..."</tt></td><td>strings (with no interpolation of variables)</td></tr>
 <tr><td><tt>String</tt></td><td>type name</td></tr>
-<tr><td><tt>T&apos;Input<a href="#6">(6)</a></tt></td><td>unserialize (un-marshalling)</td></tr>
+<tr><td><tt>T'Input<a href="#6">(6)</a></tt></td><td>unserialize (un-marshalling)</td></tr>
 <tr><td><tt>To_Upper / To_Lower</tt></td><td>upper / lower case character</td></tr>
 <tr><td><tt>to_upper / to_lower</tt></td><td>uppercase / lowercase / capitalized string</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>strings (with interpolation of variables)<br>strings (end-of-line (without writing the real CR or LF character))<br>multi-line
+</table><p>
+Unknown: <blockquote>strings (with interpolation of variables)<br>strings (end-of-line (without writing the real CR or LF character))<br>multi-line
 </blockquote>
-</li><li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>false</tt></td><td>false value</td></tr>
+<li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>false</tt></td><td>false value</td></tr>
 <tr><td><tt>not<a href="#7">(7)</a></tt></td><td>logical not</td></tr>
 <tr><td><tt>or / and</tt></td><td>logical or / and (non short circuit (always evaluates both arguments))</td></tr>
 <tr><td><tt>or else / and then</tt></td><td>logical or / and (short circuit)</td></tr>
 <tr><td><tt>true</tt></td><td>true value</td></tr>
 <tr><td><tt>Boolean</tt></td><td>type name</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>Insert</tt></td><td>adding an element at index (return the new list (no side-effect))</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>Insert</tt></td><td>adding an element at index (return the new list (no side-effect))</td></tr>
 <tr><td><tt>Prepend</tt></td><td>adding an element at the beginning (list cons) (return the new list (no side-effect))</td></tr>
 <tr><td><tt>Append</tt></td><td>adding an element at the end (return the new list (no side-effect))</td></tr>
 <tr><td><tt>Find</tt></td><td>find an element</td></tr>
@@ -150,15 +160,15 @@ Unknown: </p><blockquote>strings (with interpolation of variables)<br>strings (e
 <tr><td><tt>Iterate</tt></td><td>for each element do something</td></tr>
 <tr><td><tt>Last_Element</tt></td><td>last element</td></tr>
 <tr><td><tt>Last</tt></td><td>last element (iterator)</td></tr>
-<tr><td><tt>&amp;</tt></td><td>list concatenation</td></tr>
+<tr><td><tt>&</tt></td><td>list concatenation</td></tr>
 <tr><td><tt>Length</tt></td><td>list size</td></tr>
 <tr><td><tt>a(i)</tt></td><td>list/array indexing</td></tr>
 <tr><td><tt>Reverse_Elements</tt></td><td>reverse</td></tr>
 <tr><td><tt>Containers.Vectors.Vector or Ada.Containers.Doubly_Linked_Lists.List</tt></td><td>type name</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>Element</tt></td><td>dictionary (access: read)</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>Element</tt></td><td>dictionary (access: read)</td></tr>
 <tr><td><tt>Replace_Element</tt></td><td>dictionary (access: write)</td></tr>
 <tr><td><tt>Contains</tt></td><td>dictionary (has the key ?)</td></tr>
 <tr><td><tt>Delete</tt></td><td>dictionary (remove by key)</td></tr>
@@ -168,13 +178,13 @@ Unknown: </p><blockquote>strings (with interpolation of variables)<br>strings (e
 <tr><td><tt>v</tt></td><td>optional value (value)</td></tr>
 <tr><td><tt>a .. b</tt></td><td>range (inclusive .. inclusive)</td></tr>
 <tr><td><tt>.</tt></td><td>record (selector)</td></tr>
-<tr><td><tt>&apos;<a href="#10">(10)</a></tt></td><td>record (selector)</td></tr>
+<tr><td><tt>'<a href="#10">(10)</a></tt></td><td>record (selector)</td></tr>
 <tr><td><tt><pre>type Typ is record
   N1 : Typ1;
   N2 : Typ2 := default_val;
   ...
 end record;</pre></tt></td><td>record (type declaration)</td></tr>
-<tr><td><tt>&apos;access</tt></td><td>reference (pointer) (creation)</td></tr>
+<tr><td><tt>'access</tt></td><td>reference (pointer) (creation)</td></tr>
 <tr><td><tt>.[all]</tt></td><td>reference (pointer) (dereference)</td></tr>
 <tr><td><tt>( a, b, c )</tt></td><td>tuple constructor</td></tr>
 <tr><td><tt><pre>type Typ (Choice : Discrete_Type) is record
@@ -188,12 +198,12 @@ end record;</pre></tt></td><td>record (type declaration)</td></tr>
         ...
   end case;
 end record;</pre></tt></td><td>union type declaration</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>optional value (null coalescing)
+</table><p>
+Unknown: <blockquote>optional value (null coalescing)
 </blockquote>
-</li><li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>and / or / xor</tt></td><td>bitwise operators (and / or / xor)</td></tr>
+<li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>and / or / xor</tt></td><td>bitwise operators (and / or / xor)</td></tr>
 <tr><td><tt>not</tt></td><td>bitwise operators (bitwise inversion)</td></tr>
 <tr><td><tt>Shift_Left / Shift_Right / Shift_Right_Arithmetic / Rotate_Left / Rotate_Right</tt></td><td>bitwise operators (left shift / right shift / unsigned right shift)</td></tr>
 <tr><td><tt>**</tt></td><td>exponentiation (power)</td></tr>
@@ -212,17 +222,17 @@ Unknown: </p><blockquote>optional value (null coalescing)
 <tr><td><tt>sqrt / exp / abs</tt></td><td>square root / e-exponential / absolute value</td></tr>
 <tr><td><tt>sin / cos / tan</tt></td><td>trigonometry (basic)</td></tr>
 <tr><td><tt>asin / acos / atan<a href="#12">(12)</a></tt></td><td>trigonometry (inverse)</td></tr>
-<tr><td><tt>Float&apos;Truncation / Float&apos;Rounding / Float&apos;Floor / Float&apos;Ceiling<a href="#13">(13)</a></tt></td><td>truncate / round / floor / ceil</td></tr>
+<tr><td><tt>Float'Truncation / Float'Rounding / Float'Floor / Float'Ceiling<a href="#13">(13)</a></tt></td><td>truncate / round / floor / ceil</td></tr>
 <tr><td><tt> / Rounding / Floor / Ceiling</tt></td><td>truncate / round / floor / ceil</td></tr>
 <tr><td><tt>type T is digits N range Low..High;</tt></td><td>type name (floating point)</td></tr>
 <tr><td><tt>type T is delta S digits N range Low..High;<a href="#14">(14)</a></tt></td><td>type name (floating point)</td></tr>
 <tr><td><tt>type T is range Low...High;</tt></td><td>type name (integers)</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>addition / subtraction / multiplication / division<br>operator priorities and associativities
+</table><p>
+Unknown: <blockquote>addition / subtraction / multiplication / division<br>operator priorities and associativities
 </blockquote>
-</li><li><a href="../syntax-across-languages/Thrds.html">Threads</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>Call a task entry on the other thread</tt></td><td>Joining Another Thread (Suspending a Thread Until Another Thread Establishes An Internal State)</td></tr>
+<li><a href="../syntax-across-languages/Thrds.html">Threads</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>Call a task entry on the other thread</tt></td><td>Joining Another Thread (Suspending a Thread Until Another Thread Establishes An Internal State)</td></tr>
 <tr><td><tt>Call task entry serviced just before task termination</tt></td><td>Joining Another Thread (Suspending a thread until another thread completes)</td></tr>
 <tr><td><tt>Set_Priority(Priority_Value);</tt></td><td>Thread Prioritization (Changing Thead Priority)</td></tr>
 <tr><td><tt>pragma Priority(expression);</tt></td><td>Thread Prioritization (Establishing a base thread priority)</td></tr>
@@ -239,10 +249,33 @@ end Object_Name;</pre></tt></td><td>Thread Synchronization (Defining a Synchroni
 <tr><td><tt>pragma Volatile(Object_Name);</tt></td><td>Thread-safe sharing of data without synchronization (Ensuring access is always via a local copy of the shared data)</td></tr>
 <tr><td><tt>pragma Atomic(Object_Name);</tt></td><td>Thread-safe sharing of data without synchronization (Ensuring access is atomic)</td></tr>
 <tr><td><tt>call an entry with parameters</tt></td><td>passing data directly between threads</td></tr>
-<tr><td><tt>Tasks are started when created / call Stop entry or &quot;abort task-object-name&quot;</tt></td><td>starting / stopping threads</td></tr>
+<tr><td><tt>Tasks are started when created / call Stop entry or "abort task-object-name"</tt></td><td>starting / stopping threads</td></tr>
 <tr><td><tt>select task_entry_call; or delay timeout_limit; end select;</tt></td><td>terminating thread communication due to a time-out</td></tr>
 <tr><td><tt>task task_name is [entry entry_name[(parameter ...)]...] end task_name</tt></td><td>thread definition</td></tr>
 <tr><td><tt>task type task_type_name is [entry entry_name[(parameter ...)]...] end task_type_name</tt></td><td>thread definition</td></tr>
 <tr><td><tt>MyTask : task_type_name;</tt></td><td>thread object creation</td></tr>
-</tbody></table></p><p>
-</p></li>
+</table><p>
+</ul>
+<h2>Remarks</h2>
+<ul>
+<li><a name="1">(1)</a> introduce scope
+<li><a name="2">(2)</a> in Lua, "return xxx" can only appear before a block end. in Matlab, only in inline('...')
+<li><a name="3">(3)</a> for parameters
+<li><a name="4">(4)</a> c'Class is the class rooted in c
+<li><a name="5">(5)</a> or simply o_ := o for non-polymorphic objects
+<li><a name="6">(6)</a> where T is the type of the value
+<li><a name="7">(7)</a> Smalltalk: postfix operator
+<li><a name="8">(8)</a> n1, n2, ...
+<li><a name="9">(9)</a> only for "access" types in Ada
+<li><a name="10">(10)</a> attribute selector
+<li><a name="11">(11)</a> from instances of Ada.Numerics.Float_Random or Ada.Numerics.Discrete_Random
+<li><a name="12">(12)</a> Ruby &gt;= 1.7
+<li><a name="13">(13)</a> replace Float with whatever type you are using
+<li><a name="14">(14)</a> fixed point
+</ul>
+<hr><address><a href="mailto:pixel@rigaux.org">Pixel</a></address>
+This document is licensed under <a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> (GNU Free Documentation License).
+<br>Generated from <a href="../syntax-across-languages.html.pl">syntax-across-languages.html.pl</a>
+<br> $Id: syntax-across-languages.html.pl 408 2008-08-29 08:32:23Z pixel $
+
+</body></html>

@@ -1,8 +1,18 @@
+<html><head><title>syntax in Forth </title></head><body>
 
+<p>
+The "Unknown:"s below indicate that an entry is incomplete.
+<ul>
+<li>either the entry exist in the language, and <a href="mailto:pixel@rigaux.org">please tell</a>.
+<li>either the entry doesn't exist in the language, and <a href="mailto:pixel@rigaux.org">please tell so</a>.
+The entry will be marked as such and won't appear as missing anymore.
+</ul>
+
+<hr><ul>
 <li><a href="categories.html">Category</a>: Dynamically typed<p>
-</p></li><li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>nothing needed</tt></td><td>breaking lines (useful when end-of-line and/or indentation has a special meaning)</td></tr>
+<li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>nothing needed</tt></td><td>breaking lines (useful when end-of-line and/or indentation has a special meaning)</td></tr>
 <tr><td><tt>( ... )</tt></td><td>commenting (non nestable)</td></tr>
 <tr><td><tt>\</tt></td><td>commenting (until end of line)</td></tr>
 <tr><td><tt>&lt; &gt; &lt;= &gt;=</tt></td><td>comparison</td></tr>
@@ -21,20 +31,20 @@
 <tr><td><tt>e v !</tt></td><td>variable assignment or declaration (assignment)</td></tr>
 <tr><td><tt>variable v<a href="#1">(1)</a></tt></td><td>variable assignment or declaration (declaration)</td></tr>
 <tr><td><tt>e value v</tt></td><td>variable assignment or declaration (declaration)</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>tokens (what is the standard way for <a href="http://c2.com/cgi/wiki?CapitalizationRules">scrunching together multiple words</a>)
+</table><p>
+Unknown: <blockquote>tokens (what is the standard way for <a href="http://c2.com/cgi/wiki?CapitalizationRules">scrunching together multiple words</a>)
 </blockquote>
-</li><li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>:noname ...</tt></td><td>anonymous function</td></tr>
+<li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>:noname ...</tt></td><td>anonymous function</td></tr>
 <tr><td><tt>a b ... f</tt></td><td>function call</td></tr>
 <tr><td><tt>f</tt></td><td>function call (with no parameter)</td></tr>
 <tr><td><tt>: f ... ;</tt></td><td>function definition</td></tr>
 <tr><td><tt>exit</tt></td><td>function return value (breaks the control flow)</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>/ leave</tt></td><td>breaking control flow (continue / break)</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>/ leave</tt></td><td>breaking control flow (continue / break)</td></tr>
 <tr><td><tt>exit</tt></td><td>breaking control flow (returning a value)</td></tr>
 <tr><td><tt>catch</tt></td><td>exception (catching)</td></tr>
 <tr><td><tt>throw</tt></td><td>exception (throwing)</td></tr>
@@ -51,44 +61,44 @@ Unknown: </p><blockquote>tokens (what is the standard way for <a href="http://c2
    v2 of ... endof
    ...
 endcase</pre></tt></td><td>multiple selection (switch)</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>loop (for &quot;a la C&quot; (while + initialisation))
+</table><p>
+Unknown: <blockquote>loop (for "a la C" (while + initialisation))
 </blockquote>
-</li><li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>over n chars + c@</tt></td><td>accessing n-th character</td></tr>
-<tr><td><tt>char z, [char] z<a href="#2">(2)</a></tt></td><td>character &quot;z&quot;</td></tr>
+<li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>over n chars + c@</tt></td><td>accessing n-th character</td></tr>
+<tr><td><tt>char z, [char] z<a href="#2">(2)</a></tt></td><td>character "z"</td></tr>
 <tr><td><tt>over n chars + len</tt></td><td>extract a substring</td></tr>
 <tr><td><tt>type</tt></td><td>simple print (on strings)</td></tr>
 <tr><td><tt>dup<a href="#3">(3)</a></tt></td><td>string size</td></tr>
-<tr><td><tt>s&quot;...&quot;</tt></td><td>strings (with no interpolation of variables)</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>false</tt></td><td>false value</td></tr>
+<tr><td><tt>s"..."</tt></td><td>strings (with no interpolation of variables)</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>false</tt></td><td>false value</td></tr>
 <tr><td><tt>0<a href="#4">(4)</a></tt></td><td>false value</td></tr>
 <tr><td><tt>=0</tt></td><td>logical not</td></tr>
 <tr><td><tt>true</tt></td><td>true value</td></tr>
 <tr><td><tt>-1</tt></td><td>true value</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>a i cells + @ (for write access: o a i cells + !</tt></td><td>list/array indexing</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>list constructor<br>for each element do something<br>list size
+</table><p>
+<li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>a i cells + @ (for write access: o a i cells + !</tt></td><td>list/array indexing</td></tr>
+</table><p>
+Unknown: <blockquote>list constructor<br>for each element do something<br>list size
 </blockquote>
-</li><li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>0<a href="#5">(5)</a></tt></td><td>optional value (null value)</td></tr>
-<tr><td><tt>!</tt></td><td>reference (pointer) (assigning (when dereferencing doesn&apos;t give a lvalue))</td></tr>
+<li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>0<a href="#5">(5)</a></tt></td><td>optional value (null value)</td></tr>
+<tr><td><tt>!</tt></td><td>reference (pointer) (assigning (when dereferencing doesn't give a lvalue))</td></tr>
 <tr><td><tt>variable</tt></td><td>reference (pointer) (creation)</td></tr>
 <tr><td><tt>@</tt></td><td>reference (pointer) (dereference)</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>optional value (value)<br>optional value (null coalescing)<br>record (selector)<br>dictionary (constructor)<br>dictionary (access)<br>dictionary (has the key ?)<br>dictionary (remove by key)<br>dictionary (list of keys)<br>dictionary (list of values)<br>dictionary (merge)
+</table><p>
+Unknown: <blockquote>optional value (value)<br>optional value (null coalescing)<br>record (selector)<br>dictionary (constructor)<br>dictionary (access)<br>dictionary (has the key ?)<br>dictionary (remove by key)<br>dictionary (list of keys)<br>dictionary (list of values)<br>dictionary (merge)
 </blockquote>
-</li><li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>+ / - / * / /</tt></td><td>addition / subtraction / multiplication / division</td></tr>
+<li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>+ / - / * / /</tt></td><td>addition / subtraction / multiplication / division</td></tr>
 <tr><td><tt>f+ / f- / f* / f/</tt></td><td>addition / subtraction / multiplication / division</td></tr>
 <tr><td><tt>and / or / xor</tt></td><td>bitwise operators (and / or / xor)</td></tr>
 <tr><td><tt>invert</tt></td><td>bitwise operators (bitwise inversion)</td></tr>
@@ -107,7 +117,21 @@ Unknown: </p><blockquote>optional value (value)<br>optional value (null coalesci
 <tr><td><tt>fsin / fcos / ftan</tt></td><td>trigonometry (basic)</td></tr>
 <tr><td><tt>fasin / facos / fatan</tt></td><td>trigonometry (inverse)</td></tr>
 <tr><td><tt>/ fround / /</tt></td><td>truncate / round / floor / ceil</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>random (random number)<br>random (seed the pseudo random generator)
+</table><p>
+Unknown: <blockquote>random (random number)<br>random (seed the pseudo random generator)
 </blockquote>
-</li>
+</ul>
+<h2>Remarks</h2>
+<ul>
+<li><a name="1">(1)</a> the variable behaves like a pointer
+<li><a name="2">(2)</a> inside a function
+<li><a name="3">(3)</a> the string is represented on the stack as (addr len)
+<li><a name="4">(4)</a> beware of 0.0 which is true in Pike!
+<li><a name="5">(5)</a> optional value is only for pointers
+</ul>
+<hr><address><a href="mailto:pixel@rigaux.org">Pixel</a></address>
+This document is licensed under <a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> (GNU Free Documentation License).
+<br>Generated from <a href="../syntax-across-languages.html.pl">syntax-across-languages.html.pl</a>
+<br> $Id: syntax-across-languages.html.pl 408 2008-08-29 08:32:23Z pixel $
+
+</body></html>

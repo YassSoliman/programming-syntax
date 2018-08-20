@@ -1,9 +1,19 @@
+<html><head><title>syntax in Tcl </title></head><body>
 
+<p>
+The "Unknown:"s below indicate that an entry is incomplete.
+<ul>
+<li>either the entry exist in the language, and <a href="mailto:pixel@rigaux.org">please tell</a>.
+<li>either the entry doesn't exist in the language, and <a href="mailto:pixel@rigaux.org">please tell so</a>.
+The entry will be marked as such and won't appear as missing anymore.
+</ul>
+
+<hr><ul>
 <li><a href="categories.html">Category</a>: Object Oriented, Dynamically typed, Has anonymous functions<p>
-</p></li><li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>{ ... }</tt></td><td>block (grouping statements, especially when statements are not expressions)</td></tr>
-<tr><td><tt>&quot;...&quot;</tt></td><td>block (grouping statements, especially when statements are not expressions)</td></tr>
+<li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>{ ... }</tt></td><td>block (grouping statements, especially when statements are not expressions)</td></tr>
+<tr><td><tt>"..."</tt></td><td>block (grouping statements, especially when statements are not expressions)</td></tr>
 <tr><td><tt>\</tt></td><td>breaking lines (useful when end-of-line and/or indentation has a special meaning)</td></tr>
 <tr><td><tt>#</tt></td><td>commenting (until end of line)</td></tr>
 <tr><td><tt>&lt; &gt; &lt;= &gt;=</tt></td><td>comparison</td></tr>
@@ -17,10 +27,10 @@
 <tr><td><tt>[_a-zA-Z][_a-zA-Z0-9]*</tt></td><td>tokens (variable identifier regexp)</td></tr>
 <tr><td><tt>CamelCase or camelCase</tt></td><td>tokens (what is the standard way for <a href="http://c2.com/cgi/wiki?CapitalizationRules">scrunching together multiple words</a>)</td></tr>
 <tr><td><tt>set, variable</tt></td><td>variable assignment or declaration (both)</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>interp alias {} f_a {} f a</tt></td><td><a href="http://www.haskell.org/hawiki/PartialApplication">partial application</a> (in the examples below, a normal call is &quot;f(a,b)&quot;) (give the first argument)</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>interp alias {} f_a {} f a</tt></td><td><a href="http://www.haskell.org/hawiki/PartialApplication">partial application</a> (in the examples below, a normal call is "f(a,b)") (give the first argument)</td></tr>
 <tr><td><tt>f a b ...</tt></td><td>function call</td></tr>
 <tr><td><tt>f</tt></td><td>function call (with no parameter)</td></tr>
 <tr><td><tt>unknown</tt></td><td>function called when a function is not defined (in dynamic languages)</td></tr>
@@ -28,12 +38,12 @@
 <tr><td><tt>return<a href="#1">(1)</a></tt></td><td>function return value (breaks the control flow)</td></tr>
 <tr><td><tt>no syntax needed<a href="#2">(2)</a></tt></td><td>function return value (function body is the result)</td></tr>
 <tr><td><tt>info level</tt></td><td>runtime inspecting the caller information</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>anonymous function
+</table><p>
+Unknown: <blockquote>anonymous function
 </blockquote>
-</li><li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>continue / break</tt></td><td>breaking control flow (continue / break)</td></tr>
+<li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>continue / break</tt></td><td>breaking control flow (continue / break)</td></tr>
 <tr><td><tt>return<a href="#1">(1)</a></tt></td><td>breaking control flow (returning a value)</td></tr>
 <tr><td><tt>catch</tt></td><td>exception (catching)</td></tr>
 <tr><td><tt>return -code</tt></td><td>exception (throwing)</td></tr>
@@ -42,7 +52,7 @@ Unknown: </p><blockquote>anonymous function
 <tr><td><tt>if c b1 elsif c2 b2 b3</tt></td><td>if_then_else</td></tr>
 <tr><td><tt>if c then b1 elseif c2 then b2 else b3</tt></td><td>if_then_else</td></tr>
 <tr><td><tt>c ? b1 : b2</tt></td><td>if_then_else</td></tr>
-<tr><td><tt>for</tt></td><td>loop (for &quot;a la C&quot; (while + initialisation))</td></tr>
+<tr><td><tt>for</tt></td><td>loop (for "a la C" (while + initialisation))</td></tr>
 <tr><td><tt>for {set i 10} {$i &gt;= 1} {incr i -1} {...}</tt></td><td>loop (for each value in a numeric range, 1 decrement)</td></tr>
 <tr><td><tt>for {set i 1} {$i &lt;= 10} {incr i} {...}</tt></td><td>loop (for each value in a numeric range, 1 increment (see also the entries about ranges))</td></tr>
 <tr><td><tt>for {set i 0} {$i &lt;= 10} {incr i 2} {...}</tt></td><td>loop (for each value in a numeric range, free increment)</td></tr>
@@ -54,23 +64,23 @@ Unknown: </p><blockquote>anonymous function
 }</pre></tt></td><td>multiple selection (switch)</td></tr>
 <tr><td><tt>;</tt></td><td>sequence</td></tr>
 <tr><td><tt>end-of-line</tt></td><td>sequence</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/bjcrntRfl.html">Object Oriented &amp; Reflexivity</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>object method para</tt></td><td>method invocation</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>namespace eval p ...</tt></td><td>declare</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/bjcrntRfl.html">Object Oriented & Reflexivity</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>object method para</tt></td><td>method invocation</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>namespace eval p ...</tt></td><td>declare</td></tr>
 <tr><td><tt>namespace export name1</tt></td><td>declare (selective export)</td></tr>
 <tr><td><tt>namespace import p *</tt></td><td>import (everything into current namespace)</td></tr>
 <tr><td><tt>package require p</tt></td><td>import (package (ie. load the package))</td></tr>
 <tr><td><tt>namespace import p name1</tt></td><td>import (selectively)</td></tr>
 <tr><td><tt>::</tt></td><td>package scope</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>string index s n</tt></td><td>accessing n-th character</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>string index s n</tt></td><td>accessing n-th character</td></tr>
 <tr><td><tt>format %c $c</tt></td><td>ascii to character</td></tr>
 <tr><td><tt>scan $s %c</tt></td><td>character to ascii</td></tr>
 <tr><td><tt>unneeded, all values are strings</tt></td><td>convert something to a string (see also string interpolation)</td></tr>
@@ -78,37 +88,37 @@ Unknown: </p><blockquote>anonymous function
 <tr><td><tt>string range</tt></td><td>extract a substring</td></tr>
 <tr><td><tt>string first</tt></td><td>locate a substring</td></tr>
 <tr><td><tt>string last</tt></td><td>locate a substring (starting at the end)</td></tr>
-<tr><td><tt>&quot;...&quot;, {...}</tt></td><td>multi-line</td></tr>
+<tr><td><tt>"...", {...}</tt></td><td>multi-line</td></tr>
 <tr><td><tt>puts<a href="#3">(3)</a></tt></td><td>simple print (on simple objects)</td></tr>
 <tr><td><tt>puts -nonewline</tt></td><td>simple print (on simple objects)</td></tr>
 <tr><td><tt>puts</tt></td><td>simple print (on strings)</td></tr>
 <tr><td><tt>format</tt></td><td>sprintf-like</td></tr>
 <tr><td><tt>$a$b</tt></td><td>string concatenation</td></tr>
-<tr><td><tt>eq ne</tt></td><td>string equality &amp; inequality</td></tr>
+<tr><td><tt>eq ne</tt></td><td>string equality & inequality</td></tr>
 <tr><td><tt>string length</tt></td><td>string size</td></tr>
 <tr><td><tt>\n</tt></td><td>strings (end-of-line (without writing the real CR or LF character))</td></tr>
 <tr><td><tt>...<a href="#4">(4)</a></tt></td><td>strings (with interpolation of variables)</td></tr>
-<tr><td><tt>&quot;... $v ...&quot;</tt></td><td>strings (with interpolation of variables)</td></tr>
+<tr><td><tt>"... $v ..."</tt></td><td>strings (with interpolation of variables)</td></tr>
 <tr><td><tt>{...{...}...}</tt></td><td>strings (with no interpolation of variables)</td></tr>
 <tr><td><tt>string toupper / string tolower</tt></td><td>upper / lower case character</td></tr>
 <tr><td><tt>string toupper / string tolower / string totitle</tt></td><td>uppercase / lowercase / capitalized string</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>false</tt></td><td>false value</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>false</tt></td><td>false value</td></tr>
 <tr><td><tt>no</tt></td><td>false value</td></tr>
 <tr><td><tt>off</tt></td><td>false value</td></tr>
 <tr><td><tt>0<a href="#5">(5)</a></tt></td><td>false value</td></tr>
 <tr><td><tt>!</tt></td><td>logical not</td></tr>
-<tr><td><tt>|| / &amp;&amp;</tt></td><td>logical or / and (short circuit)</td></tr>
+<tr><td><tt>|| / &&</tt></td><td>logical or / and (short circuit)</td></tr>
 <tr><td><tt>true</tt></td><td>true value</td></tr>
 <tr><td><tt>yes</tt></td><td>true value</td></tr>
 <tr><td><tt>on</tt></td><td>true value</td></tr>
 <tr><td><tt>non zero number</tt></td><td>true value</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>linsert l i e</tt></td><td>adding an element at index (return the new list (no side-effect))</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>linsert l i e</tt></td><td>adding an element at index (return the new list (no side-effect))</td></tr>
 <tr><td><tt>linsert l end e</tt></td><td>adding an element at the end (return the new list (no side-effect))</td></tr>
 <tr><td><tt>lappend</tt></td><td>adding an element at the end (side-effect)</td></tr>
 <tr><td><tt>lrange l 1 end</tt></td><td>all but the first element</td></tr>
@@ -124,19 +134,19 @@ Unknown: </p><blockquote>anonymous function
 <tr><td><tt>lindex</tt></td><td>list/array indexing</td></tr>
 <tr><td><tt>lsort -unique</tt></td><td>remove duplicates</td></tr>
 <tr><td><tt>lsort</tt></td><td>sort</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>transform a list (or bag) in another one<br>transform two lists in parallel<br>is an element in the list<br>is the predicate true for an element<br>is the predicate true for every element<br>f(... f(f(init, e1), e2) ..., en)
+</table><p>
+Unknown: <blockquote>transform a list (or bag) in another one<br>transform two lists in parallel<br>is an element in the list<br>is the predicate true for an element<br>is the predicate true for every element<br>f(... f(f(init, e1), e2) ..., en)
 </blockquote>
-</li><li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>h(k)</tt></td><td>dictionary (access: read/write)</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>optional value (null value)<br>optional value (value)<br>optional value (null coalescing)<br>record (selector)<br>range
+<li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>h(k)</tt></td><td>dictionary (access: read/write)</td></tr>
+</table><p>
+Unknown: <blockquote>optional value (null value)<br>optional value (value)<br>optional value (null coalescing)<br>record (selector)<br>range
 </blockquote>
-</li><li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>+ / - / * / /</tt></td><td>addition / subtraction / multiplication / division</td></tr>
-<tr><td><tt>&amp; / | / ^</tt></td><td>bitwise operators (and / or / xor)</td></tr>
+<li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>+ / - / * / /</tt></td><td>addition / subtraction / multiplication / division</td></tr>
+<tr><td><tt>& / | / ^</tt></td><td>bitwise operators (and / or / xor)</td></tr>
 <tr><td><tt>~</tt></td><td>bitwise operators (bitwise inversion)</td></tr>
 <tr><td><tt>&lt;&lt; / &gt;&gt;</tt></td><td>bitwise operators (left shift / right shift / unsigned right shift)</td></tr>
 <tr><td><tt>pow</tt></td><td>exponentiation (power)</td></tr>
@@ -154,11 +164,26 @@ Unknown: </p><blockquote>optional value (null value)<br>optional value (value)<b
 <tr><td><tt>sin / cos / tan</tt></td><td>trigonometry (basic)</td></tr>
 <tr><td><tt>asin / acos / atan<a href="#6">(6)</a></tt></td><td>trigonometry (inverse)</td></tr>
 <tr><td><tt>/ round / floor / ceil</tt></td><td>truncate / round / floor / ceil</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/Thrds.html">Threads</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>thread::mutex</tt></td><td>Thread Synchronization (Defining a Synchronized Shared Resource)</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/Thrds.html">Threads</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>thread::mutex</tt></td><td>Thread Synchronization (Defining a Synchronized Shared Resource)</td></tr>
 <tr><td><tt>thread send $t {script}</tt></td><td>starting / stopping threads</td></tr>
 <tr><td><tt>set t [thread create {code}]</tt></td><td>thread creation</td></tr>
-</tbody></table></p><p>
-</p></li>
+</table><p>
+</ul>
+<h2>Remarks</h2>
+<ul>
+<li><a name="1">(1)</a> in Lua, "return xxx" can only appear before a block end. in Matlab, only in inline('...')
+<li><a name="2">(2)</a> in Matlab, only for anonymous function
+<li><a name="3">(3)</a> adding an end-of-line
+<li><a name="4">(4)</a> no spaces
+<li><a name="5">(5)</a> beware of 0.0 which is true in Pike!
+<li><a name="6">(6)</a> Ruby &gt;= 1.7
+</ul>
+<hr><address><a href="mailto:pixel@rigaux.org">Pixel</a></address>
+This document is licensed under <a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> (GNU Free Documentation License).
+<br>Generated from <a href="../syntax-across-languages.html.pl">syntax-across-languages.html.pl</a>
+<br> $Id: syntax-across-languages.html.pl 408 2008-08-29 08:32:23Z pixel $
+
+</body></html>

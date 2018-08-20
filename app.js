@@ -29,7 +29,7 @@ app.set("view engine", "ejs");
 //         if(!e && r.statusCode == 200){
 //             
 //             var newBody = parseData(b);
-//             fs.writeFile('data/'+title+'.html', newBody, function(err){
+//             fs.writeFile('data/'+title+'.html', b, function(err){
 //                if(err) throw err;
 //                 console.log(title + ' saved');
 //             });
@@ -39,9 +39,8 @@ app.set("view engine", "ejs");
 // }
 
 app.get("/", function(req, res){
-    createBackups();
-    request('http://rigaux.org/language-study/syntax-across-languages-per-language/', function(err, response, body){
-        if(!err && res.statusCode == 200){
+    fs.readFile('data/languages.html', 'utf8', function(err, body){
+        if(!err){
             var titles = parseTitles(body);
             res.render('index', {titles: titles});
         }
@@ -49,10 +48,10 @@ app.get("/", function(req, res){
 });
 
 app.get("/api", function(req, res){
-    request('http://rigaux.org/language-study/syntax-across-languages-per-language/'+req.query.language1+'.html', function(err, response, body){
-        if(!err && response.statusCode == 200){
-            request('http://rigaux.org/language-study/syntax-across-languages-per-language/'+req.query.language2+'.html', function(e, r, b){
-                if(!e && r.statusCode == 200){
+    fs.readFile('data/'+req.query.language1+'.html', 'utf8', function(err, body){
+        if(!err){
+            fs.readFile('data/'+req.query.language2+'.html', 'utf8', function(e, b){
+                if(!e){
                     var newBody1 = parseData(body);
                     var newBody2 = parseData(b);
                     res.render('syntax', {data: [newBody1, newBody2], lang: [req.query.language1, req.query.language2]});

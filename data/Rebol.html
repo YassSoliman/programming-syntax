@@ -1,8 +1,18 @@
+<html><head><title>syntax in Rebol </title></head><body>
 
+<p>
+The "Unknown:"s below indicate that an entry is incomplete.
+<ul>
+<li>either the entry exist in the language, and <a href="mailto:pixel@rigaux.org">please tell</a>.
+<li>either the entry doesn't exist in the language, and <a href="mailto:pixel@rigaux.org">please tell so</a>.
+The entry will be marked as such and won't appear as missing anymore.
+</ul>
+
+<hr><ul>
 <li><a href="categories.html">Category</a>: Object Oriented, Dynamically typed<p>
-</p></li><li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>nothing needed</tt></td><td>breaking lines (useful when end-of-line and/or indentation has a special meaning)</td></tr>
+<li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>nothing needed</tt></td><td>breaking lines (useful when end-of-line and/or indentation has a special meaning)</td></tr>
 <tr><td><tt>{ ... }</tt></td><td>commenting (nestable)</td></tr>
 <tr><td><tt>comment { ... }</tt></td><td>commenting (nestable)</td></tr>
 <tr><td><tt>comment [ ... ]</tt></td><td>commenting (nestable)</td></tr>
@@ -10,8 +20,8 @@
 <tr><td><tt>;</tt></td><td>commenting (until end of line)</td></tr>
 <tr><td><tt>&lt; &gt; &lt;= &gt;=</tt></td><td>comparison</td></tr>
 <tr><td><tt>min / max</tt></td><td>comparison (min / max (binary or more))</td></tr>
-<tr><td><tt>rebol [ Note: &quot;...&quot; ]</tt></td><td>documentation comment</td></tr>
-<tr><td><tt>func [&quot;...&quot; arg] ...</tt></td><td>documentation comment</td></tr>
+<tr><td><tt>rebol [ Note: "..." ]</tt></td><td>documentation comment</td></tr>
+<tr><td><tt>func ["..." arg] ...</tt></td><td>documentation comment</td></tr>
 <tr><td><tt>= &lt;&gt;</tt></td><td>equality / inequality (deep)</td></tr>
 <tr><td><tt>= &lt;&gt;</tt></td><td>equality / inequality (shallow)</td></tr>
 <tr><td><tt>recycle</tt></td><td>force garbage collection</td></tr>
@@ -20,26 +30,26 @@
 <tr><td><tt>system/script/header/file<a href="#2">(2)</a></tt></td><td>information about the current line and file</td></tr>
 <tr><td><tt>do / reduce / compose / load</tt></td><td>runtime evaluation</td></tr>
 <tr><td><tt>case-insensitive</tt></td><td>tokens (case-sensitivity (keywords, variable identifiers...))</td></tr>
-<tr><td><tt>[_a-zA-Z?!.&apos;+*&amp;|=~-][_a-zA-Z0-9?!.&apos;+*&amp;|=~-]* or 
-<br>[^0-9[](){}&quot;:;/][^ \n\t[](){}&quot;:;/]*</tt></td><td>tokens (variable identifier regexp)</td></tr>
+<tr><td><tt>[_a-zA-Z?!.'+*&|=~-][_a-zA-Z0-9?!.'+*&|=~-]* or 
+<br>[^0-9[](){}":;/][^ \n\t[](){}":;/]*</tt></td><td>tokens (variable identifier regexp)</td></tr>
 <tr><td><tt>hyphens</tt></td><td>tokens (what is the standard way for <a href="http://c2.com/cgi/wiki?CapitalizationRules">scrunching together multiple words</a>)</td></tr>
 <tr><td><tt>:</tt></td><td>variable assignment or declaration (assignment)</td></tr>
 <tr><td><tt>set</tt></td><td>variable assignment or declaration (assignment)</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>func [a b ...] ...</tt></td><td>anonymous function</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>func [a b ...] ...</tt></td><td>anonymous function</td></tr>
 <tr><td><tt>f a b ...</tt></td><td>function call</td></tr>
 <tr><td><tt>f</tt></td><td>function call (with no parameter)</td></tr>
 <tr><td><tt>f: func [para1 para2 ...] ...</tt></td><td>function definition</td></tr>
 <tr><td><tt>return<a href="#3">(3)</a></tt></td><td>function return value (breaks the control flow)</td></tr>
 <tr><td><tt>no syntax needed<a href="#4">(4)</a></tt></td><td>function return value (function body is the result)</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>runtime inspecting the caller information
+</table><p>
+Unknown: <blockquote>runtime inspecting the caller information
 </blockquote>
-</li><li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>/ break/return</tt></td><td>breaking control flow (continue / break)</td></tr>
+<li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>/ break/return</tt></td><td>breaking control flow (continue / break)</td></tr>
 <tr><td><tt>return<a href="#3">(3)</a></tt></td><td>breaking control flow (returning a value)</td></tr>
 <tr><td><tt>catch</tt></td><td>exception (catching)</td></tr>
 <tr><td><tt>catch/name</tt></td><td>exception (catching)</td></tr>
@@ -60,39 +70,39 @@ switch/default [
     v2 [...]
 ][...]</pre></tt></td><td>multiple selection (switch)</td></tr>
 <tr><td><tt>space</tt></td><td>sequence</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>loop (for each value in a numeric range, 1 increment (see also the entries about ranges))<br>loop (for each value in a numeric range, 1 decrement)<br>loop (for each value in a numeric range, free increment)<br>breaking control flow (goto (unconditional jump))
+</table><p>
+Unknown: <blockquote>loop (for each value in a numeric range, 1 increment (see also the entries about ranges))<br>loop (for each value in a numeric range, 1 decrement)<br>loop (for each value in a numeric range, free increment)<br>breaking control flow (goto (unconditional jump))
 </blockquote>
-</li><li><a href="../syntax-across-languages/Tps.html">Types</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>make t e / to t e</tt></td><td>cast (computed conversion (calls an internal or a user-defined function))</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/bjcrntRfl.html">Object Oriented &amp; Reflexivity</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>self</tt></td><td>current instance</td></tr>
-<tr><td><tt>all [in object &apos;method function? get in object &apos;method]</tt></td><td>has the method</td></tr>
+<li><a href="../syntax-across-languages/Tps.html">Types</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>make t e / to t e</tt></td><td>cast (computed conversion (calls an internal or a user-defined function))</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/bjcrntRfl.html">Object Oriented & Reflexivity</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>self</tt></td><td>current instance</td></tr>
+<tr><td><tt>all [in object 'method function? get in object 'method]</tt></td><td>has the method</td></tr>
 <tr><td><tt>make parent ...</tt></td><td>inheritance</td></tr>
 <tr><td><tt>object/method para</tt></td><td>method invocation</td></tr>
 <tr><td><tt>object/method</tt></td><td>method invocation (with no parameter)</td></tr>
 <tr><td><tt>make o []</tt></td><td>object cloning</td></tr>
 <tr><td><tt>make class_name! ...</tt></td><td>object creation</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>manually call an object&apos;s destructor<br>class declaration<br>testing class membership<br>get the type/class corresponding to an object/instance/value<br>methods available<br>accessing parent method
+</table><p>
+Unknown: <blockquote>manually call an object's destructor<br>class declaration<br>testing class membership<br>get the type/class corresponding to an object/instance/value<br>methods available<br>accessing parent method
 </blockquote>
-</li><li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>do</tt></td><td>import (everything into current namespace)</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>package scope<br>declare
+<li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>do</tt></td><td>import (everything into current namespace)</td></tr>
+</table><p>
+Unknown: <blockquote>package scope<br>declare
 </blockquote>
-</li><li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>s/:n</tt></td><td>accessing n-th character</td></tr>
+<li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>s/:n</tt></td><td>accessing n-th character</td></tr>
 <tr><td><tt>to char! / to-char</tt></td><td>ascii to character</td></tr>
-<tr><td><tt>#&quot;z&quot;</tt></td><td>character &quot;z&quot;</td></tr>
+<tr><td><tt>#"z"</tt></td><td>character "z"</td></tr>
 <tr><td><tt>to integer! / to-integer</tt></td><td>character to ascii</td></tr>
 <tr><td><tt>char!</tt></td><td>character type name</td></tr>
-<tr><td><tt>to string! / to-string / to &quot;&quot;</tt></td><td>convert something to a string (see also string interpolation)</td></tr>
+<tr><td><tt>to string! / to-string / to ""</tt></td><td>convert something to a string (see also string interpolation)</td></tr>
 <tr><td><tt>insert/dup</tt></td><td>duplicate n times</td></tr>
 <tr><td><tt>copy/part at s n len</tt></td><td>extract a substring</td></tr>
 <tr><td><tt>copy/part at s n at s m</tt></td><td>extract a substring</td></tr>
@@ -103,17 +113,17 @@ Unknown: </p><blockquote>package scope<br>declare
 <tr><td><tt>prin</tt></td><td>simple print (on any objects)</td></tr>
 <tr><td><tt>append</tt></td><td>string concatenation</td></tr>
 <tr><td><tt>length?</tt></td><td>string size</td></tr>
-<tr><td><tt>&quot;^/&quot;</tt></td><td>strings (end-of-line (without writing the real CR or LF character))</td></tr>
-<tr><td><tt>&quot;...&quot;</tt></td><td>strings (with no interpolation of variables)</td></tr>
+<tr><td><tt>"^/"</tt></td><td>strings (end-of-line (without writing the real CR or LF character))</td></tr>
+<tr><td><tt>"..."</tt></td><td>strings (with no interpolation of variables)</td></tr>
 <tr><td><tt>string!</tt></td><td>type name</td></tr>
 <tr><td><tt>uppercase form / lowercase form</tt></td><td>upper / lower case character</td></tr>
 <tr><td><tt>uppercase/lowercase</tt></td><td>uppercase / lowercase / capitalized string</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>strings (with interpolation of variables)<br>serialize (marshalling)<br>unserialize (un-marshalling)<br>sprintf-like<br>string equality &amp; inequality
+</table><p>
+Unknown: <blockquote>strings (with interpolation of variables)<br>serialize (marshalling)<br>unserialize (un-marshalling)<br>sprintf-like<br>string equality & inequality
 </blockquote>
-</li><li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>false</tt></td><td>false value</td></tr>
+<li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>false</tt></td><td>false value</td></tr>
 <tr><td><tt>none</tt></td><td>false value</td></tr>
 <tr><td><tt>not<a href="#6">(6)</a></tt></td><td>logical not</td></tr>
 <tr><td><tt>or / and</tt></td><td>logical or / and (non short circuit (always evaluates both arguments))</td></tr>
@@ -121,10 +131,10 @@ Unknown: </p><blockquote>strings (with interpolation of variables)<br>serialize 
 <tr><td><tt>true</tt></td><td>true value</td></tr>
 <tr><td><tt>anything not false</tt></td><td>true value</td></tr>
 <tr><td><tt>logic!</tt></td><td>type name</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>insert</tt></td><td>adding an element at the beginning (list cons) (side-effect)</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>insert</tt></td><td>adding an element at the beginning (list cons) (side-effect)</td></tr>
 <tr><td><tt>append</tt></td><td>adding an element at the end (side-effect)</td></tr>
 <tr><td><tt>find</tt></td><td>find an element</td></tr>
 <tr><td><tt>first</tt></td><td>first element</td></tr>
@@ -139,19 +149,19 @@ Unknown: </p><blockquote>strings (with interpolation of variables)<br>serialize 
 <tr><td><tt>reverse</tt></td><td>reverse</td></tr>
 <tr><td><tt>minimum-of / maximum-of</tt></td><td>smallest / biggest element</td></tr>
 <tr><td><tt>sort<a href="#8">(8)</a></tt></td><td>sort</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>list flattening<br>adding an element at index<br>all but the first element<br>get the first element and remove it<br>get the last element and remove it<br>is an element in the list<br>join a list of strings in a string using a glue string<br>iterate with index
+</table><p>
+Unknown: <blockquote>list flattening<br>adding an element at index<br>all but the first element<br>get the first element and remove it<br>get the last element and remove it<br>is an element in the list<br>join a list of strings in a string using a glue string<br>iterate with index
 </blockquote>
-</li><li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>a . b . c</tt></td><td>tuple constructor</td></tr>
+<li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>a . b . c</tt></td><td>tuple constructor</td></tr>
 <tr><td><tt>tuple!</tt></td><td>tuple type</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (empty tuple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (1-uple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (using a tuple for a function call)<br>reference (pointer) (creation)<br>reference (pointer) (dereference)<br>optional value (null value)<br>optional value (value)<br>optional value (null coalescing)<br>record (selector)<br>dictionary (constructor)<br>dictionary (access)<br>dictionary (has the key ?)<br>dictionary (remove by key)<br>dictionary (list of keys)<br>dictionary (list of values)<br>dictionary (merge)<br>range
+</table><p>
+Unknown: <blockquote>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (empty tuple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (1-uple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (using a tuple for a function call)<br>reference (pointer) (creation)<br>reference (pointer) (dereference)<br>optional value (null value)<br>optional value (value)<br>optional value (null coalescing)<br>record (selector)<br>dictionary (constructor)<br>dictionary (access)<br>dictionary (has the key ?)<br>dictionary (remove by key)<br>dictionary (list of keys)<br>dictionary (list of values)<br>dictionary (merge)<br>range
 </blockquote>
-</li><li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>and / or / xor</tt></td><td>bitwise operators (and / or / xor)</td></tr>
+<li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>and / or / xor</tt></td><td>bitwise operators (and / or / xor)</td></tr>
 <tr><td><tt>complement</tt></td><td>bitwise operators (bitwise inversion)</td></tr>
 <tr><td><tt>**</tt></td><td>exponentiation (power)</td></tr>
 <tr><td><tt>power</tt></td><td>exponentiation (power)</td></tr>
@@ -162,14 +172,31 @@ Unknown: </p><blockquote>computable tuple (these are a kind of immutable lists p
 <tr><td><tt>-</tt></td><td>negation</td></tr>
 <tr><td><tt>negate</tt></td><td>negation</td></tr>
 <tr><td><tt>1000., 1E3, 1,0</tt></td><td>numbers syntax (floating point)</td></tr>
-<tr><td><tt>1&apos;000, 10&apos;00, 100&apos;0</tt></td><td>numbers syntax (integer thousand-separator)</td></tr>
+<tr><td><tt>1'000, 10'00, 100'0</tt></td><td>numbers syntax (integer thousand-separator)</td></tr>
 <tr><td><tt>2#{1}, #{F}</tt></td><td>numbers syntax (integers in base 2, octal and hexadecimal)</td></tr>
 <tr><td><tt>1000</tt></td><td>numbers syntax (integers)</td></tr>
 <tr><td><tt>square-root / exp / abs or absolute</tt></td><td>square root / e-exponential / absolute value</td></tr>
 <tr><td><tt>sine / cosine / tangent</tt></td><td>trigonometry (basic)</td></tr>
 <tr><td><tt>arcsine / arccosine / arctangent</tt></td><td>trigonometry (inverse)</td></tr>
 <tr><td><tt>to-integer / / /</tt></td><td>truncate / round / floor / ceil</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>addition / subtraction / multiplication / division<br>random (random number)<br>random (seed the pseudo random generator)<br>operator priorities and associativities
+</table><p>
+Unknown: <blockquote>addition / subtraction / multiplication / division<br>random (random number)<br>random (seed the pseudo random generator)<br>operator priorities and associativities
 </blockquote>
-</li>
+</ul>
+<h2>Remarks</h2>
+<ul>
+<li><a name="1">(1)</a> when unused
+<li><a name="2">(2)</a> need "file: %script-header.r" in file header
+<li><a name="3">(3)</a> in Lua, "return xxx" can only appear before a block end. in Matlab, only in inline('...')
+<li><a name="4">(4)</a> in Matlab, only for anonymous function
+<li><a name="5">(5)</a> adding an end-of-line
+<li><a name="6">(6)</a> Smalltalk: postfix operator
+<li><a name="7">(7)</a> in C++, it is done in place
+<li><a name="8">(8)</a> in Scheme, not standard, but nearly standard
+</ul>
+<hr><address><a href="mailto:pixel@rigaux.org">Pixel</a></address>
+This document is licensed under <a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> (GNU Free Documentation License).
+<br>Generated from <a href="../syntax-across-languages.html.pl">syntax-across-languages.html.pl</a>
+<br> $Id: syntax-across-languages.html.pl 408 2008-08-29 08:32:23Z pixel $
+
+</body></html>

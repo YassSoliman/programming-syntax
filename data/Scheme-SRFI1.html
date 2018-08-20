@@ -1,23 +1,34 @@
+<html><head><title>syntax in Scheme-SRFI1 </title></head><body>
 
+<p>
+The "Unknown:"s below indicate that an entry is incomplete.
+<ul>
+<li>either the entry exist in the language, and <a href="mailto:pixel@rigaux.org">please tell</a>.
+<li>either the entry doesn't exist in the language, and <a href="mailto:pixel@rigaux.org">please tell so</a>.
+The entry will be marked as such and won't appear as missing anymore.
+</ul>
+
+<hr><p>See the <a href="Scheme.html">various entries for Scheme</a><p>
+<ul>
 <li><a href="categories.html">Category</a>: Dynamically typed, Functional<p>
-</p></li><li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
-Unknown: </p><blockquote>information about the current line and file<br>tokens (case-sensitivity (keywords, variable identifiers...))<br>comparison (returns 3 values (i.e. inferior, equal or superior))<br>force garbage collection
+<li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
+Unknown: <blockquote>information about the current line and file<br>tokens (case-sensitivity (keywords, variable identifiers...))<br>comparison (returns 3 values (i.e. inferior, equal or superior))<br>force garbage collection
 </blockquote>
-</li><li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
-Unknown: </p><blockquote>function called when a function is not defined (in dynamic languages)<br>runtime inspecting the caller information<br>function composition<br>identity function
+<li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
+Unknown: <blockquote>function called when a function is not defined (in dynamic languages)<br>runtime inspecting the caller information<br>function composition<br>identity function
 </blockquote>
-</li><li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
-Unknown: </p><blockquote>loop (for each value in a numeric range, 1 increment (see also the entries about ranges))<br>loop (for each value in a numeric range, 1 decrement)<br>loop (for each value in a numeric range, free increment)<br>loop (for &quot;a la C&quot; (while + initialisation))<br>breaking control flow (returning a value)<br>breaking control flow (goto (unconditional jump))<br>breaking control flow (continue / break)
+<li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
+Unknown: <blockquote>loop (for each value in a numeric range, 1 increment (see also the entries about ranges))<br>loop (for each value in a numeric range, 1 decrement)<br>loop (for each value in a numeric range, free increment)<br>loop (for "a la C" (while + initialisation))<br>breaking control flow (returning a value)<br>breaking control flow (goto (unconditional jump))<br>breaking control flow (continue / break)
 </blockquote>
-</li><li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
-Unknown: </p><blockquote>package scope<br>declare<br>import
+<li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
+Unknown: <blockquote>package scope<br>declare<br>import
 </blockquote>
-</li><li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
-Unknown: </p><blockquote>strings (with interpolation of variables)<br>strings (end-of-line (without writing the real CR or LF character))<br>convert something to a string (see also string interpolation)<br>serialize (marshalling)<br>unserialize (un-marshalling)<br>duplicate n times<br>locate a substring<br>locate a substring (starting at the end)
+<li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+Unknown: <blockquote>strings (with interpolation of variables)<br>strings (end-of-line (without writing the real CR or LF character))<br>convert something to a string (see also string interpolation)<br>serialize (marshalling)<br>unserialize (un-marshalling)<br>duplicate n times<br>locate a substring<br>locate a substring (starting at the end)
 </blockquote>
-</li><li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>unzip2</tt></td><td>2 lists from a list of couples</td></tr>
+<li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>unzip2</tt></td><td>2 lists from a list of couples</td></tr>
 <tr><td><tt>fold</tt></td><td>f(... f(f(init, e1), e2) ..., en)</td></tr>
 <tr><td><tt>fold-right</tt></td><td>f(e1, f(e2, ... f(en, init) ...))</td></tr>
 <tr><td><tt>find</tt></td><td>find an element</td></tr>
@@ -30,13 +41,23 @@ Unknown: </p><blockquote>strings (with interpolation of variables)<br>strings (e
 <tr><td><tt>partition!</tt></td><td>partition a list: elements matching, elements non matching</td></tr>
 <tr><td><tt>delete-duplicates</tt></td><td>remove duplicates</td></tr>
 <tr><td><tt>delete-duplicates!</tt></td><td>remove duplicates</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>list flattening<br>adding an element at index<br>adding an element at the end<br>get the first element and remove it<br>get the last element and remove it<br>join a list of strings in a string using a glue string<br>iterate with index
+</table><p>
+Unknown: <blockquote>list flattening<br>adding an element at index<br>adding an element at the end<br>get the first element and remove it<br>get the last element and remove it<br>join a list of strings in a string using a glue string<br>iterate with index
 </blockquote>
-</li><li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
-Unknown: </p><blockquote>tuple constructor<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (empty tuple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (1-uple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (using a tuple for a function call)<br>optional value (null value)<br>record (selector)<br>dictionary (constructor)<br>dictionary (access)<br>dictionary (has the key ?)<br>dictionary (remove by key)<br>dictionary (list of keys)<br>dictionary (list of values)<br>dictionary (merge)<br>range
+<li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
+Unknown: <blockquote>tuple constructor<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (empty tuple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (1-uple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (using a tuple for a function call)<br>optional value (null value)<br>record (selector)<br>dictionary (constructor)<br>dictionary (access)<br>dictionary (has the key ?)<br>dictionary (remove by key)<br>dictionary (list of keys)<br>dictionary (list of values)<br>dictionary (merge)<br>range
 </blockquote>
-</li><li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
-Unknown: </p><blockquote>random (random number)<br>random (seed the pseudo random generator)<br>logarithm (base 10)<br>bitwise operators
+<li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
+Unknown: <blockquote>random (random number)<br>random (seed the pseudo random generator)<br>logarithm (base 10)<br>bitwise operators
 </blockquote>
-</li>
+</ul>
+<h2>Remarks</h2>
+<ul>
+<li><a name="1">(1)</a> Python &gt;= 2.5
+</ul>
+<hr><address><a href="mailto:pixel@rigaux.org">Pixel</a></address>
+This document is licensed under <a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> (GNU Free Documentation License).
+<br>Generated from <a href="../syntax-across-languages.html.pl">syntax-across-languages.html.pl</a>
+<br> $Id: syntax-across-languages.html.pl 408 2008-08-29 08:32:23Z pixel $
+
+</body></html>

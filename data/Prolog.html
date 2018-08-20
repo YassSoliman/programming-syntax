@@ -1,8 +1,18 @@
+<html><head><title>syntax in Prolog </title></head><body>
 
+<p>
+The "Unknown:"s below indicate that an entry is incomplete.
+<ul>
+<li>either the entry exist in the language, and <a href="mailto:pixel@rigaux.org">please tell</a>.
+<li>either the entry doesn't exist in the language, and <a href="mailto:pixel@rigaux.org">please tell so</a>.
+The entry will be marked as such and won't appear as missing anymore.
+</ul>
+
+<hr><ul>
 <li><a href="categories.html">Category</a>: Dynamically typed<p>
-</p></li><li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>%</tt></td><td>commenting (until end of line)</td></tr>
+<li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>%</tt></td><td>commenting (until end of line)</td></tr>
 <tr><td><tt>@&lt; / @=&lt; / @&gt; / @&gt;=</tt></td><td>comparison</td></tr>
 <tr><td><tt>min / max</tt></td><td>comparison (min / max (binary or more))</td></tr>
 <tr><td><tt>compare</tt></td><td>comparison (returns 3 values (i.e. inferior, equal or superior))</td></tr>
@@ -18,65 +28,65 @@
 <tr><td><tt>is</tt></td><td>variable assignment or declaration (assignment)</td></tr>
 <tr><td><tt>=</tt></td><td>variable assignment or declaration (declaration)</td></tr>
 <tr><td><tt>:-</tt></td><td>variable assignment or declaration (declaration)</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>f(a,b,...)</tt></td><td>function call</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>f(a,b,...)</tt></td><td>function call</td></tr>
 <tr><td><tt>.. [ f, A, B, ...]</tt></td><td>function call</td></tr>
 <tr><td><tt>f</tt></td><td>function call (with no parameter)</td></tr>
 <tr><td><tt>the predicate fail</tt></td><td>function called when a function is not defined (in dynamic languages)</td></tr>
 <tr><td><tt>f(Para1, Para2, ....) :- ... .</tt></td><td>function definition (predicates)</td></tr>
 <tr><td><tt>current_predicate</tt></td><td>runtime inspecting the caller information</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>catch</tt></td><td>exception (catching)</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>catch</tt></td><td>exception (catching)</td></tr>
 <tr><td><tt>throw</tt></td><td>exception (throwing)</td></tr>
 <tr><td><tt>c -&gt; b1 ; c2 -&gt; b2 ; b3</tt></td><td>if_then_else</td></tr>
 <tr><td><tt>repeat, ..., c</tt></td><td>loop (do something until condition)</td></tr>
 <tr><td><tt><pre>X = val,
 (X = v1, ... ; X = v2, ... ; ...)</pre></tt></td><td>multiple selection (switch)</td></tr>
 <tr><td><tt>,</tt></td><td>sequence</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>:- module(p)</tt></td><td>declare</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>:- module(p)</tt></td><td>declare</td></tr>
 <tr><td><tt>:- use_module(name1, name2, ...)</tt></td><td>import (selectively)</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>package scope
+</table><p>
+Unknown: <blockquote>package scope
 </blockquote>
-</li><li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>char_code</tt></td><td>ascii to character</td></tr>
+<li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>char_code</tt></td><td>ascii to character</td></tr>
 <tr><td><tt>char_code</tt></td><td>character to ascii</td></tr>
 <tr><td><tt>sub_string / sub_atom</tt></td><td>extract a substring</td></tr>
 <tr><td><tt>sub_string / sub_atom</tt></td><td>locate a substring</td></tr>
 <tr><td><tt>write</tt></td><td>simple print (on any objects)</td></tr>
 <tr><td><tt>format<a href="#3">(3)</a></tt></td><td>simple print (printf-like)</td></tr>
 <tr><td><tt>append</tt></td><td>string concatenation</td></tr>
-<tr><td><tt>= \=</tt></td><td>string equality &amp; inequality</td></tr>
+<tr><td><tt>= \=</tt></td><td>string equality & inequality</td></tr>
 <tr><td><tt>length</tt></td><td>string size</td></tr>
 <tr><td><tt>atom_length</tt></td><td>string size</td></tr>
-<tr><td><tt>&apos;...&apos;</tt></td><td>strings (with no interpolation of variables)</td></tr>
-<tr><td><tt>&quot;...&quot;</tt></td><td>strings (with no interpolation of variables)</td></tr>
+<tr><td><tt>'...'</tt></td><td>strings (with no interpolation of variables)</td></tr>
+<tr><td><tt>"..."</tt></td><td>strings (with no interpolation of variables)</td></tr>
 <tr><td><tt>char_type(C_, to_upper(C)), char_type(C_, to_lower(C))</tt></td><td>upper / lower case character</td></tr>
 <tr><td><tt>upcase_atom/downcase_atom</tt></td><td>uppercase / lowercase / capitalized string</td></tr>
 <tr><td><tt>upcase_atom / downcase_atom</tt></td><td>uppercase / lowercase / capitalized string</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>strings (end-of-line (without writing the real CR or LF character))<br>sprintf-like<br>accessing n-th character
+</table><p>
+Unknown: <blockquote>strings (end-of-line (without writing the real CR or LF character))<br>sprintf-like<br>accessing n-th character
 </blockquote>
-</li><li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>No</tt></td><td>false value</td></tr>
+<li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>No</tt></td><td>false value</td></tr>
 <tr><td><tt>fail</tt></td><td>false value</td></tr>
 <tr><td><tt>not<a href="#4">(4)</a></tt></td><td>logical not</td></tr>
 <tr><td><tt>; / ,</tt></td><td>logical or / and (short circuit)</td></tr>
 <tr><td><tt>true</tt></td><td>true value</td></tr>
 <tr><td><tt>Yes</tt></td><td>true value</td></tr>
-</tbody></table></p><p>
-</p></li><li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>[ e | l ]</tt></td><td>adding an element at the beginning (list cons) (return the new list (no side-effect))</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>[ e | l ]</tt></td><td>adding an element at the beginning (list cons) (return the new list (no side-effect))</td></tr>
 <tr><td><tt>L = [_|ButFirst]</tt></td><td>all but the first element</td></tr>
 <tr><td><tt>forall</tt></td><td>for each element do something</td></tr>
 <tr><td><tt>member</tt></td><td>is an element in the list</td></tr>
@@ -95,22 +105,22 @@ Unknown: </p><blockquote>strings (end-of-line (without writing the real CR or LF
 <tr><td><tt>maplist</tt></td><td>transform a list (or bag) in another one</td></tr>
 <tr><td><tt>sublist</tt></td><td>transform a list (or bag) in another one</td></tr>
 <tr><td><tt>maplist2</tt></td><td>transform two lists in parallel</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>first element<br>get the first element and remove it<br>get the last element and remove it<br>remove duplicates
+</table><p>
+Unknown: <blockquote>first element<br>get the first element and remove it<br>get the last element and remove it<br>remove duplicates
 </blockquote>
-</li><li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>Nothing</tt></td><td>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (empty tuple)</td></tr>
+<li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>Nothing</tt></td><td>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (empty tuple)</td></tr>
 <tr><td><tt>L =.. [ F | Args ], call(L)</tt></td><td>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (using a tuple for a function call)</td></tr>
 <tr><td><tt>findall(Key, item(Key, _), Keys)</tt></td><td>dictionary (list of keys)</td></tr>
 <tr><td><tt>numlist / between</tt></td><td>range (inclusive .. inclusive)</td></tr>
 <tr><td><tt>( a, b, c )</tt></td><td>tuple constructor</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (1-uple)<br>reference (pointer) (creation)<br>reference (pointer) (dereference)
+</table><p>
+Unknown: <blockquote>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (1-uple)<br>reference (pointer) (creation)<br>reference (pointer) (dereference)
 </blockquote>
-</li><li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
-<table border="1" cellpadding="6">
-<tbody><tr><td><tt>+ / - / * / /</tt></td><td>addition / subtraction / multiplication / division</td></tr>
+<li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>+ / - / * / /</tt></td><td>addition / subtraction / multiplication / division</td></tr>
 <tr><td><tt>/\ / \/ / xor</tt></td><td>bitwise operators (and / or / xor)</td></tr>
 <tr><td><tt>\</tt></td><td>bitwise operators (bitwise inversion)</td></tr>
 <tr><td><tt>&lt;&lt; / &gt;&gt;</tt></td><td>bitwise operators (left shift / right shift / unsigned right shift)</td></tr>
@@ -128,7 +138,23 @@ Unknown: </p><blockquote>computable tuple (these are a kind of immutable lists p
 <tr><td><tt>sin / cos / tan</tt></td><td>trigonometry (basic)</td></tr>
 <tr><td><tt>asin / acos / atan<a href="#7">(7)</a></tt></td><td>trigonometry (inverse)</td></tr>
 <tr><td><tt>truncate / round / floor / ceiling</tt></td><td>truncate / round / floor / ceil</td></tr>
-</tbody></table></p><p>
-Unknown: </p><blockquote>operator priorities and associativities
+</table><p>
+Unknown: <blockquote>operator priorities and associativities
 </blockquote>
-</li>
+</ul>
+<h2>Remarks</h2>
+<ul>
+<li><a name="1">(1)</a> normal / structural / unification / arithmetic
+<li><a name="2">(2)</a> Univ operator
+<li><a name="3">(3)</a> but not using the C-like %-syntax
+<li><a name="4">(4)</a> Smalltalk: postfix operator
+<li><a name="5">(5)</a> new in PHP 5.4
+<li><a name="6">(6)</a> in Scheme, not standard, but nearly standard
+<li><a name="7">(7)</a> Ruby &gt;= 1.7
+</ul>
+<hr><address><a href="mailto:pixel@rigaux.org">Pixel</a></address>
+This document is licensed under <a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> (GNU Free Documentation License).
+<br>Generated from <a href="../syntax-across-languages.html.pl">syntax-across-languages.html.pl</a>
+<br> $Id: syntax-across-languages.html.pl 408 2008-08-29 08:32:23Z pixel $
+
+</body></html>
