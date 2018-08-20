@@ -1,0 +1,168 @@
+<html><head><title>syntax in Classic REXX </title></head><body>
+
+<p>
+The "Unknown:"s below indicate that an entry is incomplete.
+<ul>
+<li>either the entry exist in the language, and <a href="mailto:pixel@rigaux.org">please tell</a>.
+<li>either the entry doesn't exist in the language, and <a href="mailto:pixel@rigaux.org">please tell so</a>.
+The entry will be marked as such and won't appear as missing anymore.
+</ul>
+
+<hr><ul>
+<li><a href="categories.html">Category</a>: Dynamically typed<p>
+<li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>do ... end</tt></td><td>block (grouping statements, especially when statements are not expressions)</td></tr>
+<tr><td><tt>,</tt></td><td>breaking lines (useful when end-of-line and/or indentation has a special meaning)</td></tr>
+<tr><td><tt>/* ... */</tt></td><td>commenting (nestable)</td></tr>
+<tr><td><tt>&lt; &gt; &lt;= &gt;=</tt></td><td>comparison</td></tr>
+<tr><td><tt>&lt;&lt; &gt;&gt; &lt;&lt;= &gt;&gt;=<a href="#1">(1)</a></tt></td><td>comparison</td></tr>
+<tr><td><tt>MIN / MAX</tt></td><td>comparison (min / max (binary or more))</td></tr>
+<tr><td><tt>== \==</tt></td><td>equality / inequality (deep)</td></tr>
+<tr><td><tt>( ... )</tt></td><td>grouping expressions</td></tr>
+<tr><td><tt>SOURCELINE() / parse source OS . SOURCENAME</tt></td><td>information about the current line and file</td></tr>
+<tr><td><tt>interpret</tt></td><td>runtime evaluation</td></tr>
+<tr><td><tt>case-insensitive</tt></td><td>tokens (case-sensitivity (keywords, variable identifiers...))</td></tr>
+<tr><td><tt>[a-zA-Z!?@#][a-zA-Z0-9!?@#]*</tt></td><td>tokens (variable identifier regexp)</td></tr>
+<tr><td><tt>=</tt></td><td>variable assignment or declaration (assignment)</td></tr>
+</table><p>
+Unknown: <blockquote>tokens (what is the standard way for <a href="http://c2.com/cgi/wiki?CapitalizationRules">scrunching together multiple words</a>)
+</blockquote>
+<li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>v = f(a, b, ...) or call f a, b, ...</tt></td><td>function call</td></tr>
+<tr><td><tt>v = f()</tt></td><td>function call (with no parameter)</td></tr>
+<tr><td><tt>call f</tt></td><td>function call (with no parameter)</td></tr>
+<tr><td><tt><pre>f : procedure
+  ...
+return retval</pre></tt></td><td>function definition</td></tr>
+<tr><td><tt><pre>f : procedure
+  ...
+return</pre></tt></td><td>function definition (procedures)</td></tr>
+<tr><td><tt>return<a href="#2">(2)</a></tt></td><td>function return value (breaks the control flow)</td></tr>
+<tr><td><tt>trace 'I'</tt></td><td>runtime inspecting the caller information</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>iterate / leave</tt></td><td>breaking control flow (continue / break)</td></tr>
+<tr><td><tt>signal</tt></td><td>breaking control flow (goto (unconditional jump))</td></tr>
+<tr><td><tt>return<a href="#2">(2)</a></tt></td><td>breaking control flow (returning a value)</td></tr>
+<tr><td><tt><pre>signal on predefined_condition_name
+...
+predefined_condition_name :
+  ...
+</pre></tt></td><td>exception (catching)</td></tr>
+<tr><td><tt>signal predefined_condition_name</tt></td><td>exception (throwing)</td></tr>
+<tr><td><tt><pre>if c then ; ...
+
+if c then
+  ...
+
+if c then do
+  ...
+end</pre></tt></td><td>if_then</td></tr>
+<tr><td><tt><pre>if c then ; b1 ; else ; b2
+
+if c then
+  b1
+else
+  b2
+
+if c then do
+  b1
+  ...
+end
+else do
+  b2
+  ...
+end</pre></tt></td><td>if_then_else</td></tr>
+<tr><td><tt><pre>do i = 10 to 1 by -1
+  ...
+end</pre></tt></td><td>loop (for each value in a numeric range, 1 decrement)</td></tr>
+<tr><td><tt><pre>do i = 1 for 10
+  ...
+end</pre></tt></td><td>loop (for each value in a numeric range, 1 increment (see also the entries about ranges))</td></tr>
+<tr><td><tt><pre>do i = 1 to 10 by 2
+  ...
+end</pre></tt></td><td>loop (for each value in a numeric range, free increment)</td></tr>
+<tr><td><tt><pre>do forever
+  ...
+end</pre></tt></td><td>loop (forever loop)</td></tr>
+<tr><td><tt><pre>do while c
+  ...
+end</pre></tt></td><td>loop (while condition do something)</td></tr>
+<tr><td><tt><pre>select
+  when v1 ...
+  when v2 | v3 ...
+  otherwise ...
+end</pre></tt></td><td>multiple selection (switch)</td></tr>
+<tr><td><tt>nothing, optionally ;</tt></td><td>sequence</td></tr>
+</table><p>
+Unknown: <blockquote>loop (do something until condition)
+</blockquote>
+<li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>X2C, D2C</tt></td><td>ascii to character</td></tr>
+<tr><td><tt>'z'</tt></td><td>character "z"</td></tr>
+<tr><td><tt>"z"</tt></td><td>character "z"</td></tr>
+<tr><td><tt>C2X, C2D</tt></td><td>character to ascii</td></tr>
+<tr><td><tt>COPIES</tt></td><td>duplicate n times</td></tr>
+<tr><td><tt>SUBSTR</tt></td><td>extract a substring</td></tr>
+<tr><td><tt>POS</tt></td><td>locate a substring</td></tr>
+<tr><td><tt>LASTPOS</tt></td><td>locate a substring (starting at the end)</td></tr>
+<tr><td><tt><pre>"...",
+"..."</pre></tt></td><td>multi-line</td></tr>
+<tr><td><tt>say</tt></td><td>simple print (on strings)</td></tr>
+<tr><td><tt>||</tt></td><td>string concatenation</td></tr>
+<tr><td><tt></tt></td><td>string concatenation</td></tr>
+<tr><td><tt>= \=</tt></td><td>string equality & inequality</td></tr>
+<tr><td><tt>== \== or = &lt;&gt; \=</tt></td><td>string equality & inequality</td></tr>
+<tr><td><tt>LENGTH</tt></td><td>string size</td></tr>
+<tr><td><tt>'...'</tt></td><td>strings (with no interpolation of variables)</td></tr>
+<tr><td><tt>"..."</tt></td><td>strings (with no interpolation of variables)</td></tr>
+<tr><td><tt>parse upper var in_var out_var / parse lower var in_var out_var</tt></td><td>uppercase / lowercase / capitalized string</td></tr>
+</table><p>
+Unknown: <blockquote>serialize (marshalling)<br>unserialize (un-marshalling)<br>upper / lower case character
+</blockquote>
+<li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>0<a href="#3">(3)</a></tt></td><td>false value</td></tr>
+<tr><td><tt>\</tt></td><td>logical not</td></tr>
+<tr><td><tt>| / &</tt></td><td>logical or / and (non short circuit (always evaluates both arguments))</td></tr>
+<tr><td><tt>1</tt></td><td>true value</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>+ / - / * / /</tt></td><td>addition / subtraction / multiplication / division</td></tr>
+<tr><td><tt>BITAND / BITOR / BITXOR</tt></td><td>bitwise operators (and / or / xor)</td></tr>
+<tr><td><tt>**</tt></td><td>exponentiation (power)</td></tr>
+<tr><td><tt>Log10</tt></td><td>logarithm (base 10)</td></tr>
+<tr><td><tt>Log</tt></td><td>logarithm (base e)</td></tr>
+<tr><td><tt>//</tt></td><td>modulo (modulo of -3 / 2 is -1)</td></tr>
+<tr><td><tt>%</tt></td><td>modulo (modulo of -3 / 2 is 1)</td></tr>
+<tr><td><tt>-</tt></td><td>negation</td></tr>
+<tr><td><tt>1000., 1E3</tt></td><td>numbers syntax (floating point)</td></tr>
+<tr><td><tt>'1'B, 'F'X</tt></td><td>numbers syntax (integers in base 2, octal and hexadecimal)</td></tr>
+<tr><td><tt>1000, '1000'D</tt></td><td>numbers syntax (integers)</td></tr>
+<tr><td><tt>mathematical</tt></td><td>operator priorities and associativities (addition vs multiplication)</td></tr>
+<tr><td><tt>mathematical</tt></td><td>operator priorities and associativities (exponentiation vs negation (is -3^2 equal to 9 or -9))</td></tr>
+<tr><td><tt>Sqrt / Exp / ABS</tt></td><td>square root / e-exponential / absolute value</td></tr>
+<tr><td><tt>Sin / Cos / Tan</tt></td><td>trigonometry (basic)</td></tr>
+<tr><td><tt>ASin / ACos / ATan</tt></td><td>trigonometry (inverse)</td></tr>
+<tr><td><tt>TRUNC / FORMAT / Floor / Ceil</tt></td><td>truncate / round / floor / ceil</td></tr>
+</table><p>
+Unknown: <blockquote>random (random number)<br>random (seed the pseudo random generator)
+</blockquote>
+</ul>
+<h2>Remarks</h2>
+<ul>
+<li><a name="1">(1)</a> deep comparison
+<li><a name="2">(2)</a> in Lua, "return xxx" can only appear before a block end. in Matlab, only in inline('...')
+<li><a name="3">(3)</a> beware of 0.0 which is true in Pike!
+</ul>
+<hr><address><a href="mailto:pixel@rigaux.org">Pixel</a></address>
+This document is licensed under <a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> (GNU Free Documentation License).
+<br>Generated from <a href="../syntax-across-languages.html.pl">syntax-across-languages.html.pl</a>
+<br> $Id: syntax-across-languages.html.pl 408 2008-08-29 08:32:23Z pixel $
+
+</body></html>

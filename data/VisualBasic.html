@@ -1,0 +1,145 @@
+<html><head><title>syntax in Visual Basic </title></head><body>
+
+<p>
+The "Unknown:"s below indicate that an entry is incomplete.
+<ul>
+<li>either the entry exist in the language, and <a href="mailto:pixel@rigaux.org">please tell</a>.
+<li>either the entry doesn't exist in the language, and <a href="mailto:pixel@rigaux.org">please tell so</a>.
+The entry will be marked as such and won't appear as missing anymore.
+</ul>
+
+<hr><p>See the <a href="Basic.html">various entries for Basic</a><p>
+<ul>
+<li><a href="categories.html">Category</a>: Object Oriented, Dynamically typed, Has types<p>
+<li><a href="../syntax-across-languages/Vrs.html">Various</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>_</tt></td><td>breaking lines (useful when end-of-line and/or indentation has a special meaning)</td></tr>
+<tr><td><tt>'</tt></td><td>commenting (until end of line)</td></tr>
+<tr><td><tt>&lt; &gt; &lt;= &gt;=</tt></td><td>comparison</td></tr>
+<tr><td><tt>= &lt;&gt;</tt></td><td>equality / inequality (deep)</td></tr>
+<tr><td><tt>case-insensitive</tt></td><td>tokens (case-sensitivity (keywords, variable identifiers...))</td></tr>
+<tr><td><tt>CamelCase or camelCase</tt></td><td>tokens (what is the standard way for <a href="http://c2.com/cgi/wiki?CapitalizationRules">scrunching together multiple words</a>)</td></tr>
+</table><p>
+Unknown: <blockquote>documentation comment<br>information about the current line and file<br>tokens (variable identifier regexp)<br>grouping expressions<br>block (grouping statements, especially when statements are not expressions)<br>comparison (returns 3 values (i.e. inferior, equal or superior))<br>comparison (min / max (binary or more))<br>runtime evaluation<br>force garbage collection
+</blockquote>
+<li><a href="../syntax-across-languages/Fnctn.html">Functions</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>Function f(para1, para2)
+...
+End Function</tt></td><td>function definition</td></tr>
+<tr><td><tt>Sub f(para1, para2)
+...
+End Sub</tt></td><td>function definition (procedures)</td></tr>
+<tr><td><tt>Return</tt></td><td>function return value (breaks the control flow)</td></tr>
+<tr><td><tt>Exit Function / Exit Sub</tt></td><td>function return value (breaks the control flow)</td></tr>
+<tr><td><tt>&lt;function name&gt; = val</tt></td><td>function return value (setting the result)</td></tr>
+</table><p>
+Unknown: <blockquote>function call<br>function call (with no parameter)<br>function called when a function is not defined (in dynamic languages)<br>runtime inspecting the caller information
+</blockquote>
+<li><a href="../syntax-across-languages/CntrFlow.html">Control Flow</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>/ Exit Do, Exit For</tt></td><td>breaking control flow (continue / break)</td></tr>
+<tr><td><tt>Return</tt></td><td>breaking control flow (returning a value)</td></tr>
+<tr><td><tt>Exit Function / Exit Sub</tt></td><td>breaking control flow (returning a value)</td></tr>
+<tr><td><tt>If c Then ...</tt></td><td>if_then</td></tr>
+<tr><td><tt><pre>If c
+  ...
+End If</pre></tt></td><td>if_then</td></tr>
+<tr><td><tt>If c Then b1 Else b2</tt></td><td>if_then_else</td></tr>
+<tr><td><tt><pre>If c
+  b1
+Else
+  b2
+End If</pre></tt></td><td>if_then_else</td></tr>
+<tr><td><tt><pre>Do 
+...
+Loop Until c</pre></tt></td><td>loop (do something until condition)</td></tr>
+<tr><td><tt>For i = 10 To 1 Step -1 ... Next</tt></td><td>loop (for each value in a numeric range, 1 decrement)</td></tr>
+<tr><td><tt>For i = 1 To 10 ... Next</tt></td><td>loop (for each value in a numeric range, 1 increment (see also the entries about ranges))</td></tr>
+<tr><td><tt>For i = 1 To 10 Step 2 ... Next</tt></td><td>loop (for each value in a numeric range, free increment)</td></tr>
+<tr><td><tt><pre>Do
+    ...
+Loop</pre></tt></td><td>loop (forever loop)</td></tr>
+<tr><td><tt><pre>Do While c 
+    ...
+Loop</pre></tt></td><td>loop (while condition do something)</td></tr>
+<tr><td><tt><pre>Select val
+    Case v1
+	...
+    Case v2, v3
+	...
+    Case Else
+	...
+End Select</pre></tt></td><td>multiple selection (switch)</td></tr>
+</table><p>
+Unknown: <blockquote>loop (for "a la C" (while + initialisation))<br>exception (throwing)<br>exception (catching)
+</blockquote>
+<li><a href="../syntax-across-languages/Tps.html">Types</a><p>
+Unknown: <blockquote>declaration<br>annotation (or variable declaration)<br>cast<br>mutability, constness (type of a mutable value)<br>mutability, constness (type of a constant value)
+</blockquote>
+<li><a href="../syntax-across-languages/bjcrntRfl.html">Object Oriented & Reflexivity</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>Me</tt></td><td>current instance</td></tr>
+<tr><td><tt>object.method(para)</tt></td><td>method invocation</td></tr>
+<tr><td><tt>new class_name(...)</tt></td><td>object creation</td></tr>
+</table><p>
+Unknown: <blockquote>method invocation (with no parameter)<br>object cloning<br>manually call an object's destructor<br>class declaration<br>testing class membership<br>get the type/class corresponding to an object/instance/value<br>methods available<br>inheritance<br>has the method<br>accessing parent method
+</blockquote>
+<li><a href="../syntax-across-languages/PckgMdl.html">Package, Module</a><p>
+Unknown: <blockquote>package scope<br>declare<br>import
+</blockquote>
+<li><a href="../syntax-across-languages/Strng.html">Strings</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>chr$</tt></td><td>ascii to character</td></tr>
+<tr><td><tt>asc</tt></td><td>character to ascii</td></tr>
+<tr><td><tt>&</tt></td><td>string concatenation</td></tr>
+<tr><td><tt>= &lt;&gt;</tt></td><td>string equality & inequality</td></tr>
+<tr><td><tt>len</tt></td><td>string size</td></tr>
+<tr><td><tt>vb_nl</tt></td><td>strings (end-of-line (without writing the real CR or LF character))</td></tr>
+<tr><td><tt>String</tt></td><td>type name</td></tr>
+<tr><td><tt>UCase / LCase</tt></td><td>uppercase / lowercase / capitalized string</td></tr>
+</table><p>
+Unknown: <blockquote>character "z"<br>strings (with no interpolation of variables)<br>strings (with interpolation of variables)<br>multi-line<br>convert something to a string (see also string interpolation)<br>serialize (marshalling)<br>unserialize (un-marshalling)<br>sprintf-like<br>upper / lower case character<br>extract a substring<br>locate a substring<br>locate a substring (starting at the end)
+</blockquote>
+<li><a href="../syntax-across-languages/Blns.html">Booleans</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>False</tt></td><td>false value</td></tr>
+<tr><td><tt>0<a href="#1">(1)</a></tt></td><td>false value</td></tr>
+<tr><td><tt>Not</tt></td><td>logical not</td></tr>
+<tr><td><tt>Or / And<a href="#2">(2)</a></tt></td><td>logical or / and (non short circuit (always evaluates both arguments))</td></tr>
+<tr><td><tt>True</tt></td><td>true value</td></tr>
+<tr><td><tt>non-zero-numbers</tt></td><td>true value</td></tr>
+<tr><td><tt>Boolean</tt></td><td>type name</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/BagAndLst.html">Bags and Lists</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt>For Each v in l
+...
+Next</tt></td><td>for each element do something</td></tr>
+</table><p>
+<li><a href="../syntax-across-languages/VrsDatTps.html">Various Data Types</a><p>
+<table border=1 cellpadding=6>
+<tr><td><tt><pre>Enum typ
+   n1
+   n2
+End Enum</pre></tt></td><td>enumerated type declaration</td></tr>
+<tr><td><tt>if(a, b)</tt></td><td>optional value (null coalescing)</td></tr>
+<tr><td><tt>AddressOf</tt></td><td>reference (pointer) (creation)</td></tr>
+</table><p>
+Unknown: <blockquote>tuple type<br>tuple constructor<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (empty tuple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (1-uple)<br>computable tuple (these are a kind of immutable lists playing a special role in parameter passing) (using a tuple for a function call)<br>reference (pointer) (dereference)<br>optional value (null value)<br>optional value (value)<br>record (type declaration)<br>record (selector)<br>union type declaration<br>dictionary (type name)<br>dictionary (constructor)<br>dictionary (access)<br>dictionary (has the key ?)<br>dictionary (remove by key)<br>dictionary (list of keys)<br>dictionary (list of values)<br>dictionary (merge)<br>range
+</blockquote>
+<li><a href="../syntax-across-languages/Mthmt.html">Mathematics</a><p>
+Unknown: <blockquote>type name<br>numbers syntax (integers)<br>numbers syntax (integers in base 2, octal and hexadecimal)<br>numbers syntax (floating point)<br>addition / subtraction / multiplication / division<br>exponentiation (power)<br>negation<br>random (random number)<br>random (seed the pseudo random generator)<br>operator priorities and associativities<br>square root / e-exponential / absolute value<br>trigonometry (basic)<br>trigonometry (inverse)<br>logarithm (base e)<br>logarithm (base 10)<br>modulo<br>truncate / round / floor / ceil<br>bitwise operators
+</blockquote>
+</ul>
+<h2>Remarks</h2>
+<ul>
+<li><a name="1">(1)</a> beware of 0.0 which is true in Pike!
+<li><a name="2">(2)</a> in Oz, simple functions, not operators
+</ul>
+<hr><address><a href="mailto:pixel@rigaux.org">Pixel</a></address>
+This document is licensed under <a href="http://www.gnu.org/copyleft/fdl.html">GFDL</a> (GNU Free Documentation License).
+<br>Generated from <a href="../syntax-across-languages.html.pl">syntax-across-languages.html.pl</a>
+<br> $Id: syntax-across-languages.html.pl 408 2008-08-29 08:32:23Z pixel $
+
+</body></html>
