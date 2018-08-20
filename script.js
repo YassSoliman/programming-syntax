@@ -1,5 +1,5 @@
 // Before this step need to get the website http://rigaux.org/language-study/syntax-across-languages/Vrs.html 
-var pythonSyntax = document.evaluate('//tr[contains(., "Python")]', document, null, XPathResult.ANY_TYPE, null);
+var syntax = document.evaluate('//tr[contains(., "Python")]', document, null, XPathResult.ANY_TYPE, null);
 var titles = document.evaluate('//li[contains(., "Python")]', document, null, XPathResult.ANY_TYPE, null);
 
 var iterator = pythonSyntax.iterateNext();

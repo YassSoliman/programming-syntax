@@ -18,9 +18,9 @@
   "homepage": "https://github.com/YassSoliman/programming-syntax#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "cheerio": "^1.0.0-rc.2",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
-    "jsdom": "^12.0.0",
     "request": "^2.88.0"
   }
 }

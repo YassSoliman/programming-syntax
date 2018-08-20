@@ -1,4 +1,11 @@
-<h1>Syntax</h1>
-<h2><%= lang %></h2>
-<%- data %>
-
+<% include partials/header %>
+        <h1>Syntax</h1>
+        <div class="left">
+            <h2><%= lang[0] %></h2>
+            <%- data[0] %>
+        </div>
+        <div class="right">
+            <h2><%= lang[1] %></h2>
+            <%- data[1] %>
+        </div>
+<% include partials/footer %>
