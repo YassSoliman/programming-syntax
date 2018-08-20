@@ -39,7 +39,6 @@ app.set("view engine", "ejs");
 //  }
 
 app.get("/", function(req, res){
-    createBackups();
     fs.readFile('data/languages.html', 'utf8', function(err, body){
         if(!err){
             var titles = parseTitles(body);
