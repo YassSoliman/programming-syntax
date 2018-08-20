@@ -1,3 +1,7 @@
+* {
+    font-family: monospace;    
+}
+
 .left {
     display: inline-block;
     width: 45%;
@@ -12,4 +16,34 @@
     padding: 0 40px;
     margin: 0 auto;
     float: right;    
+}
+
+form {
+    width: 20%;
+    margin: 0 auto;
+}
+
+select {
+    width: 49%;
+    display: inline-block;
+}
+
+select[name="language1"] {
+    float: left;
+}
+
+select[name="language2"] {
+    float: right;
+}
+
+input[type="submit"] {
+    display: inline-block;
+    width: 80%;
+    margin: 5px 10%;
+    height: 1.5em;
+    font-size: 1.2em;
+}
+
+h1 {
+   text-align: center; 
 }
